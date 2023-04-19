@@ -25,6 +25,16 @@ const firebaseApp = initializeApp({
 export default function Home() {
 
   const [filmes, setFilmes] = useState([]);
+  const [buscar, setBuscar] = useState("");
+  const [ordenacao, setOrdenacao] = useState ("")
+
+  const pesquisar = (e) => {
+    setBuscar(e.target.value);
+  };
+
+  const onChangeOrdenacao = (e) => {
+    setOrdenacao(e.target.value)
+  }
   
   const db = getFirestore(firebaseApp);
   const filmeCollectionRef = collection(db, "filmes");
@@ -39,14 +49,44 @@ export default function Home() {
 
   return (
     <Main>
-        {filmes.map((filme) => {
+      <input type="text" placeholder="Buscar por nome" onChange={pesquisar} value={buscar}/>
+      <label>Ordenação: 
+          <select value={ordenacao} onChange={onChangeOrdenacao}>
+           <option value="ordemLancamento">Ordem Lançamento</option>
+           <option value="ordemCronologica">Ordem Cronologica</option>
+          </select>
+        </label>
+        {filmes
+        .filter((filme) => {
+          return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
+        })
+        .sort((a, b)=>{
+          if(ordenacao === "ordemCronologica"){
+            if(a.ordemCronologica < b.ordemCronologica){
+              return -1
+            } else {
+              return 1
+            }
+          } else if(ordenacao === "ordemLancamento"){
+              if(a.ordemLancamento > b.ordemLancamento){
+                return 1
+              } else {
+                return -1
+              }
+          }
+        })
+        .map((filme) => {
           return (
             <Section key={filme.id}>
               <div className="container">
                 <img className="poster" src={filme.posterImg} alt="Poster"/>
                 <div className="information">
 
-                  <h2>{filme.titulo}</h2>
+                  <h2 className="titulo">{filme.titulo}</h2>
+                  <div className="generoContainer">
+                    <span className="genero">{filme.genero}</span>
+                  </div>
+
                   <div className="subTitle">
                     <div className="IMDB">
                       <Image className="imgIMDB" src={IMDB} width={35} height={40}/>
@@ -75,11 +115,11 @@ export default function Home() {
                     </div>
                   </div>
                   
-                  <span className="genero">{filme.genero}</span>
+                  
                   
                   
                   <div className="sinopseContainer"> 
-                    <span>Sinopse:</span>
+                    <span className="subTitleSinopse">Sinopse:</span>
                     <span className="sinopse">{filme.sinopse}</span>
                   </div>
 
