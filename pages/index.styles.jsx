@@ -36,6 +36,11 @@ border: red 2px solid;
         width: 34rem;
     }
 
+    .titulo{
+        display: flex;
+        margin-bottom: 8px;
+    }
+
     .IMDB{
         height: 40px;
         width: 40px;
@@ -90,32 +95,23 @@ border: red 2px solid;
         flex-direction: row;
         align-items: center;
         gap: 28px;
-        margin-bottom: 20px;
+        margin-bottom: 15px;
     }
 
     .generoContainer{
         display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
-        border: 1px solid white; 
-        border-radius: 8px;
-        width: 13rem;
-    }
-
-    .subTitleGenero{
-        color: #f5c518;
-        margin: 5px 5px 2px 5px;
+        align-items: center;
+        margin-bottom: 15px;
     }
 
     .genero{
         display: flex;
-        flex-direction: column;
-        margin-bottom: 10px;
         font-family: 'Roboto', sans-serif;
         font-size: 0.8em;
-        margin-bottom: 5px;
-        color: #f5c518;
-
+        background-color: #111111;
+        padding: 5px;
+        border-radius: 8px;
+        color: white;
     }
 
     .sinopseContainer{
@@ -126,10 +122,20 @@ border: red 2px solid;
         border-radius: 8px;
     }
 
+    .subTitleSinopse{
+        display: flex;
+        flex-direction: row;
+        gap: 8px;
+        color: #f5c518;
+        margin: 5px 0px 5px 10px;
+    }
+
     .sinopse{
         display: flex;
         flex-direction: column;
         margin-bottom: 10px;
+        margin-left: 10px;
+        font-size: 0.9rem;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -143,6 +149,12 @@ border: red 2px solid;
         display: flex;
         align-items: center;
         gap: 8px;
+        background-color: #111111;
+        border-radius: 8px;
+        padding: 3px 10px 3px 10px;
+        color: #f5c518;
+        font-family: 'Roboto', sans-serif;
+        font-size: 0.8em;
     }
 
     .imgYoutube{
@@ -157,7 +169,7 @@ border: red 2px solid;
     }
 
     .imgAmazon{
-        width: 42px;
+        width: 38px;
         height: 37px;
         border-radius: 10px;
     }
