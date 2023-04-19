@@ -7,6 +7,10 @@ import disneyplus from "../public/disneyplus.jpg";
 import netflix from "../public/netflix.jpg";
 import hbo from "../public/hbo.jpg";
 import amazon from "../public/amazon.png";
+import IMDB from "../public/IMDB.png"
+import calender from "../public/calender.png"
+import cash from "../public/cash.png"
+import duration from "../public/duration.png"
 import Image from "next/image";
 
 const firebaseApp = initializeApp({
@@ -44,27 +48,59 @@ export default function Home() {
 
                   <h2>{filme.titulo}</h2>
                   <div className="subTitle">
-                    <span>{filme.notaIMDB}</span>
-                    <span>{filme.dataDeLancamento}</span>
-                    <span>{filme.bilheteriaUS$}</span>
+                    <div className="IMDB">
+                      <Image className="imgIMDB" src={IMDB} width={35} height={40}/>
+                      <span className="notaIMDB">{filme.notaIMDB}</span>
+                    </div>
+                    <div className="releaseDateOf">
+                      <div className="subTitleDate">
+                        <Image className="imgCalender" src={calender} width={20} height={20}/>
+                        <span>Data de Lançamento:</span>
+                      </div>
+                      <span className="date">{filme.dataDeLancamento}</span>
+                    </div>
+                    <div className="boxOfficeContainer">
+                      <div className="subTitleBoxOffice">
+                        <Image className="imgBoxOffice" src={cash} width={20} height={20}/>
+                        <span>Bilheteria:</span>
+                      </div>
+                      <span className="boxOffice">US$ {filme.bilheteriaUS$.toLocaleString("en-US")}.00</span>
+                    </div>
+                    <div className="durationContainer">
+                      <div className="subTitleDuration">
+                        <Image src={duration} width={20} height={20}/>
+                        <span>Duração:</span>
+                      </div>
+                      <span className="duration">{filme.duration}</span>
+                    </div>
+                  </div>
+                  
+                  <span className="genero">{filme.genero}</span>
+                  
+                  
+                  <div className="sinopseContainer"> 
+                    <span>Sinopse:</span>
+                    <span className="sinopse">{filme.sinopse}</span>
                   </div>
 
-                  <span>{filme.genero}</span>
-
-                  <p>{filme.sinopse}</p>
-
                   <div className="links">
-                    <a href={filme.linkTrailer} target="_blank"><Image src={youtube} width={50} height={50}/></a>
-                    <a href={filme.linkFilme} target="_blank" >
-                      {filme.streaming === "disney" 
-                        ? <Image src={disneyplus} width={50} height={50}/> 
-                        : filme.streaming === "netflix"
-                        ? <Image src={netflix} width={50} height={50}/>
-                        : filme.streaming === "hbo"
-                        ? <Image src={hbo} width={50} height={50}/>
-                        : <Image src={amazon} width={50} height={50}/>
-                      }
-                    </a>
+                    <div className="watch">
+                      <span>Assista ao trailer:</span>
+                      <a href={filme.linkTrailer} target="_blank"><Image className="imgYoutube" src={youtube}/></a>
+                    </div>
+                    <div className="watch">
+                      <span>Assista ao filme:</span>
+                      <a href={filme.linkFilme} target="_blank" >
+                        {filme.streaming === "disney" 
+                          ? <Image className="imgDisney" src={disneyplus}/> 
+                          : filme.streaming === "netflix"
+                          ? <Image src={netflix} width={50} height={50}/>
+                          : filme.streaming === "hbo"
+                          ? <Image src={hbo} width={50} height={50}/>
+                          : <Image className="imgAmazon" src={amazon}/>
+                        }
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
