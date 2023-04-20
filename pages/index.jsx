@@ -12,6 +12,7 @@ import calender from "../public/calender.png"
 import cash from "../public/cash.png"
 import duration from "../public/duration.png"
 import Image from "next/image";
+import Header from "./Header/header";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTzrhi_2NswWKirKVwumQb4cdjxTVTi4A",
@@ -28,13 +29,7 @@ export default function Home() {
   const [buscar, setBuscar] = useState("");
   const [ordenacao, setOrdenacao] = useState ("")
 
-  const pesquisar = (e) => {
-    setBuscar(e.target.value);
-  };
-
-  const onChangeOrdenacao = (e) => {
-    setOrdenacao(e.target.value)
-  }
+  
   
   const db = getFirestore(firebaseApp);
   const filmeCollectionRef = collection(db, "filmes");
@@ -49,13 +44,7 @@ export default function Home() {
 
   return (
     <Main>
-      <input type="text" placeholder="Buscar por nome" onChange={pesquisar} value={buscar}/>
-      <label>Ordenação: 
-          <select value={ordenacao} onChange={onChangeOrdenacao}>
-           <option value="ordemLancamento">Ordem Lançamento</option>
-           <option value="ordemCronologica">Ordem Cronologica</option>
-          </select>
-        </label>
+      <Header buscar={buscar} setBuscar={setBuscar} ordenacao={ordenacao} setOrdenacao={setOrdenacao}/>
         {filmes
         .filter((filme) => {
           return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
