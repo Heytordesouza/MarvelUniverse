@@ -6,6 +6,9 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 gap: 1rem;
+width: 100%;
+height: 100%;
+background-color: black;
 `
 
 export const Section = styled.section `
@@ -13,8 +16,8 @@ display: flex;
 flex-direction: column;
 background-color: black;
 color: white;
-width: 52rem;
-height: 23rem;
+width: 51.6rem;
+height: 30%;
 border-radius: 20px;
 border: red 2px solid;
 
