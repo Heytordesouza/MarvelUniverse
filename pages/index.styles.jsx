@@ -16,7 +16,7 @@ display: flex;
 flex-direction: column;
 background-color: black;
 color: white;
-width: 51.6rem;
+width: 70%;
 height: 30%;
 border-radius: 20px;
 border: red 2px solid;
@@ -27,8 +27,8 @@ border: red 2px solid;
     }
 
     .poster{
-        height: 20rem; 
-        width: 13rem;
+        height: 20%; 
+        width: 25%;
         margin: 25px;
         border-radius: 20px;
     }
@@ -36,7 +36,8 @@ border: red 2px solid;
     .information{
         display: flex;
         flex-direction: column;
-        width: 34rem;
+        width: 68%;
+        height: 40%;
     }
 
     .titulo{
@@ -71,7 +72,7 @@ border: red 2px solid;
         flex-direction: column;
         align-items: center;
         border-radius: 8px;
-        height: 3rem;
+        height: 100%;
         background-color: #111111;
     }
 
@@ -89,7 +90,7 @@ border: red 2px solid;
     .boxOffice,
     .duration{
         font-family: 'Roboto', sans-serif;
-        font-size: 0.8em;
+        font-size: 100%;
         margin: 0px 5px 5px 5px;
     }
 
@@ -97,7 +98,7 @@ border: red 2px solid;
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 28px;
+        gap: 10%;
         margin-bottom: 15px;
     }
 
