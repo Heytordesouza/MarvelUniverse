@@ -5,13 +5,24 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-gap: 1rem;
-width: 100%;
-height: 100%;
 background-color: black;
+width: 100vw;
+height: 100%;
 `
 
-export const Section = styled.section `
+export const Section = styled.section`
+display: flex;
+flex-direction: column;
+width: 100%;
+height: 100%;
+gap: 1rem;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+`
+
+export const Card = styled.section `
 display: flex;
 flex-direction: column;
 background-color: black;
@@ -98,8 +109,11 @@ border: red 2px solid;
         display: flex;
         flex-direction: row;
         align-items: center;
-        gap: 10%;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        gap: 5%;
         margin-bottom: 15px;
+        width: 100%;
     }
 
     .generoContainer{
@@ -177,5 +191,113 @@ border: red 2px solid;
         height: 37px;
         border-radius: 10px;
     }
-`
+
+    @media screen and (min-device-width: 768px) and (max-device-width: 1200px) {
+        display: flex;
+        flex-direction: column;
+        background-color: black;
+        color: white;
+        width: 70%;
+        height: 30%;
+        border-radius: 20px;
+        border: red 2px solid;
+
+        .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        }
+
+        .poster{
+        height: 60%; 
+        width: 70%;
+        margin: 25px 25px 10px 25px;
+        border-radius: 20px;
+        }
+
+        .information{
+            display: flex;
+            flex-direction: column;
+            width: 80%;
+            height: 40%;
+        }
+
+        .titulo{
+            display: flex;
+            margin-bottom: 8px;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+        }
+
+        .subTitle{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 5%;
+            margin-bottom: 15px;
+            width: 100%;
+        }
+
+        .IMDB{
+            height: 75px;
+            width: 65px;
+            background-color: azure
+        }
+
+        .imgIMDB{
+            position: absolute;
+            height: 75px;
+            width: 65px;
+        }
+
+        .notaIMDB{
+            display: flex;
+            position: relative;
+            color: black;
+            margin-top: 35px;
+            margin-left: 20px;
+            height: 80px;
+            width: 100px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .boxOfficeContainer,
+        .releaseDateOf,
+        .durationContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 8px;
+            height: 100%;
+            background-color: #111111;
+        }
+
+        .subTitleBoxOffice,
+        .subTitleDate,
+        .subTitleDuration{
+            display: flex;
+            flex-direction: row;
+            gap: 8px;
+            color: #f5c518;
+            margin: 5px 5px 2px 5px;
+        }
+
+        .date,
+        .boxOffice,
+        .duration{
+            font-family: 'Roboto', sans-serif;
+            font-size: 100%;
+            margin: 0px 5px 5px 5px;
+        }
+
+        
+
+
+    }
+`;
+
 
