@@ -4,7 +4,7 @@ import marvel2 from "../../public/marvel.jpg"
 export const ImageMarvel = styled.div`
 display: flex;
 height: 25rem;
-width: 100rem;
+width: 100%;
 align-items: center;
 justify-content: center;
 background: linear-gradient(to bottom, transparent 0%, black 90%), url(marvel.jpg);
