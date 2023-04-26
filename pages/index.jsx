@@ -69,6 +69,7 @@ export default function Home() {
               <Card key={filme.id}>
                 <div className="container">
                   <img className="poster" src={filme.posterImg} alt="Poster"/>
+                  
                   <div className="information">
 
                     <h2 className="titulo">{filme.titulo}</h2>
@@ -83,21 +84,21 @@ export default function Home() {
                       </div>
                       <div className="releaseDateOf">
                         <div className="subTitleDate">
-                          <Image className="imgCalender" src={calender} width={20} height={20}/>
+                          <Image className="imgSubtitle" src={calender} width={20} height={20}/>
                           <span>Data de Lançamento:</span>
                         </div>
                         <span className="date">{filme.dataDeLancamento}</span>
                       </div>
                       <div className="boxOfficeContainer">
                         <div className="subTitleBoxOffice">
-                          <Image className="imgBoxOffice" src={cash} width={20} height={20}/>
+                          <Image className="imgSubtitle" src={cash} width={20} height={20}/>
                           <span>Bilheteria:</span>
                         </div>
                         <span className="boxOffice">US$ {filme.bilheteriaUS$.toLocaleString("en-US")}.00</span>
                       </div>
                       <div className="durationContainer">
                         <div className="subTitleDuration">
-                          <Image src={duration} width={20} height={20}/>
+                          <Image className="imgSubtitle" src={duration} width={20} height={20}/>
                           <span>Duração:</span>
                         </div>
                         <span className="duration">{filme.duration}</span>
