@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
 import { useEffect, useState } from "react";
-import { Main, Section, Card } from "./index.styles";
+import { Main, Section, Card } from "../Styles/index.styles";
 import youtube from "../public/youtube.png";
 import disneyplus from "../public/disneyplus.jpg";
 import netflix from "../public/netflix.jpg";
@@ -84,21 +84,21 @@ export default function Home() {
                       </div>
                       <div className="releaseDateOf">
                         <div className="subTitleDate">
-                          <Image className="imgSubtitle" src={calender} width={20} height={20}/>
+                          <Image className="imgSubtitle" src={calender}/>
                           <span>Data de Lançamento:</span>
                         </div>
                         <span className="date">{filme.dataDeLancamento}</span>
                       </div>
                       <div className="boxOfficeContainer">
                         <div className="subTitleBoxOffice">
-                          <Image className="imgSubtitle" src={cash} width={20} height={20}/>
+                          <Image className="imgSubtitle" src={cash}/>
                           <span>Bilheteria:</span>
                         </div>
                         <span className="boxOffice">US$ {filme.bilheteriaUS$.toLocaleString("en-US")}.00</span>
                       </div>
                       <div className="durationContainer">
                         <div className="subTitleDuration">
-                          <Image className="imgSubtitle" src={duration} width={20} height={20}/>
+                          <Image className="imgSubtitle" src={duration}/>
                           <span>Duração:</span>
                         </div>
                         <span className="duration">{filme.duration}</span>
