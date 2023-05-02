@@ -1,6 +1,4 @@
-import { ImageMarvel, Input } from "./header.styles"
-import marvel from "../../public/marvel.jpg"
-import Image from "next/image";
+import { ImageMarvel, Input } from "../../Styles/header.styles"
 
 export default function Header(props) {
 

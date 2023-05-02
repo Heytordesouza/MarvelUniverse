@@ -27,7 +27,7 @@ display: flex;
 flex-direction: column;
 background-color: black;
 color: white;
-width: 1100px;
+width: 80vw;
 border-radius: 20px;
 border: red 2px solid;
 
@@ -38,8 +38,8 @@ border: red 2px solid;
     }
 
     .poster{
-        height: 330px; 
-        width: 240px;
+        height: 50%; 
+        width: 20%;
         margin: 25px;
         border-radius: 20px;
     }
@@ -64,23 +64,30 @@ border: red 2px solid;
     }
 
     .IMDB{
-        height: 40px;
-        width: 40px;
+        display: flex;
+        height: 45%;
+        width: 4.8%;
     }
 
     .imgIMDB{
+        display: flex;
         position: absolute;
+        width: 2.6%;
+        align-items: center;
+        justify-content: center;
     }
 
     .notaIMDB{
         display: flex;
         position: relative;
         color: black;
-        margin-top: 20px;
-        margin-left: 6.5px;
-        height: 60px;
-        width: 50px;
+        margin-top: 1.7em;
+        margin-left: 0.6em;
+        height: 1.8em;
+        width: 1.2em;
         font-family: 'Roboto', sans-serif;
+        font-size: 1vw;
+        font-weight: bold;
     }
 
     .boxOfficeContainer,
@@ -89,8 +96,10 @@ border: red 2px solid;
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         border-radius: 8px;
-        height: 100%;
+        height: 90%;
+        width: 28%;
         background-color: #111111;
     }
 
@@ -99,16 +108,25 @@ border: red 2px solid;
     .subTitleDuration{
         display: flex;
         flex-direction: row;
+        align-items: center;
+        justify-content: center;
         gap: 8px;
         color: #f5c518;
         margin: 5px 5px 2px 5px;
+        font-size: 1vw;
+        width: 90%;
+    }
+
+    .imgSubtitle{
+            height: 90%;
+            width: 12%;
     }
 
     .date,
     .boxOffice,
     .duration{
         font-family: 'Roboto', sans-serif;
-        font-size: 100%;
+        font-size: 1vw;
         margin: 0px 5px 5px 5px;
     }
 
@@ -118,20 +136,21 @@ border: red 2px solid;
         align-items: center;
         flex-wrap: wrap;
         gap: 3%;
-        margin-bottom: 15px;
-        width: 97%;
+        margin-bottom: 1%;
+        width: 90%;
+        height: 20%;
     }
 
     .generoContainer{
         display: flex;
         align-items: center;
-        margin-bottom: 18px;
+        margin-bottom: 1%;
     }
 
     .genero{
         display: flex;
         font-family: 'Roboto', sans-serif;
-        font-size: 0.8em;
+        font-size: 1vw;
         background-color: #111111;
         padding: 5px;
         border-radius: 8px;
@@ -153,6 +172,7 @@ border: red 2px solid;
         gap: 8px;
         color: #f5c518;
         margin: 5px 0px 5px 10px;
+        font-size: 1vw;
     }
 
     .sinopse{
@@ -160,7 +180,7 @@ border: red 2px solid;
         flex-direction: column;
         margin-bottom: 10px;
         margin-left: 10px;
-        font-size: 0.9rem;
+        font-size: 1vw;
         font-family: 'Roboto', sans-serif;
     }
 
@@ -179,23 +199,24 @@ border: red 2px solid;
         padding: 3px 10px 3px 10px;
         color: #f5c518;
         font-family: 'Roboto', sans-serif;
-        font-size: 0.8em;
+        font-size: 1vw;
+        
     }
 
     .imgYoutube{
-        width: 45px;
-        height: 32px;
+        width: 3em;
+        height: 2em;
     }
 
     .imgDisney{
-        width: 50px;
-        height: 35px;
+        width: 3.8em;
+        height: 2.5em;
         border-radius: 10px;
     }
 
     .imgAmazon{
-        width: 38px;
-        height: 37px;
+        width: 2.5em;
+        height: 2.5em;
         border-radius: 10px;
     }
 
@@ -254,24 +275,32 @@ border: red 2px solid;
         }
 
         .IMDB{
-            height: 40px;
-            width: 40px;
-            margin-bottom: 20px;
+            display: flex;
+            height: 45%;
+            width: 4.8%;
+            margin-bottom: 1%;
         }
 
         .imgIMDB{
+            display: flex;
             position: absolute;
+            width: 3%;
+            align-items: center;
+            justify-content: center;
+            
         }
 
         .notaIMDB{
             display: flex;
             position: relative;
             color: black;
-            margin-top: 20px;
-            margin-left: 6.5px;
-            height: 60px;
-            width: 50px;
+            margin-top: 1.4em;
+            margin-left: 0.4em;
+            height: 1.8em;
+            width: 1.2em;
             font-family: 'Roboto', sans-serif;
+            font-size: 1.4vw;
+            font-weight: bold;
         }
 
         .boxOfficeContainer,
@@ -410,6 +439,7 @@ border: red 2px solid;
 
         .poster{
             height: 22rem; 
+            width: 15rem;
             margin: 25px 0px 25px 25px;
             border-radius: 20px;
         }
@@ -445,24 +475,32 @@ border: red 2px solid;
         }
 
         .IMDB{
-            height: 40px;
-            width: 40px;
-            margin-bottom: 20px;
+            display: flex;
+            height: 45%;
+            width: 4.8%;
+            margin-bottom: 2%;
         }
 
         .imgIMDB{
+            display: flex;
             position: absolute;
+            width: 3.3%;
+            align-items: center;
+            justify-content: center;
+            
         }
 
         .notaIMDB{
             display: flex;
             position: relative;
             color: black;
-            margin-top: 20px;
-            margin-left: 6.5px;
-            height: 60px;
-            width: 50px;
+            margin-top: 1.5em;
+            margin-left: 0.5em;
+            height: 1.8em;
+            width: 1.2em;
             font-family: 'Roboto', sans-serif;
+            font-size: 1.4vw;
+            font-weight: bold;
         }
 
         .boxOfficeContainer,
@@ -532,6 +570,7 @@ border: red 2px solid;
             gap: 8px;
             color: #f5c518;
             margin: 5px 0px 5px 10px;
+            font-size: 100%;
         }
 
         .sinopse{
@@ -718,7 +757,7 @@ border: red 2px solid;
         .boxOffice,
         .duration{
             font-family: 'Roboto', sans-serif;
-            font-size: 100%;
+            font-size: 1.5em;
             margin: 0px 5px 5px 5px;
         }
 
@@ -756,7 +795,7 @@ border: red 2px solid;
         .links{
             display: flex;
             
-            gap: 60px;
+            gap: 10%;
         }
 
         .watch{
@@ -768,7 +807,7 @@ border: red 2px solid;
             padding: 3px 10px 3px 10px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
+            font-size: 1em;
         }
 
         .imgYoutube{
