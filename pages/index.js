@@ -111,7 +111,7 @@ export default function Home() {
                     <div className="links">
                       <div className="watch">
                         <span>Assista ao trailer:</span>
-                        <a href={filme.linkTrailer} target="_blank"><Image className="imgYoutube" src={youtube}/></a>
+                        <a className="imgWatch" href={filme.linkTrailer} target="_blank"><Image className="imgYoutube" src={youtube}/></a>
                       </div>
                       <div className="watch">
                         <span>Assista ao filme:</span>

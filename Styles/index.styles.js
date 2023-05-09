@@ -621,7 +621,7 @@ border: red 2px solid;
 
 
     
-    @media screen and (max-device-width: 680px) {
+    @media screen and (max-device-width: 679px) {
         display: flex;
         flex-direction: column;
         background-color: black;
@@ -661,7 +661,7 @@ border: red 2px solid;
             justify-content: center;
             width: 100%;
             height: 100%;
-            font-size: 2.5rem;
+            font-size: 8vw;
             font-weight: bold;
         }
 
@@ -676,7 +676,7 @@ border: red 2px solid;
         .genero{
             display: flex;
             font-family: 'Roboto', sans-serif;
-            font-size: 1.3em;
+            font-size: 3.5vw;
             background-color: #111111;
             padding: 5px;
             border-radius: 8px;
@@ -685,57 +685,71 @@ border: red 2px solid;
 
         .subTitle{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             flex-wrap: wrap;
             margin-bottom: 15px;
             width: 100%;
+            background-color: red;
         }
 
         .IMDB{
-            height: 75px;
-            width: 65px;
-            margin-right: 4%;
-            margin-bottom: 2%
+            display: flex;
+            height: 10%;
+            width: 11.3%;
         }
 
         .imgIMDB{
+            display: flex;
             position: absolute;
-            height: 85px;
-            width: 75px;
+            width: 9.9%;
+            margin-top: 1.8%;
+            margin-left: 0.4%;
+            align-items: center;
+            justify-content: center;
         }
 
         .notaIMDB{
             display: flex;
             position: relative;
             color: black;
-            margin-top: 39px;
-            margin-left: 16px;
-            height: 100px;
-            width: 200px;
+            margin-top: 2.2em;
+            margin-left: 0.8em;
+            height: 1.6em;
+            width: 1.5em;
             font-family: 'Roboto', sans-serif;
-            font-size: 1.9rem;
+            font-size: 3.7vw;
             font-weight: bold;
         }
 
-        .boxOfficeContainer,
-        .releaseDateOf,
-        .durationContainer{
+        .releaseDateOf{
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             border-radius: 8px;
             height: 100%;
-            width: 85%;
+            width: 75%;
             margin: 15px 5px 2px 5px;
             background-color: #111111;
         }
 
+        .boxOfficeContainer {
+            width: 47%;
+            height: 100%;
+            margin-top: 3%;
+        }
+
+        .durationContainer {
+            width: 40%;
+            height: 100%;
+            margin-top: 3%;
+        }
+
         .imgSubtitle{
-            height: 10%;
-            width: 10%;
+            height: 1.2em;
+            width: 1.2em;
         }
 
         .subTitleBoxOffice,
@@ -749,7 +763,7 @@ border: red 2px solid;
             height: 100%;
             align-items: center;
             justify-content: center;
-            font-size: 4vw;
+            font-size: 3.5vw;
             margin: 5px;
         }
 
@@ -757,7 +771,7 @@ border: red 2px solid;
         .boxOffice,
         .duration{
             font-family: 'Roboto', sans-serif;
-            font-size: 1.5em;
+            font-size: 3vw;
             margin: 0px 5px 5px 5px;
         }
 
@@ -772,13 +786,14 @@ border: red 2px solid;
             width: 90%;
             align-items: center;
             justify-content: center;
+            background-color: blue;
         }
 
         .subTitleSinopse{
             display: flex;
             flex-direction: row;
             gap: 8px;
-            font-size: 1.5rem;
+            font-size: 1.3em;
             color: #f5c518;
             margin: 5px 0px 5px 10px;
         }
@@ -788,31 +803,39 @@ border: red 2px solid;
             flex-direction: column;
             margin-bottom: 10px;
             margin-left: 10px;
-            font-size: 1.5rem;
+            font-size: 1em;
             font-family: 'Roboto', sans-serif;
         }
 
         .links{
             display: flex;
-            
+            width: 90%;
             gap: 10%;
         }
 
         .watch{
             display: flex;
             align-items: center;
-            gap: 8px;
-            background-color: #111111;
+            gap: 8%;
+            width: 45%;
+            background-color: green;
             border-radius: 8px;
-            padding: 3px 10px 3px 10px;
+            padding: 5px 5px 5px 15px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
-            font-size: 1em;
+            font-size: 2.6vw;
+        }
+
+        .imgWatch{
+            display: flex;
+            width: 25%;
+            height: 100%;
         }
 
         .imgYoutube{
-            width: 45px;
-            height: 32px;
+            width: 8em;
+            height: 2em;
+            margin-top: 18%;
         }
 
         .imgDisney{
