@@ -669,7 +669,6 @@ border: red 2px solid;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 20px;
             width: 85%;
         }
 
@@ -691,7 +690,6 @@ border: red 2px solid;
             flex-wrap: wrap;
             margin-bottom: 15px;
             width: 100%;
-            background-color: red;
         }
 
         .IMDB{
@@ -786,7 +784,6 @@ border: red 2px solid;
             width: 90%;
             align-items: center;
             justify-content: center;
-            background-color: blue;
         }
 
         .subTitleSinopse{
@@ -810,20 +807,20 @@ border: red 2px solid;
         .links{
             display: flex;
             width: 90%;
-            gap: 10%;
+            gap: 5%;
         }
 
         .watch{
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 8%;
-            width: 45%;
-            background-color: green;
+            width: 50%;
             border-radius: 8px;
             padding: 5px 5px 5px 15px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
-            font-size: 2.6vw;
+            font-size: 2.5vw;
         }
 
         .imgWatch{
@@ -839,14 +836,12 @@ border: red 2px solid;
         }
 
         .imgDisney{
-            width: 50px;
-            height: 35px;
+            width: 100%;
             border-radius: 10px;
         }
 
         .imgAmazon{
-            width: 38px;
-            height: 37px;
+            width: 100%;
             border-radius: 10px;
         }
 
