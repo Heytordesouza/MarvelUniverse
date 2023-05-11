@@ -1,4 +1,4 @@
-import { ImageMarvel, Input } from "../../Styles/header.styles"
+import { ImageMarvel, Input, Ordenacao } from "../../Styles/header.styles"
 
 export default function Header(props) {
 
@@ -15,14 +15,18 @@ export default function Header(props) {
         <>
         <ImageMarvel/>
         <Input>
+            <label ClassName="name">Filme ou Série</label>
             <input type="text" placeholder="Buscar por nome" onChange={pesquisar} value={props.buscar}/>
-            <label>Ordenação: 
-                <select value={props.ordenacao} onChange={onChangeOrdenacao}>
+        </Input>
+        <Ordenacao>
+            <label>
+                <p>Ordenação:</p>
+                <select  value={props.ordenacao} onChange={onChangeOrdenacao}>
                     <option value="ordemLancamento">Ordem Lançamento</option>
                     <option value="ordemCronologica">Ordem Cronologica</option>
                 </select>
             </label>
-        </Input>
+        </Ordenacao>
         </>
     )
 }

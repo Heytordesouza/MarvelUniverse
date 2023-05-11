@@ -13,6 +13,7 @@ import cash from "../public/cash.png"
 import duration from "../public/duration.png"
 import Image from "next/image";
 import Header from "./Header/header";
+import Footer from "./Footer/footer";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTzrhi_2NswWKirKVwumQb4cdjxTVTi4A",
@@ -46,9 +47,11 @@ export default function Home() {
     <Main>
       <Header buscar={buscar} setBuscar={setBuscar} ordenacao={ordenacao} setOrdenacao={setOrdenacao}/>
         <Section>
+
           {filmes.filter((filme) => {
             return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
           })
+
           .sort((a, b)=>{
             if(ordenacao === "ordemCronologica"){
               if(a.ordemCronologica < b.ordemCronologica){
@@ -64,6 +67,7 @@ export default function Home() {
                 }
             }
           })
+          
           .map((filme) => {
             return (
               <Card key={filme.id}>
@@ -111,7 +115,7 @@ export default function Home() {
                     <div className="links">
                       <div className="watch">
                         <span>Assista ao trailer:</span>
-                        <a href={filme.linkTrailer} target="_blank"><Image className="imgYoutube" src={youtube}/></a>
+                        <a className="imgWatch" href={filme.linkTrailer} target="_blank"><Image className="imgYoutube" src={youtube}/></a>
                       </div>
                       <div className="watch">
                         <span>Assista ao filme:</span>
@@ -133,6 +137,7 @@ export default function Home() {
             )
           })}
         </Section>
+      <Footer/>
     </Main>
   )
 }
