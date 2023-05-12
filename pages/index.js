@@ -51,25 +51,31 @@ export default function Home() {
           {filmes.filter((filme) => {
             return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
           })
-
-          .sort((a, b)=>{
-            if(ordenacao === "ordemCronologica"){
-              if(a.ordemCronologica < b.ordemCronologica){
-                return -1
-              } else {
-                return 1
-              }
-            } else if(ordenacao === "ordemLancamento"){
-                if(a.ordemLancamento > b.ordemLancamento){
-                  return 1
-                } else {
-                  return -1
-                }
-            }
-          })
           
-          .map((filme) => {
-            return (
+          .length > 0 ? (
+
+            filmes.filter((filme) => {
+              return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
+            })
+
+            .sort((a, b)=>{
+              if(ordenacao === "ordemCronologica"){
+                if(a.ordemCronologica < b.ordemCronologica){
+                  return -1
+                } else {
+                  return 1
+                }
+              } else if(ordenacao === "ordemLancamento"){
+                  if(a.ordemLancamento > b.ordemLancamento){
+                    return 1
+                  } else {
+                    return -1
+                  }
+              }
+            })
+
+            .map((filme) => {
+             return (
               <Card key={filme.id}>
                 <div className="container">
                   <img className="poster" src={filme.posterImg} alt="Poster"/>
@@ -114,20 +120,22 @@ export default function Home() {
                     </div>
                     <div className="links">
                       <div className="watch">
-                        <span>Assista ao trailer:</span>
-                        <a className="imgWatch" href={filme.linkTrailer} target="_blank"><Image className="imgYoutube" src={youtube}/></a>
+                        <a className="imgWatch" href={filme.linkTrailer} target="_blank">
+                          <span>Assista ao trailer</span>
+                          <Image className="imgYoutube" src={youtube}/>
+                        </a>
                       </div>
                       <div className="watch">
-                        <span>Assista ao filme:</span>
-                        <a href={filme.linkFilme} target="_blank" >
-                          {filme.streaming === "disney" 
-                            ? <Image className="imgDisney" src={disneyplus}/> 
-                            : filme.streaming === "netflix"
-                            ? <Image src={netflix} width={50} height={50}/>
-                            : filme.streaming === "hbo"
-                            ? <Image src={hbo} width={50} height={50}/>
-                            : <Image className="imgAmazon" src={amazon}/>
-                          }
+                        <a className="imgWatch" href={filme.linkFilme} target="_blank" >
+                          <span>Assista ao filme</span>
+                            {filme.streaming === "disney" 
+                              ? <Image className="imgDisney" src={disneyplus}/> 
+                              : filme.streaming === "netflix"
+                              ? <Image src={netflix} width={50} height={50}/>
+                              : filme.streaming === "hbo"
+                              ? <Image src={hbo} width={50} height={50}/>
+                              : <Image className="imgAmazon" src={amazon}/>
+                            }
                         </a>
                       </div>
                     </div>
@@ -135,7 +143,8 @@ export default function Home() {
                 </div>
               </Card>
             )
-          })}
+          })
+        ) : (<h1>Não encontrado</h1>)}
         </Section>
       <Footer/>
     </Main>

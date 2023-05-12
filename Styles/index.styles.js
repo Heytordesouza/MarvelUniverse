@@ -186,21 +186,42 @@ border: red 2px solid;
 
     .links{
         display: flex;
-        
-        gap: 60px;
+        gap: 4%;
     }
 
     .watch{
         display: flex;
+        flex-direction: row;
         align-items: center;
-        gap: 8px;
+        gap: 8%;
+        width: 25%;
         background-color: #111111;
+        border: 1px solid black;
         border-radius: 8px;
-        padding: 3px 10px 3px 10px;
+        /* padding: 3px 12px 3px 10px; */
         color: #f5c518;
         font-family: 'Roboto', sans-serif;
         font-size: 1vw;
+
+        :hover{
+            background-color: black;
+            border: 1px solid red;
+        }
+
+        :active{
+            background-color: black;
+            border: 1px solid white;
+        }
         
+    }
+
+    .imgWatch{
+        display: flex;
+        flex-direction: row;
+        gap: 10%;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .imgYoutube{
@@ -386,18 +407,45 @@ border: red 2px solid;
             position: relative;
             margin-left: -300px;
             gap: 60px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
         .watch{
             display: flex;
+            flex-direction: row;
             align-items: center;
-            gap: 8px;
+            gap: 8%;
+            width: 40%;
+            height: 10%;
             background-color: #111111;
+            border: 1px solid black;
             border-radius: 8px;
-            padding: 3px 10px 3px 10px;
+            padding: 3px 12px 3px 10px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
             font-size: 0.8em;
+
+            :hover{
+                background-color: black;
+                border: 1px solid red;
+            }
+
+            :active{
+                background-color: black;
+                border: 1px solid white;
+            }
+            
+        }
+
+        .imgWatch{
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
         .imgYoutube{
@@ -585,20 +633,47 @@ border: red 2px solid;
         .links{
             display: flex;
             position: relative;
-            margin-left: -300px;
-            gap: 60px;
+            margin-left: -265px;
+            gap: 4%;
+            width: 30em;
+            justify-content: center;
+            align-items: center;
         }
 
         .watch{
             display: flex;
+            flex-direction: row;
             align-items: center;
-            gap: 8px;
+            gap: 8%;
+            width: 60%;
+            height: 10%;
             background-color: #111111;
+            border: 1px solid black;
             border-radius: 8px;
-            padding: 3px 10px 3px 10px;
+            padding: 3px 12px 3px 10px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
+            font-size: 1em;
+
+            :hover{
+                background-color: black;
+                border: 1px solid red;
+            }
+
+            :active{
+                background-color: black;
+                border: 1px solid white;
+            }
+            
+        }
+
+        .imgWatch{
+            display: flex;
+            flex-direction: row;
+            gap: 10%;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
         }
 
         .imgYoutube{
@@ -808,11 +883,14 @@ border: red 2px solid;
             display: flex;
             width: 90%;
             gap: 5%;
+            justify-content: center;
+            align-items: center;
+            
         }
 
         .watch{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
             gap: 8%;
             width: 50%;
@@ -821,28 +899,47 @@ border: red 2px solid;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
             font-size: 2.5vw;
+
+            :hover{
+                background-color: black;
+                border: 1px solid red;
+            }
+
+            :active{
+                background-color: black;
+                border: 1px solid white;
+            }
+            
         }
 
         .imgWatch{
             display: flex;
-            width: 25%;
-            height: 100%;
+            flex-direction: row;
+            gap: 10%;
+            width: 100%;
+            height: 50%;
+            justify-content: center;
+            align-items: center;
         }
 
         .imgYoutube{
-            width: 8em;
-            height: 2em;
-            margin-top: 18%;
+            width: 25%;
+           
+            margin-bottom: 1%;
         }
 
         .imgDisney{
-            width: 100%;
+            width: 30%;
+            height: 15%;
             border-radius: 10px;
+            
         }
 
         .imgAmazon{
-            width: 100%;
+            width: 18%;
+            height: 10%;
             border-radius: 10px;
+
         }
 
 
