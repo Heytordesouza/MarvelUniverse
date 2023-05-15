@@ -19,7 +19,7 @@ export const ImageMarvel = styled.div`
         }
 
         @media screen and (min-device-width: 320px) and (max-device-width: 679px) {
-            height: 20vh;
+            height: 25vh;
         }
 
         @media screen and (max-device-width: 319px) {
@@ -32,6 +32,7 @@ export const Input = styled.div`
     align-items: center;
     justify-content: center;
     width: 30%;
+    
 
     label{
         display: block; 
@@ -58,18 +59,20 @@ export const Input = styled.div`
     }
 
     @media screen and (min-device-width: 680px) and (max-device-width: 899px){
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 40%;
+        width: 100%;
 
         label{
             display: block; 
             position: relative; 
-            bottom:-10px; 
-            width:fit-content; 
-            left:10px; 
-            padding:0px 5px; 
-            background-color:black;
+            bottom: -10px; 
+            width: fit-content; 
+            left: -3px; 
+            padding: 0px 5px; 
+            background-color: black;
             color: white;
             font-size: 3vw;
         }
@@ -77,10 +80,11 @@ export const Input = styled.div`
         input{
             border:2px solid red; 
             height: 10%; 
-            width:100%;
-            padding: 3% 3%;
-            font-weight:bold;
-            background-color:black;
+            width: 50%;
+            padding: 2%;
+            text-align: center;
+            font-weight: bold;
+            background-color: black;
             color: white;
             border-radius: 7px;
             font-size: 3vw;
@@ -88,29 +92,31 @@ export const Input = styled.div`
     }
 
     @media screen and (max-device-width: 679px) {
+        display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
-        width: 54%;
+        width: 100%;
 
         label{
             display: block; 
             position: relative; 
-            bottom:-10px; 
-            width:fit-content; 
-            left:10px; 
-            padding:0px 5px; 
-            background-color:black;
+            bottom: -10px; 
+            width: fit-content; 
+            left: -5px;
+            padding: 0px 5px; 
+            background-color: black;
             color: white;
             font-size: 4vw;
         }
 
         input{
-            border:2px solid red; 
+            border: 2px solid red; 
             height: 10%; 
-            width:100%;
-            padding: 3% 3%;
-            font-weight:bold;
-            background-color:black;
+            width: 53%;
+            padding: 3%;
+            text-align: center;
+            font-weight: bold;
             color: white;
             border-radius: 7px;
             font-size: 4vw;
@@ -154,13 +160,13 @@ export const Ordenacao = styled.div`
         label{
             margin-bottom: 2%;
             font-size: 3vw;
-            width: 42%;
+            width: 53.5%;
+            margin-right: 1.5%;
         }
 
         label p{
-            text-align: start;
-            margin-left: 8%;
             margin-bottom: 2%;
+            margin-left: 1%;
         }
 
         select{
@@ -170,7 +176,9 @@ export const Ordenacao = styled.div`
             border: 2px solid red; 
             border-radius: 7px;
             font-size: 3vw;
-            padding: 2%;
+            padding: 3%;
+            margin-bottom: 2%;
+            text-align: center;
         }
     }
 
@@ -186,13 +194,13 @@ export const Ordenacao = styled.div`
         label{
             margin-bottom: 2%;
             font-size: 4vw;
-            width: 59%;
+            width: 58.5%;
+            margin-right: 1.5%;
         }
 
         label p{
-            text-align: start;
-            margin-left: 8%;
             margin-bottom: 2%;
+            margin-left: 1%;
         }
 
         select{
@@ -203,7 +211,9 @@ export const Ordenacao = styled.div`
             border: 2px solid red; 
             border-radius: 7px;
             font-size: 4vw;
-            padding: 2%;
+            padding: 3%;
+            margin-bottom: 2%;
+            text-align: center;
         }
     }
 `

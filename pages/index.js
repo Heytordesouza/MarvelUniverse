@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
 import { useEffect, useState } from "react";
-import { Main, Section, Card } from "../Styles/index.styles";
+import { Main, Section, NotFound, Card } from "../Styles/index.styles";
 import youtube from "../public/youtube.png";
 import disneyplus from "../public/disneyplus.jpg";
 import netflix from "../public/netflix.jpg";
@@ -144,7 +144,7 @@ export default function Home() {
               </Card>
             )
           })
-        ) : (<h1>Não encontrado</h1>)}
+        ) : (<NotFound>Nenhum filme ou série encontrado</NotFound>)}
         </Section>
       <Footer/>
     </Main>
