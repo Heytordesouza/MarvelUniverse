@@ -17,6 +17,7 @@ export default function Header(props) {
         <Input>
             <label ClassName="name">Filme ou Série</label>
             <input type="text" placeholder="Buscar por nome" onChange={pesquisar} value={props.buscar}/>
+            {/* <button id="button" type="submit" onClick={props.pesquisarB()}>Pesquisar</button> */}
         </Input>
         <Ordenacao>
             <label>
