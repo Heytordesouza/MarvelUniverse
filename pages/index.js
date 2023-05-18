@@ -1,7 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
 import { useEffect, useState } from "react";
-import { Main, Section, NotFound, Card } from "../Styles/index.styles";
+import { Main, ButtonTop, Section, NotFound, Card } from "../Styles/index.styles";
 import youtube from "../public/youtube.png";
 import disneyplus from "../public/disneyplus.jpg";
 import netflix from "../public/netflix.jpg";
@@ -14,6 +14,7 @@ import duration from "../public/duration.png"
 import Image from "next/image";
 import Header from "./Header/header";
 import Footer from "./Footer/footer";
+import seta from "../public/seta.png";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTzrhi_2NswWKirKVwumQb4cdjxTVTi4A",
@@ -29,8 +30,7 @@ export default function Home() {
   const [filmes, setFilmes] = useState([]);
   const [buscar, setBuscar] = useState("");
   const [ordenacao, setOrdenacao] = useState ("")
-
-  
+  const [showScrollTopButton, setshowScrollTopButton] = useState(false);
   
   const db = getFirestore(firebaseApp);
   const filmeCollectionRef = collection(db, "filmes");
@@ -43,10 +43,34 @@ export default function Home() {
     getFilmes();
   }, []);
 
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 300) {
+            setshowScrollTopButton(true);
+        } else {
+            setshowScrollTopButton(false);
+        }
+    })
+  }, []);
+
+  const scrollTop = () => {
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth",
+    });
+  };
+
   return (
     <Main>
       <Header buscar={buscar} setBuscar={setBuscar} ordenacao={ordenacao} setOrdenacao={setOrdenacao}/>
-        <Section>
+      <div>
+        {showScrollTopButton && (
+          <ButtonTop>
+            <Image src={seta} onClick={scrollTop} />
+          </ButtonTop>
+        )}
+      </div>
+      <Section>
 
           {filmes.filter((filme) => {
             return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
@@ -145,7 +169,7 @@ export default function Home() {
             )
           })
         ) : (<NotFound>Nenhum filme ou série encontrado</NotFound>)}
-        </Section>
+      </Section>
       <Footer/>
     </Main>
   )
