@@ -1,5 +1,5 @@
 import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs } from 'firebase/firestore/lite'
+import { getFirestore, collection, getDocs, query, orderBy } from 'firebase/firestore/lite'
 import { useEffect, useState } from "react";
 import { Main, ButtonTop, Section, NotFound, Card } from "../Styles/index.styles";
 import youtube from "../public/youtube.png";
@@ -27,20 +27,21 @@ const firebaseApp = initializeApp({
 
 export default function Home() {
 
-  const [filmes, setFilmes] = useState([]);
+  const [films, setFilms] = useState([]);
   const [buscar, setBuscar] = useState("");
   const [ordenacao, setOrdenacao] = useState ("")
   const [showScrollTopButton, setshowScrollTopButton] = useState(false);
   
   const db = getFirestore(firebaseApp);
   const filmeCollectionRef = collection(db, "filmes");
+  const q = query(filmeCollectionRef, orderBy("releaseOrder"));
   
   useEffect(() => {
-    const getFilmes = async () => {
-      const data = await getDocs(filmeCollectionRef)
-      setFilmes(data.docs.map((doc) => ({ ...doc.data(), id: doc.id})))
+    const getFilms = async () => {
+      const data = await getDocs(q)
+      setFilms(data.docs.map((docs) => ({ ...docs.data(), id: docs.id})))
     };
-    getFilmes();
+    getFilms();
   }, []);
 
   useEffect(() => {
@@ -72,25 +73,25 @@ export default function Home() {
       </div>
       <Section>
 
-          {filmes.filter((filme) => {
-            return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
+          {films.filter((film) => {
+            return film.title.toLowerCase().includes(buscar.toLowerCase())
           })
           
           .length > 0 ? (
 
-            filmes.filter((filme) => {
-              return filme.titulo.toLowerCase().includes(buscar.toLowerCase())
+            films.filter((film) => {
+              return film.title.toLowerCase().includes(buscar.toLowerCase())
             })
 
             .sort((a, b)=>{
               if(ordenacao === "ordemCronologica"){
-                if(a.ordemCronologica < b.ordemCronologica){
+                if(a.chronologicalOrder < b.chronologicalOrder){
                   return -1
                 } else {
                   return 1
                 }
               } else if(ordenacao === "ordemLancamento"){
-                  if(a.ordemLancamento > b.ordemLancamento){
+                  if(a.releaseOrder > b.releaseOrder){
                     return 1
                   } else {
                     return -1
@@ -98,65 +99,65 @@ export default function Home() {
               }
             })
 
-            .map((filme) => {
+            .map((film) => {
              return (
-              <Card key={filme.id}>
+              <Card key={film.id}>
                 <div className="container">
-                  <img className="poster" src={filme.posterImg} alt="Poster"/>
+                  <img className="poster" src={film.posterImg} alt="Poster"/>
                   
                   <div className="information">
 
-                    <h2 className="titulo">{filme.titulo}</h2>
+                    <h2 className="titulo">{film.title}</h2>
                     <div className="generoContainer">
-                      <span className="genero">{filme.genero}</span>
+                      <span className="genero">{film.gender}</span>
                     </div>
 
                     <div className="subTitle">
                       <div className="IMDB">
                         <Image className="imgIMDB" src={IMDB} width={35} height={40}/>
-                        <span className="notaIMDB">{filme.notaIMDB}</span>
+                        <span className="notaIMDB">{film.IMDBNote}</span>
                       </div>
                       <div className="releaseDateOf">
                         <div className="subTitleDate">
                           <Image className="imgSubtitle" src={calender}/>
                           <span>Data de Lançamento:</span>
                         </div>
-                        <span className="date">{filme.dataDeLancamento}</span>
+                        <span className="date">{film.releaseDateOf}</span>
                       </div>
                       <div className="boxOfficeContainer">
                         <div className="subTitleBoxOffice">
                           <Image className="imgSubtitle" src={cash}/>
                           <span>Bilheteria:</span>
                         </div>
-                        <span className="boxOffice">US$ {filme.bilheteriaUS$.toLocaleString("en-US")}.00</span>
+                        <span className="boxOffice">US$ {film.boxOfficeUS$.toLocaleString("en-US")}.00</span>
                       </div>
                       <div className="durationContainer">
                         <div className="subTitleDuration">
                           <Image className="imgSubtitle" src={duration}/>
                           <span>Duração:</span>
                         </div>
-                        <span className="duration">{filme.duration}</span>
+                        <span className="duration">{film.duration}</span>
                       </div>
                     </div>
                     <div className="sinopseContainer"> 
                       <span className="subTitleSinopse">Sinopse:</span>
-                      <span className="sinopse">{filme.sinopse}</span>
+                      <span className="sinopse">{film.synopsis}</span>
                     </div>
                     <div className="links">
                       <div className="watch">
-                        <a className="imgWatch" href={filme.linkTrailer} target="_blank">
+                        <a className="imgWatch" href={film.trailerLink} target="_blank">
                           <span>Assista ao trailer</span>
                           <Image className="imgYoutube" src={youtube}/>
                         </a>
                       </div>
                       <div className="watch">
-                        <a className="imgWatch" href={filme.linkFilme} target="_blank" >
+                        <a className="imgWatch" href={film.movieLink} target="_blank" >
                           <span>Assista ao filme</span>
-                            {filme.streaming === "disney" 
+                            {film.streaming === "disney" 
                               ? <Image className="imgDisney" src={disneyplus}/> 
-                              : filme.streaming === "netflix"
+                              : film.streaming === "netflix"
                               ? <Image src={netflix} width={50} height={50}/>
-                              : filme.streaming === "hbo"
+                              : film.streaming === "hbo"
                               ? <Image src={hbo} width={50} height={50}/>
                               : <Image className="imgAmazon" src={amazon}/>
                             }

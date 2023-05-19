@@ -106,24 +106,25 @@ export const Card = styled.section `
         display: flex;
         height: 45%;
         width: 4.8%;
+        align-items: center;
+        justify-content: center;
     }
 
     .imgIMDB{
         display: flex;
         position: absolute;
         width: 2.6%;
-        align-items: center;
-        justify-content: center;
     }
 
     .notaIMDB{
         display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         color: black;
         margin-top: 1.7em;
-        margin-left: 0.6em;
         height: 1.8em;
-        width: 1.2em;
+        width: 1.5em;
         font-family: 'Roboto', sans-serif;
         font-size: 1vw;
         font-weight: bold;
