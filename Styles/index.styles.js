@@ -9,6 +9,22 @@ export const Main = styled.main`
     width: 100vw;
 `
 
+export const ButtonTop = styled.div`
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    height: 40px;
+    z-index: 1;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: red;
+    cursor: pointer; 
+    :active{
+        background-color: white;
+    }
+`
+
 export const Section = styled.section`
     display: flex;
     flex-direction: column;
@@ -90,24 +106,25 @@ export const Card = styled.section `
         display: flex;
         height: 45%;
         width: 4.8%;
+        align-items: center;
+        justify-content: center;
     }
 
     .imgIMDB{
         display: flex;
         position: absolute;
         width: 2.6%;
-        align-items: center;
-        justify-content: center;
     }
 
     .notaIMDB{
         display: flex;
+        align-items: center;
+        justify-content: center;
         position: relative;
         color: black;
         margin-top: 1.7em;
-        margin-left: 0.6em;
         height: 1.8em;
-        width: 1.2em;
+        width: 1.5em;
         font-family: 'Roboto', sans-serif;
         font-size: 1vw;
         font-weight: bold;
@@ -888,7 +905,7 @@ export const Card = styled.section `
             display: flex;
             flex-direction: row;
             gap: 8px;
-            font-size: 1.3em;
+            font-size: 3.5vw;
             color: #f5c518;
             margin: 5px 0px 5px 10px;
         }
@@ -898,7 +915,7 @@ export const Card = styled.section `
             flex-direction: column;
             margin-bottom: 10px;
             margin-left: 10px;
-            font-size: 1em;
+            font-size: 2.9vw;
             font-family: 'Roboto', sans-serif;
         }
 
