@@ -124,13 +124,15 @@ export default function Home() {
                         </div>
                         <span className="date">{film.releaseDateOf}</span>
                       </div>
-                      <div className="boxOfficeContainer">
-                        <div className="subTitleBoxOffice">
-                          <Image className="imgSubtitle" src={cash}/>
-                          <span>Bilheteria:</span>
+                      {film.boxOfficeUS$ &&
+                        <div className="boxOfficeContainer">
+                          <div className="subTitleBoxOffice">
+                            <Image className="imgSubtitle" src={cash}/>
+                            <span>Bilheteria:</span>
+                          </div>
+                          <span className="boxOffice">US$ {film.boxOfficeUS$.toLocaleString("en-US")}.00</span>
                         </div>
-                        <span className="boxOffice">US$ {film.boxOfficeUS$.toLocaleString("en-US")}.00</span>
-                      </div>
+                      }
                       <div className="durationContainer">
                         <div className="subTitleDuration">
                           <Image className="imgSubtitle" src={duration}/>
@@ -150,19 +152,21 @@ export default function Home() {
                           <Image className="imgYoutube" src={youtube}/>
                         </a>
                       </div>
-                      <div className="watch">
-                        <a className="imgWatch" href={film.movieLink} target="_blank" >
-                          <span>Assista ao filme</span>
-                            {film.streaming === "disney" 
-                              ? <Image className="imgDisney" src={disneyplus}/> 
-                              : film.streaming === "netflix"
-                              ? <Image src={netflix} width={50} height={50}/>
-                              : film.streaming === "hbo"
-                              ? <Image src={hbo} width={50} height={50}/>
-                              : <Image className="imgAmazon" src={amazon}/>
-                            }
-                        </a>
-                      </div>
+                      {film.movieLink && 
+                        <div className="watch">
+                          <a className="imgWatch" href={film.movieLink} target="_blank" >
+                            <span>Assista ao filme</span>
+                              {film.streaming === "disney" 
+                                ? <Image className="imgDisney" src={disneyplus}/> 
+                                : film.streaming === "netflix"
+                                ? <Image src={netflix} width={50} height={50}/>
+                                : film.streaming === "hbo"
+                                ? <Image src={hbo} width={50} height={50}/>
+                                : <Image className="imgAmazon" src={amazon}/>
+                              }
+                          </a>
+                        </div>
+                      }
                     </div>
                   </div>
                 </div>

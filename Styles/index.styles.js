@@ -80,7 +80,7 @@ export const Card = styled.section `
         height: 50%; 
         width: 20%;
         margin: 25px;
-        border-radius: 20px;
+        border-radius: 10px;
     }
 
     .information{
