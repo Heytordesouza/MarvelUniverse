@@ -28,7 +28,7 @@ export const ImageMarvel = styled.div`
 
 `
 
-export const Input = styled.div`
+export const InputContainer = styled.div`
     align-items: center;
     justify-content: center;
     width: 30%;
@@ -123,7 +123,7 @@ export const Input = styled.div`
         }
     }
 `
-export const Ordenacao = styled.div`
+export const OrdinationContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
