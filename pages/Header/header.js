@@ -1,33 +1,33 @@
-import { ImageMarvel, Input, Ordenacao } from "../../Styles/header.styles"
+import { ImageMarvel, InputContainer, OrdinationContainer } from "../../Styles/header.styles"
 
 export default function Header(props) {
 
-    const pesquisar = (e) => {
-        props.setBuscar(e.target.value);
+    const {search, ordination, setSearch, setOrdination } = props
+
+    const onChangeSearch = (e) => {
+        setSearch(e.target.value);
     };
     
-    const onChangeOrdenacao = (e) => {
-        props.setOrdenacao(e.target.value)
+    const onChangeOrdination = (e) => {
+        setOrdination(e.target.value)
     }
-
 
     return (
         <>
         <ImageMarvel/>
-        <Input>
+        <InputContainer>
             <label ClassName="name">Filme ou Série</label>
-            <input type="text" placeholder="Buscar por nome" onChange={pesquisar} value={props.buscar}/>
-            {/* <button id="button" type="submit" onClick={props.pesquisarB()}>Pesquisar</button> */}
-        </Input>
-        <Ordenacao>
+            <input type="text" placeholder="Buscar por nome" onChange={onChangeSearch} value={search}/>
+        </InputContainer>
+        <OrdinationContainer>
             <label>
                 <p>Ordenação:</p>
-                <select  value={props.ordenacao} onChange={onChangeOrdenacao}>
-                    <option value="ordemLancamento">Ordem Lançamento</option>
-                    <option value="ordemCronologica">Ordem Cronologica</option>
+                <select  value={ordination} onChange={onChangeOrdination}>
+                    <option value="releaseOrder">Ordem de Lançamento</option>
+                    <option value="chronologicalOrder">Ordem Cronológica</option>
                 </select>
             </label>
-        </Ordenacao>
+        </OrdinationContainer>
         </>
     )
 }
