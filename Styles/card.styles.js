@@ -303,10 +303,10 @@ export const Section = styled.section `
         border: red 2px solid;
 
         .container{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
         }
 
         .poster{
@@ -330,7 +330,7 @@ export const Section = styled.section `
             margin-bottom: 10px;
             align-items: center;
             justify-content: center;
-            width: 390px;
+            width: 370px;
             height: 5rem;
             font-size: 28px;
             text-align: center;
@@ -350,7 +350,7 @@ export const Section = styled.section `
             display: flex;
             height: 45%;
             width: 4.8%;
-            margin-bottom: 1%;
+            margin-bottom: 2%;
         }
 
         .imgIMDB{
@@ -404,6 +404,11 @@ export const Section = styled.section `
             font-size: 100%;
         }
 
+        .imgSubtitle{
+            height: 80%;
+            width: 10%;
+        }
+
         .date,
         .boxOffice,
         .duration{
@@ -412,12 +417,13 @@ export const Section = styled.section `
             margin: 0px 5px 5px 5px;
         }
 
-        
-
         .generoContainer{
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            gap: 10%;
+            width: 310px;
+            justify-content: center;
         }
 
         .genero{
@@ -430,15 +436,27 @@ export const Section = styled.section `
             color: white;
         }
 
+        .type{
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8em;
+            background-color: #111111;
+            padding: 5px 22px;
+            border-radius: 8px;
+            justify-content: center;
+            color: white;
+        }
+
         .sinopseContainer{
             display: flex;
             flex-direction: column;
             position: relative;
-            margin: 0px 245px 250px -90px;
+            margin: -10px 210px 250px -90px;
             margin-bottom: 10px;
             background-color: #111111;
             border-radius: 8px;
-            width: 720px;
+            width: 740px;
+            padding: 2px;
         }
 
         .subTitleSinopse{
@@ -463,7 +481,7 @@ export const Section = styled.section `
             position: relative;
             margin-left: -300px;
             gap: 60px;
-            width: 100%;
+            width: 500px;
             justify-content: center;
             align-items: center;
         }
@@ -472,13 +490,12 @@ export const Section = styled.section `
             display: flex;
             flex-direction: row;
             align-items: center;
-            gap: 8%;
-            width: 40%;
+            width: 50%;
             height: 10%;
             background-color: #111111;
             border: 1px solid black;
             border-radius: 8px;
-            padding: 3px 12px 3px 10px;
+            padding: 3px 1px 3px 3px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
             font-size: 0.8em;
@@ -498,19 +515,20 @@ export const Section = styled.section `
         .imgWatch{
             display: flex;
             flex-direction: row;
-            gap: 10%;
+            gap: 6%;
             width: 100%;
             justify-content: center;
             align-items: center;
+            text-align: center;
         }
 
         .imgYoutube{
-            width: 45px;
-            height: 32px;
+            width: 42px;
+            height: 30px;
         }
 
         .imgDisney{
-            width: 50px;
+            width: 58px;
             height: 35px;
             border-radius: 10px;
         }
