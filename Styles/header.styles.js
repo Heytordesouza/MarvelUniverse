@@ -33,7 +33,6 @@ export const InputContainer = styled.div`
     justify-content: center;
     width: 30%;
     
-
     label{
         display: block; 
         position: relative; 
@@ -61,32 +60,17 @@ export const InputContainer = styled.div`
     @media screen and (min-device-width: 680px) and (max-device-width: 899px){
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100%;
 
         label{
-            display: block; 
-            position: relative; 
-            bottom: -10px; 
-            width: fit-content; 
             left: -3px; 
-            padding: 0px 5px; 
-            background-color: black;
-            color: white;
             font-size: 3vw;
         }
 
-        input{
-            border:2px solid red; 
-            height: 10%; 
+        input{ 
             width: 50%;
             padding: 2%;
             text-align: center;
-            font-weight: bold;
-            background-color: black;
-            color: white;
-            border-radius: 7px;
             font-size: 3vw;
         }
     }
@@ -94,31 +78,17 @@ export const InputContainer = styled.div`
     @media screen and (max-device-width: 679px) {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
         width: 100%;
 
         label{
-            display: block; 
-            position: relative; 
-            bottom: -10px; 
-            width: fit-content; 
             left: -5px;
-            padding: 0px 5px; 
-            background-color: black;
-            color: white;
             font-size: 4vw;
         }
 
         input{
-            border: 2px solid red; 
-            height: 10%; 
             width: 53%;
             padding: 3%;
             text-align: center;
-            font-weight: bold;
-            color: white;
-            border-radius: 7px;
             font-size: 4vw;
         }
     }
@@ -149,14 +119,9 @@ export const OrdinationContainer = styled.div`
     }
 
     @media screen and (min-device-width: 680px) and (max-device-width: 899px){
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-top: 2%;
         margin-bottom: 4%;
-        width: 100%;
         
-
         label{
             margin-bottom: 2%;
             font-size: 3vw;
@@ -171,10 +136,6 @@ export const OrdinationContainer = styled.div`
 
         select{
             width: 92%;
-            color: white;
-            background-color: black;
-            border: 2px solid red; 
-            border-radius: 7px;
             font-size: 3vw;
             padding: 3%;
             margin-bottom: 2%;
@@ -183,13 +144,8 @@ export const OrdinationContainer = styled.div`
     }
 
     @media screen and (max-device-width: 679px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
         margin-top: 2%;
         margin-bottom: 4%;
-        width: 100%;
-        
 
         label{
             margin-bottom: 2%;
@@ -206,10 +162,6 @@ export const OrdinationContainer = styled.div`
         select{
             width: 90%;
             height: 50%;
-            color: white;
-            background-color: black;
-            border: 2px solid red; 
-            border-radius: 7px;
             font-size: 4vw;
             padding: 3%;
             margin-bottom: 2%;

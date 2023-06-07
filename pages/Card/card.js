@@ -1,4 +1,4 @@
-import { Main, NotFound, Section } from "../../Styles/card.styles";
+import { Main, Section } from "../../Styles/card.styles";
 import youtube from "../../public/youtube.png";
 import disneyplus from "../../public/disneyplus.jpg";
 import netflix from "../../public/netflix.png";
@@ -12,126 +12,106 @@ import Image from "next/image";
 
 export default function Card(props) {
 
-    const { films, search, ordination } = props
+    const { id, 
+            posterImg, 
+            title, 
+            type, 
+            gender, 
+            IMDBNote, 
+            releaseDateOf, 
+            durationFilm, 
+            boxOfficeUS$, 
+            synopsis, 
+            trailerLink,
+            movieLink,
+            streaming } = props
 
     return (
         <Main>
-            {films.filter((film) => {
-                return film.title.toLowerCase().includes(search.toLowerCase())
-            })
 
-                .length > 0 ? (
+            <Section key={id}>
+                <div className="container">
+                    <Image className="poster" src={posterImg} width={35} height={40} />
 
-                films.filter((film) => {
-                    return film.title.toLowerCase().includes(search.toLowerCase())
-                })
+                    <div className="information">
 
-                    .sort((a, b) => {
-                        if (ordination === "chronologicalOrder") {
-                            if (a.chronologicalOrder < b.chronologicalOrder) {
-                                return -1
-                            } else {
-                                return 1
-                            }
-                        } else if (ordination === "releaseOrder") {
-                            if (a.releaseOrder > b.releaseOrder) {
-                                return 1
-                            } else {
-                                return -1
-                            }
-                        }
-                    })
+                        <h2 className="titulo">{title}</h2>
+                        <div className="generoContainer">
+                            <span className="type">{type}</span>
+                            <span className="genero">{gender}</span>
+                        </div>
 
-                    .map((film) => {
-                        return (
-                            <Section key={film.id}>
-                                <div className="container">
-                                    <img className="poster" src={film.posterImg} alt="Poster" />
-
-                                    <div className="information">
-
-                                    
-
-                                        <h2 className="titulo">{film.title}</h2>
-                                        <div className="generoContainer">
-                                            <span className="type">{film.type}</span>
-                                            <span className="genero">{film.gender}</span>
-                                        </div>
-
-                                        <div className="subTitle">
-                                            <div className="IMDB">
-                                                <Image className="imgIMDB" src={IMDB} width={35} height={40} />
-                                                <span className="notaIMDB">{film.IMDBNote}</span>
-                                            </div>
-                                            <div className="releaseDateOf">
-                                                <div className="subTitleDate">
-                                                    <Image className="imgSubtitle" src={calender} />
-                                                    <span>Data de Lançamento:</span>
-                                                </div>
-                                                <span className="date">{film.releaseDateOf}</span>
-                                            </div>
-                                            
-                                            <div className="durationContainer">
-                                                <div className="subTitleDuration">
-                                                    <Image className="imgSubtitle" src={duration} />
-                                                    <span>Duração:</span>
-                                                </div>
-                                                <span className="duration">{film.duration}</span>
-                                            </div>
-
-                                            {film.boxOfficeUS$ ?
-                                                <div className="boxOfficeContainer">
-                                                    <div className="subTitleBoxOffice">
-                                                        <Image className="imgSubtitle" src={cash} />
-                                                        <span>Bilheteria:</span>
-                                                    </div>
-                                                    <span className="boxOffice">US$ {film.boxOfficeUS$.toLocaleString("en-US")}.00</span>
-                                                </div>
-                                                :
-                                                <div className="notBoxOfficeContainer"/>
-                                            }
-                                        </div>
-
-                                        <div className="sinopseContainer">
-                                            <span className="subTitleSinopse">Sinopse:</span>
-                                            <span className="sinopse">{film.synopsis}</span>
-                                        </div>
-                                        <div className="links">
-                                            <div className="watch">
-                                                <a className="imgWatch" href={film.trailerLink} target="_blank">
-                                                    <span>Assista ao trailer</span>
-                                                    <Image className="imgYoutube" src={youtube} />
-                                                </a>
-                                            </div>
-                                            {film.movieLink &&
-                                                <div className="watch">
-                                                    <a className="imgWatch" href={film.movieLink} target="_blank" >
-
-                                                        {film.type === "Filme"
-                                                            ? <span>Assistir ao Filme</span>
-                                                            : film.type === "Série"
-                                                                ? <span>Assistir a Série</span>
-                                                                : <span>Assistir ao Curta</span>
-                                                        }
-
-                                                        {film.streaming === "disney"
-                                                            ? <Image className="imgDisney" src={disneyplus} />
-                                                            : film.streaming === "netflix"
-                                                                ? <Image className="imgNetflix" src={netflix} />
-                                                                : film.streaming === "hbo"
-                                                                    ? <Image className="imgHBO" src={hbomax} />
-                                                                    : <Image className="imgAmazon" src={amazon} />
-                                                        }
-                                                    </a>
-                                                </div>
-                                            }
-                                        </div>
-                                    </div>
+                        <div className="subTitleContainer">
+                            <div className="IMDB">
+                                <Image className="imgIMDB" src={IMDB} width={35} height={40} />
+                                <span className="notaIMDB">{IMDBNote}</span>
+                            </div>
+                            <div className="releaseDateOf">
+                                <div className="subTitle">
+                                    <Image className="imgSubtitle" src={calender} />
+                                    <span>Data de Lançamento:</span>
                                 </div>
-                            </Section>
-                        )
-                    })
-            ) : (<NotFound>Nenhum filme ou série encontrado</NotFound>)}
+                                <span className="date">{releaseDateOf}</span>
+                            </div>
+
+                            <div className="durationContainer">
+                                <div className="subTitle">
+                                    <Image className="imgSubtitle" src={duration} />
+                                    <span>Duração:</span>
+                                </div>
+                                <span className="duration">{durationFilm}</span>
+                            </div>
+
+                            {boxOfficeUS$ ?
+                                <div className="boxOfficeContainer">
+                                    <div className="subTitle">
+                                        <Image className="imgSubtitle" src={cash} />
+                                        <span>Bilheteria:</span>
+                                    </div>
+                                    <span className="boxOffice">US$ {boxOfficeUS$.toLocaleString("en-US")}.00</span>
+                                </div>
+                                :
+                                <div className="notBoxOfficeContainer" />
+                            }
+                        </div>
+
+                        <div className="sinopseContainer">
+                            <span className="subTitleSinopse">Sinopse:</span>
+                            <span className="sinopse">{synopsis}</span>
+                        </div>
+                        <div className="links">
+                            <div className="watch">
+                                <a className="imgWatch" href={trailerLink} target="_blank">
+                                    <span>Assista ao Trailer</span>
+                                    <Image className="imgYoutube" src={youtube} />
+                                </a>
+                            </div>
+                            {movieLink &&
+                                <div className="watch">
+                                    <a className="imgWatch" href={movieLink} target="_blank" >
+
+                                        {type === "Filme"
+                                            ? <span>Assistir ao Filme</span>
+                                            : type === "Série"
+                                                ? <span>Assistir a Série</span>
+                                                : <span>Assistir ao Curta</span>
+                                        }
+
+                                        {streaming === "disney"
+                                            ? <Image className="imgDisney" src={disneyplus} />
+                                            : streaming === "netflix"
+                                                ? <Image className="imgNetflix" src={netflix} />
+                                                : streaming === "hbo"
+                                                    ? <Image className="imgHBO" src={hbomax} />
+                                                    : <Image className="imgAmazon" src={amazon} />
+                                        }
+                                    </a>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </Section>
         </Main>
     )
 }
