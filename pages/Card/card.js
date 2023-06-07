@@ -1,8 +1,8 @@
 import { Main, NotFound, Section } from "../../Styles/card.styles";
 import youtube from "../../public/youtube.png";
 import disneyplus from "../../public/disneyplus.jpg";
-import netflix from "../../public/netflix.jpg";
-import hbo from "../../public/hbo.jpg";
+import netflix from "../../public/netflix.png";
+import hbomax from "../../public/hbomax.png";
 import amazon from "../../public/amazon.png";
 import IMDB from "../../public/IMDB.png"
 import calender from "../../public/calender.png"
@@ -119,7 +119,7 @@ export default function Card(props) {
                                                             : film.streaming === "netflix"
                                                                 ? <Image className="imgNetflix" src={netflix} />
                                                                 : film.streaming === "hbo"
-                                                                    ? <Image className="imgHBO" src={hbo} />
+                                                                    ? <Image className="imgHBO" src={hbomax} />
                                                                     : <Image className="imgAmazon" src={amazon} />
                                                         }
                                                     </a>

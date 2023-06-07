@@ -6,7 +6,7 @@ export const Main = styled.footer`
     justify-content: center;
     align-items: center;
     color: white;
-    height: 8em;
+    height: 9em;
     font-size: 1.3vw;
     bottom: 0;
     position: relative;
@@ -107,6 +107,7 @@ export const Main = styled.footer`
         width: 85vw;
         height: 5em;
         gap: 20%;
+        margin: 5% 0%;
 
         .criadoPor{
             display: flex;
@@ -137,12 +138,11 @@ export const Main = styled.footer`
             justify-content: center;
             align-items: center;
             gap: 18%;
-            margin: 8%;
             
 
             img{
                 display: flex;
-                width: 7vw;
+                width: 6vw;
                 border-radius: 2px;
             }
         }

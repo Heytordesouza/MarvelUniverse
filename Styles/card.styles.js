@@ -34,7 +34,7 @@ export const NotFound = styled.div`
     @media screen and (max-device-width: 319px) {
         height: 70vh;
     }
-`
+`;
 
 export const Section = styled.section `
     display: flex;
@@ -276,15 +276,15 @@ export const Section = styled.section `
     }
 
     .imgNetflix{
-        width: 7em;
+        width: 3em;
         height: 2.5em;
         border-radius: 10px;
         padding: 1%;
     }
 
     .imgHBO{
-        width: 7em;
-        height: 2em;
+        width: 2.5em;
+        height: 2.5em;
         border-radius: 10px;
         padding: 1%;
     }
@@ -390,7 +390,7 @@ export const Section = styled.section `
 
         .notBoxOfficeContainer{
             background-color: black;
-            padding: 8% 40%;
+            padding: 10% 40%;
         }
 
         .subTitleBoxOffice,
@@ -421,7 +421,7 @@ export const Section = styled.section `
             display: flex;
             align-items: center;
             margin-bottom: 15px;
-            gap: 10%;
+            gap: 6%;
             width: 310px;
             justify-content: center;
         }
@@ -451,7 +451,7 @@ export const Section = styled.section `
             display: flex;
             flex-direction: column;
             position: relative;
-            margin: -10px 210px 250px -90px;
+            margin: -5px 210px 250px -90px;
             margin-bottom: 10px;
             background-color: #111111;
             border-radius: 8px;
@@ -538,6 +538,18 @@ export const Section = styled.section `
             height: 37px;
             border-radius: 10px;
         }
+
+        .imgNetflix{
+            width: 40px;
+            height: 35px;
+            border-radius: 7px;
+        }
+
+        .imgHBO{
+            width: 38px;
+            height: 35px;
+            border-radius: 7px;
+        }
     }
 
     @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
@@ -578,11 +590,13 @@ export const Section = styled.section `
         .titulo{
             display: flex;
             margin-bottom: 10px;
+            padding-top: 10px;
             align-items: center;
             justify-content: center;
-            max-width: inherit;
+            text-align: center;
+            width: 320px;
             height: 3rem;
-            font-size: 30px;
+            font-size: 24px;
             font-weight: bold;
         }
 
@@ -617,7 +631,7 @@ export const Section = styled.section `
             position: relative;
             color: black;
             margin-top: 1.5em;
-            margin-left: 0.5em;
+            margin-left: 0.3em;
             height: 1.8em;
             width: 1.2em;
             font-family: 'Roboto', sans-serif;
@@ -635,7 +649,12 @@ export const Section = styled.section `
             height: 100%;
             width: 80%;
             background-color: #111111;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
+        }
+
+        .notBoxOfficeContainer{
+            background-color: black;
+            padding: 12% 40%;
         }
 
         .subTitleBoxOffice,
@@ -657,12 +676,14 @@ export const Section = styled.section `
             margin: 0px 5px 5px 5px;
         }
 
-        
-
         .generoContainer{
             display: flex;
             align-items: center;
             margin-bottom: 15px;
+            gap: 6%;
+            width: 310px;
+            margin-top: 20px;
+            justify-content: center;
         }
 
         .genero{
@@ -672,6 +693,17 @@ export const Section = styled.section `
             background-color: #111111;
             padding: 5px;
             border-radius: 8px;
+            color: white;
+        }
+
+        .type{
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            font-size: 0.8em;
+            background-color: #111111;
+            padding: 5px 22px;
+            border-radius: 8px;
+            justify-content: center;
             color: white;
         }
 
@@ -756,8 +788,8 @@ export const Section = styled.section `
         }
 
         .imgDisney{
-            width: 50px;
-            height: 35px;
+            width: 52px;
+            height: 32px;
             border-radius: 10px;
         }
 
@@ -765,6 +797,18 @@ export const Section = styled.section `
             width: 38px;
             height: 37px;
             border-radius: 10px;
+        }
+
+        .imgNetflix{
+            width: 40px;
+            height: 35px;
+            border-radius: 7px;
+        }
+
+        .imgHBO{
+            width: 38px;
+            height: 35px;
+            border-radius: 7px;
         }
     }
 
@@ -808,9 +852,10 @@ export const Section = styled.section `
             margin-bottom: 20px;
             align-items: center;
             justify-content: center;
-            width: 100%;
+            text-align: center;
+            width: 85%;
             height: 100%;
-            font-size: 8vw;
+            font-size: 6vw;
             font-weight: bold;
         }
 
@@ -818,16 +863,28 @@ export const Section = styled.section `
             display: flex;
             align-items: center;
             justify-content: center;
-            width: 85%;
+            width: 90vw;
+            gap: 4%;
         }
 
         .genero{
             display: flex;
             font-family: 'Roboto', sans-serif;
-            font-size: 3.5vw;
+            font-size: 3.3vw;
             background-color: #111111;
             padding: 5px;
             border-radius: 8px;
+            color: white;
+        }
+
+        .type{
+            display: flex;
+            font-family: 'Roboto', sans-serif;
+            font-size: 3.3vw;
+            background-color: #111111;
+            padding: 5px 28px;
+            border-radius: 8px;
+            justify-content: center;
             color: white;
         }
 
@@ -841,18 +898,20 @@ export const Section = styled.section `
             width: 100%;
         }
 
+        
+
         .IMDB{
             display: flex;
-            height: 10%;
-            width: 11.3%;
+            height: 9%;
+            width: 11%;
         }
 
         .imgIMDB{
             display: flex;
             position: absolute;
-            width: 9.9%;
+            width: 8.7%;
             margin-top: 1.8%;
-            margin-left: 0.4%;
+            margin-left: 0.2%;
             align-items: center;
             justify-content: center;
         }
@@ -861,8 +920,8 @@ export const Section = styled.section `
             display: flex;
             position: relative;
             color: black;
-            margin-top: 2.2em;
-            margin-left: 0.8em;
+            margin-top: 1.8em;
+            margin-left: 0.01em;
             height: 1.6em;
             width: 1.5em;
             font-family: 'Roboto', sans-serif;
@@ -955,8 +1014,8 @@ export const Section = styled.section `
 
         .links{
             display: flex;
-            width: 90%;
-            gap: 5%;
+            width: 75.5vw;
+            gap: 2%;
             justify-content: center;
             align-items: center;
             
@@ -969,7 +1028,7 @@ export const Section = styled.section `
             gap: 8%;
             width: 50%;
             border-radius: 8px;
-            padding: 5px 5px 5px 15px;
+            padding: 5px;
             color: #f5c518;
             font-family: 'Roboto', sans-serif;
             font-size: 2.5vw;
@@ -989,7 +1048,7 @@ export const Section = styled.section `
         .imgWatch{
             display: flex;
             flex-direction: row;
-            gap: 10%;
+            gap: 7%;
             width: 100%;
             height: 50%;
             justify-content: center;
@@ -997,8 +1056,7 @@ export const Section = styled.section `
         }
 
         .imgYoutube{
-            width: 25%;
-           
+            width: 23%;
             margin-bottom: 1%;
         }
 
@@ -1014,6 +1072,18 @@ export const Section = styled.section `
             height: 10%;
             border-radius: 10px;
 
+        }
+
+        .imgNetflix{
+            width: 16%;
+            height: 10%;
+            border-radius: 7px;
+        }
+
+        .imgHBO{
+            width: 16%;
+            height: 10%;
+            border-radius: 7px;
         }
 
 
