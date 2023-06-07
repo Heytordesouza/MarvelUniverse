@@ -16,7 +16,7 @@ export default function Header(props) {
         <>
         <ImageMarvel/>
         <InputContainer>
-            <label ClassName="name">Filme ou Série</label>
+            <label className="name">Filme ou Série</label>
             <input type="text" placeholder="Buscar por nome" onChange={onChangeSearch} value={search}/>
         </InputContainer>
         <OrdinationContainer>

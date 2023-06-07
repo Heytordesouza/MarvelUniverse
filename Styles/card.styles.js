@@ -11,32 +11,7 @@ export const Main = styled.main`
     align-items: center;
 `
 
-export const NotFound = styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    height: 10.1vh;
-    font-size: 3vh;
-
-    @media screen and (min-device-width: 900px) and (max-device-width: 1200px) {
-        height: 21vh;
-    }
-
-    @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
-        height: 15vh;
-    }
-
-    @media screen and (min-device-width: 320px) and (max-device-width: 679px) {
-        height: 43vh;
-    }
-
-    @media screen and (max-device-width: 319px) {
-        height: 70vh;
-    }
-`;
-
-export const Section = styled.section `
+export const Section = styled.section`
     display: flex;
     flex-direction: column;
     background-color: black;
@@ -44,11 +19,12 @@ export const Section = styled.section `
     width: 80vw;
     border-radius: 20px;
     border: red 2px solid;
+    margin: 1%;
 
     .container{
-      display: flex;
-      flex-direction: row;
-      width: 100%;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
     }
 
     .poster{
@@ -75,6 +51,46 @@ export const Section = styled.section `
         height: 100%;
         font-size: 2.5vw;
         font-weight: bold;
+    }
+
+    .generoContainer{
+        display: flex;
+        align-items: center;
+        margin-bottom: 1%;
+        gap: 1.7%;
+    }
+
+    .type{
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1vw;
+        background-color: #111111;
+        padding: 5px;
+        border-radius: 8px;
+        justify-content: center;
+        width: 5.2%;
+        color: white;
+    }
+
+    .genero{
+        display: flex;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1vw;
+        background-color: #111111;
+        padding: 5px;
+        border-radius: 8px;
+        color: white;
+    }
+
+    .subTitleContainer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 3%;
+        margin-bottom: 1%;
+        width: 90%;
+        height: 20%;
     }
 
     .IMDB{
@@ -107,9 +123,9 @@ export const Section = styled.section `
         font-weight: bold;
     }
 
-    .boxOfficeContainer,
     .releaseDateOf,
-    .durationContainer{
+    .durationContainer,
+    .boxOfficeContainer{
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -120,11 +136,7 @@ export const Section = styled.section `
         background-color: #111111;
     }
 
-    
-
-    .subTitleBoxOffice,
-    .subTitleDate,
-    .subTitleDuration{
+    .subTitle{
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -137,56 +149,16 @@ export const Section = styled.section `
     }
 
     .imgSubtitle{
-            height: 90%;
-            width: 12%;
+        height: 90%;
+        width: 12%;
     }
 
     .date,
-    .boxOffice,
-    .duration{
+    .duration,
+    .boxOffice{
         font-family: 'Roboto', sans-serif;
         font-size: 1vw;
         margin: 0px 5px 5px 5px;
-    }
-
-    .subTitle{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 3%;
-        margin-bottom: 1%;
-        width: 90%;
-        height: 20%;
-    }
-
-    .generoContainer{
-        display: flex;
-        align-items: center;
-        margin-bottom: 1%;
-        gap: 1.7%;
-    }
-
-    .genero{
-        display: flex;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1vw;
-        background-color: #111111;
-        padding: 5px;
-        border-radius: 8px;
-        color: white;
-    }
-
-    .type{
-        display: flex;
-        font-family: 'Roboto', sans-serif;
-        font-size: 1vw;
-        background-color: #111111;
-        padding: 5px;
-        border-radius: 8px;
-        justify-content: center;
-        width: 5.2%;
-        color: white;
     }
 
     .sinopseContainer{
@@ -230,7 +202,6 @@ export const Section = styled.section `
         background-color: #111111;
         border: 1px solid black;
         border-radius: 8px;
-        /* padding: 3px 12px 3px 10px; */
         color: #f5c518;
         font-family: 'Roboto', sans-serif;
         font-size: 1vw;
@@ -244,7 +215,6 @@ export const Section = styled.section `
             background-color: black;
             border: 1px solid white;
         }
-        
     }
 
     .imgWatch{
@@ -289,23 +259,11 @@ export const Section = styled.section `
         padding: 1%;
     }
 
-
-
     @media screen and (min-device-width: 900px) and (max-device-width: 1200px) {
-
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
         width: 800px;
         height: 80%;
-        border-radius: 20px;
-        border: red 2px solid;
 
         .container{
-            display: flex;
-            flex-direction: row;
-            width: 100%;
             height: 100%;
         }
 
@@ -317,74 +275,64 @@ export const Section = styled.section `
         }
 
         .information{
-            display: flex;
-            flex-direction: column;
-            height: 40%;
             width: 63%;
             align-items: center;
             justify-content: center;
         }
 
         .titulo{
-            display: flex;
-            margin-bottom: 10px;
-            align-items: center;
             justify-content: center;
             width: 370px;
             height: 5rem;
             font-size: 28px;
             text-align: center;
-            font-weight: bold;
         }
 
-        .subTitle{
-            display: flex;
+        .generoContainer{
+            margin-bottom: 15px;
+            gap: 6%;
+            width: 310px;
+            justify-content: center;
+        }
+
+        .type{
+            font-size: 0.8em;
+            padding: 5px 22px;
+        }
+
+        .genero{
+            font-size: 0.8em;
+        }
+
+        .subTitleContainer{
             flex-direction: column;
-            align-items: center;
             gap: 10%;
             margin-bottom: 10px;
             width: 80%;
         }
 
         .IMDB{
-            display: flex;
-            height: 45%;
-            width: 4.8%;
             margin-bottom: 2%;
         }
 
         .imgIMDB{
-            display: flex;
-            position: absolute;
             width: 3%;
             align-items: center;
             justify-content: center;
-            
         }
 
         .notaIMDB{
-            display: flex;
-            position: relative;
-            color: black;
             margin-top: 1.4em;
             margin-left: 0.4em;
-            height: 1.8em;
             width: 1.2em;
-            font-family: 'Roboto', sans-serif;
             font-size: 1.4vw;
-            font-weight: bold;
         }
 
-        .boxOfficeContainer,
         .releaseDateOf,
-        .durationContainer{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 8px;
+        .durationContainer,
+        .boxOfficeContainer{
             height: 100%;
             width: 80%;
-            background-color: #111111;
             margin-bottom: 20px;
         }
 
@@ -393,14 +341,7 @@ export const Section = styled.section `
             padding: 10% 40%;
         }
 
-        .subTitleBoxOffice,
-        .subTitleDate,
-        .subTitleDuration{
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            color: #f5c518;
-            margin: 5px 5px 2px 5px;
+        .subTitle{
             font-size: 100%;
         }
 
@@ -410,74 +351,23 @@ export const Section = styled.section `
         }
 
         .date,
-        .boxOffice,
-        .duration{
-            font-family: 'Roboto', sans-serif;
+        .duration,
+        .boxOffice{
             font-size: 100%;
-            margin: 0px 5px 5px 5px;
-        }
-
-        .generoContainer{
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            gap: 6%;
-            width: 310px;
-            justify-content: center;
-        }
-
-        .genero{
-            display: flex;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
-            background-color: #111111;
-            padding: 5px;
-            border-radius: 8px;
-            color: white;
-        }
-
-        .type{
-            display: flex;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
-            background-color: #111111;
-            padding: 5px 22px;
-            border-radius: 8px;
-            justify-content: center;
-            color: white;
         }
 
         .sinopseContainer{
-            display: flex;
-            flex-direction: column;
             position: relative;
-            margin: -5px 210px 250px -90px;
-            margin-bottom: 10px;
-            background-color: #111111;
-            border-radius: 8px;
+            margin: -5px 210px 15px -90px;
             width: 740px;
             padding: 2px;
         }
 
-        .subTitleSinopse{
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            color: #f5c518;
-            margin: 5px 0px 5px 10px;
-        }
-
         .sinopse{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-            margin-left: 10px;
             font-size: 0.9rem;
-            font-family: 'Roboto', sans-serif;
         }
 
         .links{
-            display: flex;
             position: relative;
             margin-left: -300px;
             gap: 60px;
@@ -487,38 +377,14 @@ export const Section = styled.section `
         }
 
         .watch{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
             width: 50%;
             height: 10%;
-            background-color: #111111;
-            border: 1px solid black;
-            border-radius: 8px;
             padding: 3px 1px 3px 3px;
-            color: #f5c518;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
-
-            :hover{
-                background-color: black;
-                border: 1px solid red;
-            }
-
-            :active{
-                background-color: black;
-                border: 1px solid white;
-            }
-            
+            font-size: 0.8em;  
         }
 
         .imgWatch{
-            display: flex;
-            flex-direction: row;
             gap: 6%;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
             text-align: center;
         }
 
@@ -553,22 +419,12 @@ export const Section = styled.section `
     }
 
     @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
-   
-
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
         width: 630px;
         height: 80%;
-        border-radius: 20px;
-        border: red 2px solid;
+        margin: 2%;
 
         .container{
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 100%;
+            height: 100%;
         }
 
         .poster{
@@ -579,76 +435,67 @@ export const Section = styled.section `
         }
 
         .information{
-            display: flex;
-            flex-direction: column;
-            height: 40%;
             width: 57%;
             align-items: center;
             justify-content: center;
         }
 
         .titulo{
-            display: flex;
-            margin-bottom: 10px;
-            padding-top: 10px;
-            align-items: center;
+            padding-top: 20px;
             justify-content: center;
             text-align: center;
             width: 320px;
             height: 3rem;
             font-size: 24px;
-            font-weight: bold;
         }
 
-        .subTitle{
-            display: flex;
+        .generoContainer{
+            margin-bottom: 15px;
+            gap: 6%;
+            width: 310px;
+            margin-top: 20px;
+            justify-content: center;
+        }
+
+        .type{
+            font-size: 0.8em;
+            padding: 5px 22px;
+        }
+
+        .genero{
+            font-size: 0.8em;
+        }
+
+        .subTitleContainer{
             flex-direction: column;
-            align-items: center;
-            flex-wrap: wrap;
             gap: 10%;
             margin-bottom: 10px;
             width: 80%;
         }
 
         .IMDB{
-            display: flex;
-            height: 45%;
             width: 4.8%;
             margin-bottom: 2%;
         }
 
         .imgIMDB{
-            display: flex;
-            position: absolute;
             width: 3.3%;
             align-items: center;
             justify-content: center;
-            
         }
 
         .notaIMDB{
-            display: flex;
-            position: relative;
-            color: black;
             margin-top: 1.5em;
             margin-left: 0.3em;
-            height: 1.8em;
             width: 1.2em;
-            font-family: 'Roboto', sans-serif;
             font-size: 1.4vw;
-            font-weight: bold;
         }
 
-        .boxOfficeContainer,
         .releaseDateOf,
-        .durationContainer{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-radius: 8px;
+        .durationContainer,
+        .boxOfficeContainer{
             height: 100%;
             width: 80%;
-            background-color: #111111;
             margin-bottom: 10px;
         }
 
@@ -657,129 +504,48 @@ export const Section = styled.section `
             padding: 12% 40%;
         }
 
-        .subTitleBoxOffice,
-        .subTitleDate,
-        .subTitleDuration{
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            color: #f5c518;
-            margin: 5px 5px 2px 5px;
+        .subTitle{
             font-size: 100%;
         }
 
         .date,
-        .boxOffice,
-        .duration{
-            font-family: 'Roboto', sans-serif;
+        .duration,
+        .boxOffice{
             font-size: 100%;
-            margin: 0px 5px 5px 5px;
-        }
-
-        .generoContainer{
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-            gap: 6%;
-            width: 310px;
-            margin-top: 20px;
-            justify-content: center;
-        }
-
-        .genero{
-            display: flex;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
-            background-color: #111111;
-            padding: 5px;
-            border-radius: 8px;
-            color: white;
-        }
-
-        .type{
-            display: flex;
-            font-family: 'Roboto', sans-serif;
-            font-size: 0.8em;
-            background-color: #111111;
-            padding: 5px 22px;
-            border-radius: 8px;
-            justify-content: center;
-            color: white;
         }
 
         .sinopseContainer{
-            display: flex;
-            flex-direction: column;
             position: relative;
-            margin: 0px 110px 200px -155px;
-            margin-bottom: 10px;
-            background-color: #111111;
-            border-radius: 8px;
+            margin: 0px 110px 15px -155px;
             width: 570px;
         }
 
         .subTitleSinopse{
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            color: #f5c518;
-            margin: 5px 0px 5px 10px;
             font-size: 100%;
         }
 
         .sinopse{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-            margin-left: 10px;
             font-size: 0.9rem;
-            font-family: 'Roboto', sans-serif;
         }
 
         .links{
-            display: flex;
             position: relative;
             margin-left: -265px;
-            gap: 4%;
             width: 30em;
             justify-content: center;
             align-items: center;
         }
 
         .watch{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 8%;
             width: 60%;
             height: 10%;
-            background-color: #111111;
-            border: 1px solid black;
             border-radius: 8px;
             padding: 3px 12px 3px 10px;
-            color: #f5c518;
-            font-family: 'Roboto', sans-serif;
-            font-size: 1em;
-
-            :hover{
-                background-color: black;
-                border: 1px solid red;
-            }
-
-            :active{
-                background-color: black;
-                border: 1px solid white;
-            }
-            
+            font-size: 1em;  
         }
 
         .imgWatch{
-            display: flex;
-            flex-direction: row;
             gap: 10%;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
         }
 
         .imgYoutube{
@@ -812,139 +578,85 @@ export const Section = styled.section `
         }
     }
 
-
-    
     @media screen and (max-device-width: 679px) {
-        display: flex;
-        flex-direction: column;
-        background-color: black;
-        color: white;
         width: 85vw;
         height: 30%;
-        border-radius: 20px;
-        border: red 2px solid;
+        margin: 2%;
 
         .container{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
         }
 
         .poster{
-        height: 60%; 
-        width: 70%;
-        margin: 25px 25px 20px 25px;
-        border-radius: 20px;
+            height: 60%; 
+            width: 70%;
+            margin: 25px 25px 20px 25px;
+            border-radius: 20px;
         }
 
         .information{
-            display: flex;
-            flex-direction: column;
             width: 100%;
-            height: 40%;
             align-items: center;
             justify-content: center;
         }
 
         .titulo{
-            display: flex;
             margin-bottom: 20px;
-            align-items: center;
             justify-content: center;
             text-align: center;
             width: 85%;
             height: 100%;
             font-size: 6vw;
-            font-weight: bold;
         }
 
         .generoContainer{
-            display: flex;
-            align-items: center;
             justify-content: center;
             width: 90vw;
             gap: 4%;
         }
 
-        .genero{
-            display: flex;
-            font-family: 'Roboto', sans-serif;
-            font-size: 3.3vw;
-            background-color: #111111;
-            padding: 5px;
-            border-radius: 8px;
-            color: white;
-        }
-
         .type{
-            display: flex;
-            font-family: 'Roboto', sans-serif;
             font-size: 3.3vw;
-            background-color: #111111;
             padding: 5px 28px;
-            border-radius: 8px;
-            justify-content: center;
-            color: white;
         }
 
-        .subTitle{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+        .genero{
+            font-size: 3.3vw;
+        }
+
+        .subTitleContainer{
             justify-content: center;
-            flex-wrap: wrap;
             margin-bottom: 15px;
             width: 100%;
         }
 
-        
-
         .IMDB{
-            display: flex;
-            height: 9%;
-            width: 11%;
+            margin-top: 3.5%;
+            margin-left: 4%;
+            margin-right: 2%;
         }
 
         .imgIMDB{
-            display: flex;
-            position: absolute;
-            width: 8.7%;
-            margin-top: 1.8%;
-            margin-left: 0.2%;
+            width: 9%;
+            height: 5.6%;
             align-items: center;
             justify-content: center;
         }
 
         .notaIMDB{
-            display: flex;
-            position: relative;
-            color: black;
-            margin-top: 1.8em;
-            margin-left: 0.01em;
-            height: 1.6em;
+            margin-top: 1.3em;
+            margin-left: 0.1em;
+            height: 1.2em;
             width: 1.5em;
-            font-family: 'Roboto', sans-serif;
-            font-size: 3.7vw;
-            font-weight: bold;
+            font-size: 3.9vw;
         }
 
         .releaseDateOf{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            border-radius: 8px;
             height: 100%;
             width: 75%;
             margin: 15px 5px 2px 5px;
-            background-color: #111111;
-        }
-
-        .boxOfficeContainer {
-            width: 47%;
-            height: 100%;
-            margin-top: 3%;
         }
 
         .durationContainer {
@@ -953,106 +665,61 @@ export const Section = styled.section `
             margin-top: 3%;
         }
 
+        .boxOfficeContainer {
+            width: 47%;
+            height: 100%;
+            margin-top: 3%;
+        }
+
+        .subTitle{
+            width: 80%;
+            height: 100%;
+            font-size: 3.5vw;
+            margin: 5px;
+        }
+
         .imgSubtitle{
             height: 1.2em;
             width: 1.2em;
         }
 
-        .subTitleBoxOffice,
-        .subTitleDate,
-        .subTitleDuration{
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            color: #f5c518;
-            width: 80%;
-            height: 100%;
-            align-items: center;
-            justify-content: center;
-            font-size: 3.5vw;
-            margin: 5px;
-        }
-
         .date,
-        .boxOffice,
-        .duration{
-            font-family: 'Roboto', sans-serif;
+        .duration,
+        .boxOffice{
             font-size: 3vw;
-            margin: 0px 5px 5px 5px;
         }
-
-        
 
         .sinopseContainer{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-            background-color: #111111;
-            border-radius: 8px;
             width: 90%;
             align-items: center;
             justify-content: center;
         }
 
         .subTitleSinopse{
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
             font-size: 3.5vw;
-            color: #f5c518;
-            margin: 5px 0px 5px 10px;
         }
 
         .sinopse{
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10px;
-            margin-left: 10px;
             font-size: 2.9vw;
-            font-family: 'Roboto', sans-serif;
         }
 
         .links{
-            display: flex;
             width: 75.5vw;
             gap: 2%;
             justify-content: center;
             align-items: center;
-            
         }
 
         .watch{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 8%;
             width: 50%;
             border-radius: 8px;
             padding: 5px;
-            color: #f5c518;
-            font-family: 'Roboto', sans-serif;
-            font-size: 2.5vw;
-
-            :hover{
-                background-color: black;
-                border: 1px solid red;
-            }
-
-            :active{
-                background-color: black;
-                border: 1px solid white;
-            }
-            
+            font-size: 2.5vw;  
         }
 
         .imgWatch{
-            display: flex;
-            flex-direction: row;
             gap: 7%;
-            width: 100%;
             height: 50%;
-            justify-content: center;
-            align-items: center;
         }
 
         .imgYoutube{
@@ -1085,7 +752,5 @@ export const Section = styled.section `
             height: 10%;
             border-radius: 7px;
         }
-
-
     }
 `;

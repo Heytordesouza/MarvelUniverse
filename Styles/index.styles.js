@@ -20,7 +20,33 @@ export const ButtonTop = styled.div`
     border: 2px solid #333;
     background-color: red;
     cursor: pointer; 
+    
     :active{
         background-color: white;
     }
 `
+
+export const NotFound = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 10.1vh;
+    font-size: 3vh;
+
+    @media screen and (min-device-width: 900px) and (max-device-width: 1200px) {
+        height: 21vh;
+    }
+
+    @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
+        height: 15vh;
+    }
+
+    @media screen and (min-device-width: 320px) and (max-device-width: 679px) {
+        height: 43vh;
+    }
+
+    @media screen and (max-device-width: 319px) {
+        height: 70vh;
+    }
+`;
