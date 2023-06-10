@@ -198,6 +198,7 @@ export const Section = styled.section`
         flex-direction: row;
         align-items: center;
         gap: 8%;
+        padding-top: 0.5px;
         width: 30%;
         background-color: #111111;
         border: 1px solid black;
@@ -723,15 +724,14 @@ export const Section = styled.section`
         }
 
         .imgYoutube{
-            width: 23%;
+            width: 22%;
             margin-bottom: 1%;
         }
 
         .imgDisney{
-            width: 30%;
+            width: 28%;
             height: 15%;
-            border-radius: 10px;
-            
+            border-radius: 10px; 
         }
 
         .imgAmazon{
