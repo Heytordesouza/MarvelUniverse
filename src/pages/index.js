@@ -1,12 +1,12 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs, query, orderBy } from 'firebase/firestore/lite'
 import { useEffect, useState } from "react";
-import { Main, ButtonTop, NotFound } from "../Styles/index.styles";
+import { Main, ButtonTop, NotFound } from "../styles/index.styles";
 import Image from "next/image";
-import Header from "./Header/header";
-import Footer from "./Footer/footer";
-import Card from "./Card/card";
-import seta from "../public/seta.png";
+import Header from "../pages/header";
+import Footer from "../pages/footer";
+import Card from "../pages/card";
+import seta from "../../public/seta.png";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTzrhi_2NswWKirKVwumQb4cdjxTVTi4A",

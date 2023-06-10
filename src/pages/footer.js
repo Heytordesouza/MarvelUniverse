@@ -1,5 +1,5 @@
 import Image from "next/image"
-import { Main } from "../../Styles/footer.styles"
+import { Main } from "../styles/footer.styles"
 import github from "../../public/github.jpg"
 import linkedin from "../../public/linkedin.png"
 

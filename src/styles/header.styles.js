@@ -150,8 +150,8 @@ export const OrdinationContainer = styled.div`
         label{
             margin-bottom: 2%;
             font-size: 4vw;
-            width: 58.5%;
-            margin-right: 1.5%;
+            width: 59.1%;
+            margin-right: 2.5%;
         }
 
         label p{

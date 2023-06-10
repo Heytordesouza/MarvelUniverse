@@ -1,4 +1,4 @@
-import { Main, Section } from "../../Styles/card.styles";
+import { Main, Section } from "../styles/card.styles";
 import youtube from "../../public/youtube.png";
 import disneyplus from "../../public/disneyplus.jpg";
 import netflix from "../../public/netflix.png";

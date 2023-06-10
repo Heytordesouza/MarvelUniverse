@@ -1,4 +1,4 @@
-import { ImageMarvel, InputContainer, OrdinationContainer } from "../../Styles/header.styles"
+import { ImageMarvel, InputContainer, OrdinationContainer } from "../styles/header.styles"
 
 export default function Header(props) {
 
