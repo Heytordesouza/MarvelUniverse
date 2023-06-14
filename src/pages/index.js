@@ -91,11 +91,11 @@ export default function Home() {
 
           .map((film) => {
             return (
-              <Card 
-                id={film.id} 
+              <Card
+                id={film.id}
                 posterImg={film.posterImg}
                 title={film.title}
-                type={film.type} 
+                type={film.type}
                 gender={film.gender}
                 IMDBNote={film.IMDBNote}
                 releaseDateOf={film.releaseDateOf}

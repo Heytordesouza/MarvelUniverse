@@ -12,19 +12,19 @@ import Image from "next/image";
 
 export default function Card(props) {
 
-    const { id, 
-            posterImg, 
-            title, 
-            type, 
-            gender, 
-            IMDBNote, 
-            releaseDateOf, 
-            durationFilm, 
-            boxOfficeUS$, 
-            synopsis, 
-            trailerLink,
-            movieLink,
-            streaming } = props
+    const { id,
+        posterImg,
+        title,
+        type,
+        gender,
+        IMDBNote,
+        releaseDateOf,
+        durationFilm,
+        boxOfficeUS$,
+        synopsis,
+        trailerLink,
+        movieLink,
+        streaming } = props
 
     return (
         <Main>
