@@ -18,9 +18,26 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 - Sinopse
 - Link para assistir ao trailer
 - Link para assistir ao filme ou série
+<br></br>
 
 # Conteúdos Abordados no Projeto
 
-📍 NextJS
-📍 Styled-components
-📍 Firebase
+<p>📍 NextJS
+<p>📍 Styled-components
+<p>📍 Firebase
+<br></br>
+
+# Responsividade
+
+📍 PC
+📍 Tablet
+📍 Celular
+<br></br>
+
+![MarvelPC](./public/screenmarvel.png)
+<br></br>
+
+![MarvelTablet](./public/screenmarveltablet.png)
+<br></br>
+
+![MarvelCel](./public/screenmarvelcel.png)
