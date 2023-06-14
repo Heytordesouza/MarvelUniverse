@@ -32,9 +32,16 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 📍 PC
 📍 Tablet
 📍 Celular
-<br></br>
-
+<br>
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/screenmarvel.png" width="900px" />
+</div>
+<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/screenmarveltablet.png" width="400px" />
+</div>
+<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/screenmarvelcel.png" width="250px" />
 </div>
