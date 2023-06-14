@@ -3,19 +3,19 @@ import { Main } from "../styles/footer.styles"
 import github from "../../public/github.jpg"
 import linkedin from "../../public/linkedin.png"
 
-export default function Footer () {
+export default function Footer() {
 
-    return(
+    return (
         <Main>
-            <div className="criadoPor">
+            <div className="createdBy">
                 <p>Criado por:</p>
-                <div className="criador">Heytor de Souza</div>
+                <div className="created">Heytor de Souza</div>
             </div>
-            <div className="containerContatos">
+            <div className="containerContacts">
                 <p>Contatos:</p>
-                <div className="contatos">
-                    <a href="https://github.com/Heytordesouza" target="_blank"><Image src={github} alt="GitHub"/></a>
-                    <a href="https://www.linkedin.com/in/heytor-de-souza" target="_blank"><Image src={linkedin} alt="GitHub"/></a>
+                <div className="contacts">
+                    <a href="https://github.com/Heytordesouza" target="_blank"><Image src={github} alt="GitHub" /></a>
+                    <a href="https://www.linkedin.com/in/heytor-de-souza" target="_blank"><Image src={linkedin} alt="GitHub" /></a>
                 </div>
             </div>
         </Main>

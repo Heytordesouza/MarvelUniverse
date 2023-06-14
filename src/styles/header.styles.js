@@ -112,8 +112,9 @@ export const OrdinationContainer = styled.div`
         width: 40%;
         color: white;
         background-color: black;
+        padding: 6px 4px;
         border: 2px solid red; 
-        border-radius: 7px;
+        border-radius: 5px;
         margin-left: 10px;
         font-size: 1.2vw;
     }
@@ -151,7 +152,7 @@ export const OrdinationContainer = styled.div`
             margin-bottom: 2%;
             font-size: 4vw;
             width: 59.1%;
-            margin-right: 2.5%;
+            margin-right: 2%;
         }
 
         label p{

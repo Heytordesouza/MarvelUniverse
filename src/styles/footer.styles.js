@@ -15,14 +15,14 @@ export const Main = styled.footer`
     border-radius: 20px;
     border: white 2px solid;
 
-    .criadoPor{
+    .createdBy{
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    .criador{
+    .created{
         background-color: white;
         padding: 0.2em 0.6em;
         border-radius: 10px;
@@ -30,12 +30,12 @@ export const Main = styled.footer`
         margin-bottom: 2%;
     }
 
-    .containerContatos{
+    .containerContacts{
         display: flex;
         flex-direction: column;
     }
 
-    .contatos{
+    .contacts{
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -58,17 +58,17 @@ export const Main = styled.footer`
         height: 5.7em;
         gap: 20%;
 
-        .criador{
+        .created{
             margin: 5% 0%;
         }
 
-        .containerContatos{
+        .containerContacts{
             justify-content: center;
             align-items: center;
             width: 20%;
         }
 
-        .contatos{
+        .contacts{
             gap: 25%;
             margin: 8%;
             
@@ -86,13 +86,13 @@ export const Main = styled.footer`
         gap: 20%;
         margin: 6% 0%;
 
-        .containerContatos{
+        .containerContacts{
             justify-content: center;
             align-items: center;
             width: 20%;
         }
 
-        .contatos{
+        .contacts{
             gap: 18%;
             
             img{
