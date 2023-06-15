@@ -23,7 +23,7 @@ function MyApp({ Component, pageProps }) {
       <ThemeProvider theme={theme}>
         <ChakraProvider>
           <Head>
-            <title>Marvel Universe</title>
+            <title>Universo Marvel</title>
             <link rel="icon" href="/favicon.ico" sizes="any" />
           </Head>
           <Component {...pageProps} />
