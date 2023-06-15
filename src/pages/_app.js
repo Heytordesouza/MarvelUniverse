@@ -1,5 +1,6 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { ChakraProvider } from '@chakra-ui/react'   
+import { ChakraProvider } from '@chakra-ui/react'
+import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -21,6 +22,10 @@ function MyApp({ Component, pageProps }) {
       <GlobalStyle />
       <ThemeProvider theme={theme}>
         <ChakraProvider>
+          <Head>
+            <title>Marvel Universe</title>
+            <link rel="icon" href="/favicon.ico" sizes="any" />
+          </Head>
           <Component {...pageProps} />
         </ChakraProvider>
       </ThemeProvider>
