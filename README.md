@@ -2,7 +2,7 @@
 
 Este projeto consiste em um site com informações de cada filme e série do Universo Marvel, utilizando as tecnologias do NextJS e do Firebase para o armazenamento das informações.
 
-🟢 Acesse ao site por esse <a href="https://universomarvelstudios.vercel.app" target="_blank" rel="noopener noreferrer">link</a>.
+🟢 Acesse ao site por esse <a href="https://universomarvelstudios.vercel.app">link</a>.
 
 # Informações de cada filme e série:
 
