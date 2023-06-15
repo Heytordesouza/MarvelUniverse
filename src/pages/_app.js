@@ -1,5 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider } from '@chakra-ui/react'   
 import Head from 'next/head'
 
 const GlobalStyle = createGlobalStyle`
