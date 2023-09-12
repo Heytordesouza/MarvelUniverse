@@ -7,6 +7,7 @@ import Header from "../pages/header";
 import Footer from "../pages/footer";
 import Card from "../pages/card";
 import seta from "../../public/seta.png";
+import { useRouter } from "next/router";
 
 const firebaseApp = initializeApp({
   apiKey: "AIzaSyDTzrhi_2NswWKirKVwumQb4cdjxTVTi4A",
@@ -18,6 +19,8 @@ const firebaseApp = initializeApp({
 });
 
 export default function Home() {
+
+  const { push } = useRouter();
 
   const [films, setFilms] = useState([]);
   const [search, setSearch] = useState("");
@@ -52,6 +55,10 @@ export default function Home() {
       behavior: "smooth",
     });
   };
+
+  const detalhes = (id) => {
+    push(`/movie/${id}`)
+  }
 
   return (
     <Main>
@@ -91,21 +98,24 @@ export default function Home() {
 
           .map((film) => {
             return (
-              <Card
-                id={film.id}
-                posterImg={film.posterImg}
-                title={film.title}
-                type={film.type}
-                gender={film.gender}
-                IMDBNote={film.IMDBNote}
-                releaseDateOf={film.releaseDateOf}
-                durationFilm={film.duration}
-                boxOfficeUS$={film.boxOfficeUS$}
-                synopsis={film.synopsis}
-                trailerLink={film.trailerLink}
-                movieLink={film.movieLink}
-                streaming={film.streaming}
-              />
+              <>
+                <div onClick={() => detalhes(film.id)}>Ver mais</div>
+                <Card
+                  id={film.id}
+                  posterImg={film.posterImg}
+                  title={film.title}
+                  type={film.type}
+                  gender={film.gender}
+                  IMDBNote={film.IMDBNote}
+                  releaseDateOf={film.releaseDateOf}
+                  durationFilm={film.duration}
+                  boxOfficeUS$={film.boxOfficeUS$}
+                  synopsis={film.synopsis}
+                  trailerLink={film.trailerLink}
+                  movieLink={film.movieLink}
+                  streaming={film.streaming}
+                />
+              </>
             )
           })
       ) : (<NotFound>Nenhum filme ou série encontrado</NotFound>)

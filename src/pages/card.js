@@ -10,6 +10,7 @@ import cash from "../../public/cash.png"
 import duration from "../../public/duration.png"
 import Image from "next/image";
 
+
 export default function Card(props) {
 
     const { id,
@@ -28,11 +29,10 @@ export default function Card(props) {
 
     return (
         <Main>
-
             <Section key={id}>
                 <div className="container">
                     <Image className="poster" src={posterImg} width={35} height={40} />
-
+                    
                     <div className="information">
 
                         <h2 className="titulo">{title}</h2>
