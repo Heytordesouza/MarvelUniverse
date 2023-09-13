@@ -1,6 +1,5 @@
-import { initializeApp } from "firebase/app";
-import { getFirestore, collection, getDocs, query, orderBy } from 'firebase/firestore/lite'
-import { useEffect, useState } from "react";
+
+import { useEffect, useState, useContext } from "react";
 import { Main, ButtonTop, NotFound } from "../styles/index.styles";
 import Image from "next/image";
 import Header from "../pages/header";
@@ -8,36 +7,22 @@ import Footer from "../pages/footer";
 import Card from "../pages/card";
 import seta from "../../public/seta.png";
 import { useRouter } from "next/router";
+import AppContext from '../components/AppContext'
+import Link from "next/link";
 
-const firebaseApp = initializeApp({
-  apiKey: "AIzaSyDTzrhi_2NswWKirKVwumQb4cdjxTVTi4A",
-  authDomain: "fir-marvel-12e8c.firebaseapp.com",
-  projectId: "fir-marvel-12e8c",
-  storageBucket: "fir-marvel-12e8c.appspot.com",
-  messagingSenderId: "477200830039",
-  appId: "1:477200830039:web:ffedb6d34beeeb60eddd12"
-});
 
 export default function Home() {
 
+  const context = useContext(AppContext);
   const { push } = useRouter();
 
-  const [films, setFilms] = useState([]);
+  const { films } = context;
+  
   const [search, setSearch] = useState("");
   const [ordination, setOrdination] = useState("")
   const [showScrollTopButton, setshowScrollTopButton] = useState(false);
 
-  const db = getFirestore(firebaseApp);
-  const filmeCollectionRef = collection(db, "filmes");
-  const q = query(filmeCollectionRef, orderBy("releaseOrder"));
 
-  useEffect(() => {
-    const getFilms = async () => {
-      const data = await getDocs(q)
-      setFilms(data.docs.map((docs) => ({ ...docs.data(), id: docs.id })))
-    };
-    getFilms();
-  }, []);
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -63,6 +48,7 @@ export default function Home() {
   return (
     <Main>
       <Header search={search} setSearch={setSearch} ordination={ordination} setOrdination={setOrdination} />
+      <Link href='/wishlist'>Lista de desejos</Link>
       <div>
         {showScrollTopButton && (
           <ButtonTop>
