@@ -1,7 +1,7 @@
 import Image from "next/image"
-import { Main } from "../styles/footer.styles"
-import github from "../../public/github.jpg"
-import linkedin from "../../public/linkedin.png"
+import { Main } from "./footer.styles"
+import github from "../../../public/github.jpg"
+import linkedin from "../../../public/linkedin.png"
 
 export default function Footer() {
 

@@ -3,12 +3,10 @@ import styled from "styled-components";
 export const Main = styled.main`
     display: flex;
     flex-direction: column;
-    position: relative;
-    width: 100vw;
-    gap: 1rem;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: black;
+    width: 100vw;
 `
 
 export const Section = styled.section`
@@ -47,11 +45,22 @@ export const Section = styled.section`
         display: flex;
         margin-bottom: 10px;
         margin-top: 10px;
+        justify-content: space-between;
         align-items: center;
-        max-width: inherit;
+        width: 100%;
         height: 100%;
         font-size: 2.5vw;
         font-weight: bold;
+    }
+
+    .title{
+        width: 90%;
+    }
+
+    .favorite{
+        width: 17%;
+        font-size: 1.5vw;
+        cursor: pointer;
     }
 
     .generoContainer{

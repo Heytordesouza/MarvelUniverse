@@ -56,15 +56,19 @@ function MyApp({ Component, pageProps }) {
   
       const turnString = JSON.stringify(movieNew)
       localStorage.setItem("local", turnString)
+      alert("Filme adicionado aos favoritos")
+    } else {
+      alert("Filme já adicionado aos favoritos")
     }
   }
 
-  useEffect(() => {
+  const consultItem = () => {
     if (localStorage.getItem("local")) {
       const storeItem = localStorage.getItem("local")
       const getString = JSON.parse(storeItem);
-      setFilmsList(getString)}
-    },[])
+      setFilmsList(getString)
+    }
+  }
 
 
   return (
@@ -77,6 +81,7 @@ function MyApp({ Component, pageProps }) {
           filmsList,
           setFilmsList,
           onAdd,
+          consultItem
         }}>
         <ThemeProvider theme={theme}>
           <ChakraProvider>

@@ -26,6 +26,42 @@ export const ButtonTop = styled.div`
     }
 `
 
+export const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+`
+
+export const Section = styled.section`
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    color: white;
+    width: 80vw;
+    border-radius: 20px;
+    border: red 2px solid;
+    margin: 1%;
+
+    .movie{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .poster{
+        height: 50%; 
+        width: 20%;
+        margin: 25px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+`
+
 export const NotFound = styled.div`
     display: flex;
     justify-content: center;

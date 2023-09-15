@@ -8,7 +8,9 @@ import IMDB from "../../public/IMDB.png"
 import calender from "../../public/calender.png"
 import cash from "../../public/cash.png"
 import duration from "../../public/duration.png"
+
 import Image from "next/image";
+import { useRouter } from "next/router";
 
 
 export default function Card(props) {
@@ -27,12 +29,24 @@ export default function Card(props) {
         movieLink,
         streaming } = props
 
+        const { push } = useRouter();
+
+        const detalhes = (id) => {
+            push(`/movie/${id}`)
+        }
+
     return (
         <Main>
             <Section key={id}>
                 <div className="container">
-                    <Image className="poster" src={posterImg} width={35} height={40} />
-                    
+                    <Image 
+                        className="poster" 
+                        src={posterImg} 
+                        onClick={() => detalhes(id)} 
+                        width={35} 
+                        height={40} 
+                    />
+                
                     <div className="information">
 
                         <h2 className="titulo">{title}</h2>

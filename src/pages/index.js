@@ -1,9 +1,9 @@
 
 import { useEffect, useState, useContext } from "react";
-import { Main, ButtonTop, NotFound } from "../styles/index.styles";
+import { Main, ButtonTop, Container, Section, NotFound } from "../styles/index.styles";
 import Image from "next/image";
-import Header from "../pages/header";
-import Footer from "../pages/footer";
+import Header from "../components/Header/header";
+import Footer from "../components/Footer/footer";
 import Card from "../pages/card";
 import seta from "../../public/seta.png";
 import { useRouter } from "next/router";
@@ -17,7 +17,7 @@ export default function Home() {
   const { push } = useRouter();
 
   const { films } = context;
-  
+
   const [search, setSearch] = useState("");
   const [ordination, setOrdination] = useState("")
   const [showScrollTopButton, setshowScrollTopButton] = useState(false);
@@ -44,6 +44,7 @@ export default function Home() {
   const detalhes = (id) => {
     push(`/movie/${id}`)
   }
+
 
   return (
     <Main>
@@ -84,24 +85,19 @@ export default function Home() {
 
           .map((film) => {
             return (
-              <>
-                <div onClick={() => detalhes(film.id)}>Ver mais</div>
-                <Card
-                  id={film.id}
-                  posterImg={film.posterImg}
-                  title={film.title}
-                  type={film.type}
-                  gender={film.gender}
-                  IMDBNote={film.IMDBNote}
-                  releaseDateOf={film.releaseDateOf}
-                  durationFilm={film.duration}
-                  boxOfficeUS$={film.boxOfficeUS$}
-                  synopsis={film.synopsis}
-                  trailerLink={film.trailerLink}
-                  movieLink={film.movieLink}
-                  streaming={film.streaming}
-                />
-              </>
+              <Container>
+                <Section key={film.id}>
+                  <div className="movie">
+                    <Image
+                      className="poster"
+                      src={film.posterImg}
+                      onClick={() => detalhes(film.id)}
+                      width={35}
+                      height={40}
+                    />
+                  </div>
+                </Section>
+              </Container>
             )
           })
       ) : (<NotFound>Nenhum filme ou série encontrado</NotFound>)
