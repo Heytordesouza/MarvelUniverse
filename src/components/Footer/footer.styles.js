@@ -10,10 +10,8 @@ export const Main = styled.footer`
     font-size: 1.3vw;
     bottom: 0;
     position: relative;
-    margin: 2% 0%;
-    width: 20vw;
-    border-radius: 20px;
-    border: white 2px solid;
+    width: 100vw;
+    background-color: black;
 
     .createdBy{
         display: flex;

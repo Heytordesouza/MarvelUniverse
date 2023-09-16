@@ -1,0 +1,155 @@
+.imageMarvel {
+    width: 100vw;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.inputContainer {
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+}
+
+.inputContainer .name {
+    display: block;
+    position: relative;
+    bottom: -10px;
+    width: fit-content;
+    left: 10px;
+    padding: 0px 5px;
+    background-color: black;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.inputContainer input {
+    border: 2px solid red;
+    height: 10%;
+    width: 100%;
+    padding: 3% 3%;
+    font-weight: bold;
+    background-color: black;
+    color: white;
+    border-radius: 7px;
+    font-size: 1.2vw;
+}
+
+.ordinationContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+.ordinationContainer .ordem {
+    text-align: center;
+    color: white;
+    width: 40%;
+    font-size: 1.2vw;
+}
+
+.ordinationContainer .ordem select {
+    width: 40%;
+    color: white;
+    background-color: black;
+    padding: 6px 4px;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 1.2vw;
+}
+
+@media screen and (min-device-width: 680px) and (max-device-width: 899px) {
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputContainer .name {
+        left: -3px;
+        font-size: 3vw;
+    }
+
+    .inputContainer input {
+        width: 50%;
+        padding: 2%;
+        text-align: center;
+        font-size: 3vw;
+    }
+
+    .ordinationContainer {
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+
+    .ordinationContainer .ordem {
+        margin-bottom: 2%;
+        font-size: 3vw;
+        width: 53.5%;
+        margin-right: 1.5%;
+    }
+
+    .ordinationContainer .ordem p {
+        margin-bottom: 2%;
+        margin-left: 1%;
+    }
+
+    .ordinationContainer .ordem select {
+        width: 92%;
+        font-size: 3vw;
+        padding: 3%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+}
+
+@media screen and (max-device-width: 679px) {
+
+    .inputContainer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .inputContainer .name {
+        left: -5px;
+        font-size: 4vw;
+    }
+
+    .inputContainer input {
+        width: 53%;
+        padding: 3%;
+        text-align: center;
+        font-size: 4vw;
+    }
+
+    .ordinationContainer {
+        margin-top: 2%;
+        margin-bottom: 4%;
+    }
+
+    .ordinationContainer .ordem {
+        margin-bottom: 2%;
+        font-size: 4vw;
+        width: 59.1%;
+        margin-right: 2%;
+    }
+
+    .ordinationContainer .ordem p {
+        margin-bottom: 2%;
+        margin-left: 1%;
+    }
+
+    .ordinationContainer .ordem select {
+        width: 90%;
+        height: 50%;
+        font-size: 4vw;
+        padding: 3%;
+        margin-bottom: 2%;
+        text-align: center;
+    }
+}

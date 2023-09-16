@@ -1,5 +1,7 @@
 import { useRouter } from 'next/router'
-import { ImageMarvel, InputContainer, OrdinationContainer } from "./header.styles"
+import Image from 'next/image'
+import marvelEdit from "../../../public/marvelEdit.png"
+import styles from "./header.module.css"
 
 export default function Header(props) {
 
@@ -19,23 +21,31 @@ export default function Header(props) {
         <>
             {router.asPath === '/' ?
                 <>
-                    <ImageMarvel />
-                    <InputContainer>
-                        <label className="name">Filme ou Série</label>
+                    <Image 
+                        className={styles.imageMarvel} 
+                        src={marvelEdit}
+                        alt="marvel" 
+                    />
+                    <div className={styles.inputContainer}>
+                        <label className={styles.name}>Filme ou Série</label>
                         <input type="text" placeholder="Buscar por nome" onChange={onChangeSearch} value={search} />
-                    </InputContainer>
-                    <OrdinationContainer>
-                        <label>
+                    </div>
+                    <div className={styles.ordinationContainer}>
+                        <label className={styles.ordem}>
                             <p>Ordenação:</p>
                             <select value={ordination} onChange={onChangeOrdination}>
                                 <option value="releaseOrder">Ordem de Lançamento</option>
                                 <option value="chronologicalOrder">Ordem Cronológica</option>
                             </select>
                         </label>
-                    </OrdinationContainer>
+                    </div>
                 </>
                 :
-                <ImageMarvel />
+                <Image 
+                    className={styles.imageMarvel} 
+                    src={marvelEdit}
+                    alt="marvel" 
+                />
             }
         </>
     )
