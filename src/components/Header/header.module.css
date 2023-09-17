@@ -1,16 +1,23 @@
-.imageMarvel {
+.main {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+}
+
+.main .imageMarvel {
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.inputContainer {
-    align-items: center;
-    justify-content: center;
+.main .inputContainer {
     width: 30%;
 }
 
-.inputContainer .name {
+.main .inputContainer .name {
     display: block;
     position: relative;
     bottom: -10px;
@@ -22,7 +29,7 @@
     font-size: 1.2vw;
 }
 
-.inputContainer input {
+.main .inputContainer input {
     border: 2px solid red;
     height: 10%;
     width: 100%;
@@ -34,7 +41,7 @@
     font-size: 1.2vw;
 }
 
-.ordinationContainer {
+.main .ordinationContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -43,14 +50,14 @@
     width: 100%;
 }
 
-.ordinationContainer .ordem {
+.main .ordinationContainer .ordem {
     text-align: center;
     color: white;
     width: 40%;
     font-size: 1.2vw;
 }
 
-.ordinationContainer .ordem select {
+.main .ordinationContainer .ordem select {
     width: 40%;
     color: white;
     background-color: black;
@@ -61,44 +68,90 @@
     font-size: 1.2vw;
 }
 
+
+
+.main .favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    padding: 0.6%;
+    border-radius: 10px;
+    color: white;
+    margin: 1.2%;
+}
+
+.main .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4%
+}
+
+.main .links .linkFavorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    font-size: 1.6vw;
+    background-color: red;
+    padding: 0.6%;
+    border-radius: 5px;
+    color: white;
+    margin: 1.2%;
+}
+
+.main .links .linkHomePage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 12vw;
+    font-size: 1.6vw;
+    background-color: blue;
+    padding: 0.6%;
+    border-radius: 6px;
+    color: white;
+    margin: 1.2%;
+}
+
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
 
-    .inputContainer {
+    .main .inputContainer {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .inputContainer .name {
+    .main .inputContainer .name {
         left: -3px;
         font-size: 3vw;
     }
 
-    .inputContainer input {
+    .main .inputContainer input {
         width: 50%;
         padding: 2%;
         text-align: center;
         font-size: 3vw;
     }
 
-    .ordinationContainer {
+    .main .ordinationContainer {
         margin-top: 2%;
         margin-bottom: 4%;
     }
 
-    .ordinationContainer .ordem {
+    .main .ordinationContainer .ordem {
         margin-bottom: 2%;
         font-size: 3vw;
         width: 53.5%;
         margin-right: 1.5%;
     }
 
-    .ordinationContainer .ordem p {
+    .main .ordinationContainer .ordem p {
         margin-bottom: 2%;
         margin-left: 1%;
     }
 
-    .ordinationContainer .ordem select {
+    .main .ordinationContainer .ordem select {
         width: 92%;
         font-size: 3vw;
         padding: 3%;
@@ -109,42 +162,42 @@
 
 @media screen and (max-device-width: 679px) {
 
-    .inputContainer {
+    .main .inputContainer {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
 
-    .inputContainer .name {
+    .main .inputContainer .name {
         left: -5px;
         font-size: 4vw;
     }
 
-    .inputContainer input {
+    .main .inputContainer input {
         width: 53%;
         padding: 3%;
         text-align: center;
         font-size: 4vw;
     }
 
-    .ordinationContainer {
+    .main .ordinationContainer {
         margin-top: 2%;
         margin-bottom: 4%;
     }
 
-    .ordinationContainer .ordem {
+    .main .ordinationContainer .ordem {
         margin-bottom: 2%;
         font-size: 4vw;
         width: 59.1%;
         margin-right: 2%;
     }
 
-    .ordinationContainer .ordem p {
+    .main .ordinationContainer .ordem p {
         margin-bottom: 2%;
         margin-left: 1%;
     }
 
-    .ordinationContainer .ordem select {
+    .main .ordinationContainer .ordem select {
         width: 90%;
         height: 50%;
         font-size: 4vw;

@@ -10,7 +10,7 @@ export const Main = styled.footer`
     font-size: 1.3vw;
     bottom: 0;
     position: relative;
-    width: 100vw;
+    width: 98.3vw;
     background-color: black;
 
     .createdBy{

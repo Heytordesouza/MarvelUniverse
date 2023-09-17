@@ -2,6 +2,7 @@ import { useRouter } from 'next/router'
 import Image from 'next/image'
 import marvelEdit from "../../../public/marvelEdit.png"
 import styles from "./header.module.css"
+import Link from "next/link";
 
 export default function Header(props) {
 
@@ -19,34 +20,45 @@ export default function Header(props) {
 
     return (
         <>
-            {router.asPath === '/' ?
-                <>
-                    <Image 
-                        className={styles.imageMarvel} 
-                        src={marvelEdit}
-                        alt="marvel" 
-                    />
-                    <div className={styles.inputContainer}>
-                        <label className={styles.name}>Filme ou Série</label>
-                        <input type="text" placeholder="Buscar por nome" onChange={onChangeSearch} value={search} />
-                    </div>
-                    <div className={styles.ordinationContainer}>
-                        <label className={styles.ordem}>
-                            <p>Ordenação:</p>
-                            <select value={ordination} onChange={onChangeOrdination}>
-                                <option value="releaseOrder">Ordem de Lançamento</option>
-                                <option value="chronologicalOrder">Ordem Cronológica</option>
-                            </select>
-                        </label>
-                    </div>
-                </>
-                :
-                <Image 
-                    className={styles.imageMarvel} 
+            <main className={styles.main}>
+                <Image
+                    className={styles.imageMarvel}
                     src={marvelEdit}
-                    alt="marvel" 
+                    alt="marvel"
                 />
-            }
+                {router.asPath === '/' ?
+                    <>
+                        <div className={styles.inputContainer}>
+                            <label className={styles.name}>Filme ou Série</label>
+                            <input type="text" placeholder="Buscar por nome" onChange={onChangeSearch} value={search} />
+                        </div>
+                        <div className={styles.ordinationContainer}>
+                            <label className={styles.ordem}>
+                                <p>Ordenação:</p>
+                                <select value={ordination} onChange={onChangeOrdination}>
+                                    <option value="releaseOrder">Ordem de Lançamento</option>
+                                    <option value="chronologicalOrder">Ordem Cronológica</option>
+                                </select>
+                            </label>
+                        </div>
+                        <Link className={styles.favorite} href='/favorites'>Favoritos</Link>
+                    </>
+                    :
+                    router.asPath === '/wishlist' ?
+                        <>
+                            <div className={styles.links}>
+                                <Link className={styles.linkHomePage} href='/'>Página Inicial</Link>
+                            </div>
+                        </>
+                        :
+                        <>
+                            <div className={styles.links}>
+                                <Link className={styles.linkHomePage} href='/'>Página Inicial</Link>
+                                <Link className={styles.linkFavorite} href='/favorites'>Favoritos</Link>
+                            </div>
+                        </>
+                }
+            </main>
         </>
     )
 }

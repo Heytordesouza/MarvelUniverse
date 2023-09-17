@@ -1,0 +1,111 @@
+.favorite {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: auto;
+}
+
+.main .buttonTop {
+    position: fixed;
+    bottom: 15px;
+    right: 20px;
+    height: 40px;
+    z-index: 1;
+    width: 40px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    background-color: red;
+    cursor: pointer;
+}
+
+.main .buttonTop :active {
+    background-color: white;
+}
+
+.main .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    gap: 1vw;
+    background-color: black;
+    height: max-content;
+}
+
+.main .container .section {
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    width: 20%;
+    height: 30vw;
+    border-radius: 20px;
+    border: red 2px solid;
+    margin: 1%;
+    cursor: pointer;
+}
+
+.main .container .section .poster {
+    height: 70%;
+    width: 80%;
+    margin: 0% 8% 10% 8%;
+    border-radius: 10px;
+}
+
+.main .container .section .title {
+    display: flex;
+    font-size: 1.5vw;
+    height: 5vh;
+    width: 16vw;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.main .notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 10.1vh;
+    font-size: 3vh;
+}
+
+@media screen and (min-device-width: 900px) and (max-device-width: 1200px) {
+    .main .notFound {
+        height: 21vh;
+    }
+}
+
+@media screen and (min-device-width: 680px) and (max-device-width: 899px) {
+    .main .notFound {
+        height: 15vh;
+    }
+}
+
+@media screen and (min-device-width: 320px) and (max-device-width: 679px) {
+    .main .notFound {
+        height: 43vh;
+    }
+}
+
+@media screen and (max-device-width: 319px) {
+    .main .notFound {
+        height: 70vh;
+    }
+}
