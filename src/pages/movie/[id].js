@@ -26,7 +26,7 @@ export default function Movie() {
 
     return (
         <>
-        <Header />
+            <Header />
             {films.map((movie) => {
                 return (
                     <>
@@ -43,7 +43,7 @@ export default function Movie() {
 
                                         <div className={styles.information}>
 
-                                            <h2 className={styles.titulo}>
+                                            <h2 className={styles.titleContainer}>
                                                 <div className={styles.title}>{movie.title}</div>
                                                 <div className={styles.favorite} onClick={() => onAdd(movie)}>Favoritar</div>
                                             </h2>
@@ -119,6 +119,15 @@ export default function Movie() {
                                                         </a>
                                                     </div>
                                                 }
+                                                <iframe
+                                                    width="560"
+                                                    height="315"
+                                                    src={`${movie.trailerLink}`}
+                                                    title="YouTube video player"
+                                                    frameborder="0"
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowFullScreen>
+                                                </iframe>
                                             </div>
                                         </div>
                                     </div>
