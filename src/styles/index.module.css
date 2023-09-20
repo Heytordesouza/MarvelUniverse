@@ -50,6 +50,30 @@
     cursor: pointer;
 }
 
+.main .container .section .typeFilm {
+    font-size: 1vw;
+    background-color: red;
+    border-radius: 10%;
+    padding: 0% 3%;
+    margin-bottom: 4%;
+}
+
+.main .container .section .typeSerie {
+    font-size: 1vw;
+    background-color: blue;
+    border-radius: 10%;
+    padding: 0% 3%;
+    margin-bottom: 4%;
+}
+
+.main .container .section .typeCurta {
+    font-size: 1vw;
+    background-color: green;
+    border-radius: 10%;
+    padding: 0% 3%;
+    margin-bottom: 4%;
+}
+
 .main .container .section .poster {
     height: 70%;
     width: 80%;
@@ -62,11 +86,9 @@
     font-size: 1.5vw;
     height: 5vh;
     width: 16vw;
-    margin-bottom: 1%;
+    margin-bottom: 4%;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
 .main .notFound {

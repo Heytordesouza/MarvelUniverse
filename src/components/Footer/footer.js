@@ -14,8 +14,12 @@ export default function Footer() {
             <div className={styles.containerContacts}>
                 <p>Contatos:</p>
                 <div className={styles.contacts}>
-                    <a href="https://github.com/Heytordesouza" target="_blank"><Image src={github} alt="GitHub" /></a>
-                    <a href="https://www.linkedin.com/in/heytor-de-souza" target="_blank"><Image src={linkedin} alt="GitHub" /></a>
+                    <a href="https://github.com/Heytordesouza" target="_blank">
+                        <Image src={github} alt="GitHub" />
+                    </a>
+                    <a href="https://www.linkedin.com/in/heytor-de-souza" target="_blank">
+                        <Image src={linkedin} alt="GitHub" />
+                    </a>
                 </div>
             </div>
         </main>

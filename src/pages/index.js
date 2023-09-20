@@ -18,6 +18,7 @@ export default function Home() {
 
   const [search, setSearch] = useState("");
   const [ordination, setOrdination] = useState("")
+  const [selectedType, setSelectedType] = useState("");
   const [showScrollTopButton, setshowScrollTopButton] = useState(false);
 
 
@@ -46,10 +47,17 @@ export default function Home() {
 
   return (
     <>
-      <Header search={search} setSearch={setSearch} ordination={ordination} setOrdination={setOrdination} />
-      
+      <Header 
+        search={search} 
+        setSearch={setSearch} 
+        selectedType={selectedType} 
+        setSelectedType={setSelectedType}
+        ordination={ordination} 
+        setOrdination={setOrdination} 
+      />
+
       <main className={styles.main}>
-      
+
 
         <div>
           {showScrollTopButton && (
@@ -58,10 +66,10 @@ export default function Home() {
             </div>
           )}
         </div>
-        
-        
+
+
         <section className={styles.container}>
-          
+
           {films.filter((film) => {
             return film.title.toLowerCase().includes(search.toLowerCase())
           })
@@ -88,22 +96,37 @@ export default function Home() {
                 }
               })
 
+              .filter((film) => {
+                if(selectedType !== "") {
+                  return film.type === selectedType
+                } else if (film.type === "Filme" || film.type === "Série" || film.type === "Curta") {
+                  return true; 
+                }  
+              })
+
               .map((film) => {
                 return (
 
-                  <div 
-                    className={styles.section} 
+                  <div
+                    className={styles.section}
                     key={film.id}
                     onClick={() => detalhes(film.id)}
-                    >
-                    
-                      <Image
-                        className={styles.poster}
-                        src={film.posterImg}
-                        width={35}
-                        height={45}
-                      />
-                    
+                  >
+
+                    {film.type === "Filme" ?
+                      <p className={styles.typeFilm}>{film.type}</p>
+                      : film.type === "Série" ?
+                        <p className={styles.typeSerie}>{film.type}</p>
+                        : <p className={styles.typeCurta}>{film.type}</p>
+                    }
+
+                    <Image
+                      className={styles.poster}
+                      src={film.posterImg}
+                      width={35}
+                      height={45}
+                    />
+
                     <div className={styles.title}>
                       {film.title}
                     </div>

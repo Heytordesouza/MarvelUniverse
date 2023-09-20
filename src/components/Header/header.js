@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Header(props) {
 
-    const { search, ordination, setSearch, setOrdination } = props
+    const { search, ordination, setSearch, setOrdination, selectedType, setSelectedType } = props
 
     const router = useRouter()
 
@@ -41,6 +41,21 @@ export default function Header(props) {
                                 </select>
                             </label>
                         </div>
+                        <div className={styles.typesContainer}>
+                            <label className={styles.types}>
+                            <p>Filmes por Tipo:</p>
+                                <select
+                                    value={selectedType}
+                                    onChange={e => setSelectedType(e.target.value)}
+                                >
+                                    <option value="">Todos</option>
+                                    <option value="Filme">Filme</option>
+                                    <option value="Série">Série</option>
+                                    <option value="Curta">Curta</option>
+                                </select>
+                            </label>
+                        </div>
+
                         <Link className={styles.favorite} href='/favorites'>Favoritos</Link>
                     </>
                     :

@@ -68,13 +68,49 @@
     font-size: 1.2vw;
 }
 
+.main .ordinationContainer .ordem select option {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+.main .typesContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1%;
+    width: 100%;
+}
+
+.main .typesContainer .types {
+    color: white;
+    width: 25%;
+    font-size: 1.2vw;
+}
+
+.main .typesContainer .types select {
+    width: 40%;
+    color: white;
+    background-color: black;
+    padding: 6px 4px;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin-left: 10px;
+    font-size: 1.2vw;
+}
+
+.main .typesContainer .types select option {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
 
 .main .favorite {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: red;
+    font-size: 1.3vw;
     padding: 0.6%;
     border-radius: 10px;
     color: white;
