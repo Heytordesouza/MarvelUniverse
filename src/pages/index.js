@@ -112,7 +112,7 @@ export default function Home() {
                     key={film.id}
                     onClick={() => detalhes(film.id)}
                   >
-
+                    {console.log(film.id)}
                     {film.type === "Filme" ?
                       <p className={styles.typeFilm}>{film.type}</p>
                       : film.type === "Série" ?
@@ -122,7 +122,7 @@ export default function Home() {
 
                     <Image
                       className={styles.poster}
-                      src={film.posterImg}
+                      src={`/poster/${film.id}.jpg`}
                       width={35}
                       height={45}
                     />

@@ -36,7 +36,7 @@ export default function Movie() {
                                     <div className={styles.container}>
                                         <Image
                                             className={styles.poster}
-                                            src={movie.posterImg}
+                                            src={`/poster/${movie.id}.jpg`}
                                             width={35}
                                             height={40}
                                         />
