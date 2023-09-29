@@ -1,6 +1,7 @@
 import { useContext, useEffect } from 'react'
 import AppContext from '../components/AppContext'
 import Header from '../components/Header/header'
+import Footer from "../components/Footer/footer";
 import styles from "../styles/favorites.module.css"
 import Image from 'next/image'
 import { useRouter } from "next/router";
@@ -48,6 +49,7 @@ export default function wishlist() {
                     )
                 })}
             </main>
+            <Footer />
         </>
     )
 
