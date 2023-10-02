@@ -112,7 +112,6 @@ export default function Home() {
                     key={film.id}
                     onClick={() => detalhes(film.id)}
                   >
-                    {console.log(film.id)}
                     {film.type === "Filme" ?
                       <p className={styles.typeFilm}>{film.type}</p>
                       : film.type === "Série" ?

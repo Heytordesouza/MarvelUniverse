@@ -10,16 +10,7 @@ export default function wishlist() {
     const context = useContext(AppContext);
     const { push } = useRouter();
 
-    const { filmsList, setFilmsList, consultItem } = context
-
-    const onRemoveTotal = (movie) => {
-
-        const filterDelete = filmsList.filter((item) => item.id !== movie.id)
-
-        const turnString = JSON.stringify(filterDelete)
-        localStorage.setItem("local", turnString)
-        setFilmsList(filterDelete)
-    }
+    const { filmsList, removeFavorite, consultItem } = context
 
     const detalhes = (id) => {
         push(`/movie/${id}`)
@@ -44,7 +35,7 @@ export default function wishlist() {
                             />
                             <div>{movie.title}</div>
                             <button onClick={() => detalhes(movie.id)}>DETALHES</button>
-                            <button onClick={() => onRemoveTotal(movie)}>EXCLUIR</button>
+                            <button onClick={() => removeFavorite(movie)}>EXCLUIR</button>
                         </section>
                     )
                 })}
