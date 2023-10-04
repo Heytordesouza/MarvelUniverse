@@ -1,4 +1,4 @@
-import { useContext, useState, useEffect} from "react";
+import { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import AppContext from '../../components/AppContext';
 import favoriteOn from "../../../public/favoriteOn.png"
@@ -68,11 +68,23 @@ export default function Movie() {
 
                                             <div className={styles.titleContainer}>
                                                 <div className={styles.title}>{movie.title}</div>
-                                                <div onClick={() => toggleFavorite(movie)}>
-                                                    {isFavorite ? 
-                                                      <Image src={favoriteOn} width={40} height={40} />
-                                                    :
-                                                      <Image src={favoriteOff} width={40} height={40} />
+                                                <div className={styles.favorite}>
+                                                    {isFavorite ?
+                                                        <Image
+                                                            className={styles.favoriteImg}
+                                                            src={favoriteOn}
+                                                            onClick={() => toggleFavorite(movie)}
+                                                            width={40}
+                                                            height={40}
+                                                        />
+                                                        :
+                                                        <Image
+                                                            className={styles.favoriteImg}
+                                                            src={favoriteOff}
+                                                            onClick={() => toggleFavorite(movie)}
+                                                            width={40}
+                                                            height={40}
+                                                        />
                                                     }
                                                 </div>
                                             </div>
@@ -119,37 +131,32 @@ export default function Movie() {
                                                 <span className={styles.subTitleSinopse}>Sinopse:</span>
                                                 <span className={styles.sinopse}>{movie.synopsis}</span>
                                             </div>
-                                            <div className={styles.links}>
+
+
+                                            {movie.movieLink &&
                                                 <div className={styles.watch}>
-                                                    <a className={styles.imgWatch} href={movie.trailerLink} target="_blank">
-                                                        <span>Assista ao Trailer</span>
-                                                        <Image className={styles.imgYoutube} src={youtube} />
+                                                    <a className={styles.imgWatch} href={movie.movieLink} target="_blank" >
+
+                                                        {movie.type === "Filme"
+                                                            ? <span>Assistir ao Filme</span>
+                                                            : movie.type === "Série"
+                                                                ? <span>Assistir a Série</span>
+                                                                : <span>Assistir ao Curta</span>
+                                                        }
+
+                                                        {movie.streaming === "disney"
+                                                            ? <Image className={styles.imgDisney} src={disneyplus} />
+                                                            : movie.streaming === "netflix"
+                                                                ? <Image className={styles.imgNetflix} src={netflix} />
+                                                                : movie.streaming === "hbo"
+                                                                    ? <Image className={styles.imgHBO} src={hbomax} />
+                                                                    : <Image className={styles.imgAmazon} src={amazon} />
+                                                        }
                                                     </a>
                                                 </div>
-                                                {movie.movieLink &&
-                                                    <div className={styles.watch}>
-                                                        <a className={styles.imgWatch} href={movie.movieLink} target="_blank" >
+                                            }
 
-                                                            {movie.type === "Filme"
-                                                                ? <span>Assistir ao Filme</span>
-                                                                : movie.type === "Série"
-                                                                    ? <span>Assistir a Série</span>
-                                                                    : <span>Assistir ao Curta</span>
-                                                            }
-
-                                                            {movie.streaming === "disney"
-                                                                ? <Image className={styles.imgDisney} src={disneyplus} />
-                                                                : movie.streaming === "netflix"
-                                                                    ? <Image className={styles.imgNetflix} src={netflix} />
-                                                                    : movie.streaming === "hbo"
-                                                                        ? <Image className={styles.imgHBO} src={hbomax} />
-                                                                        : <Image className={styles.imgAmazon} src={amazon} />
-                                                            }
-                                                        </a>
-                                                    </div>
-                                                }
-                                            </div>
-                                            <iframe
+                                            <iframe className={styles.trailer}
                                                 width="525"
                                                 height="315"
                                                 src={`${movie.trailerLink}`}
