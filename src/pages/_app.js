@@ -46,25 +46,39 @@ function MyApp({ Component, pageProps }) {
     getFilms();
   }, []);
 
-  const onAdd = (movie) => {
-  
+  const addFavorite = (movie) => {
+
     const newFilm = filmsList.find((filmNew) => filmNew.id === movie.id);
 
     if (!newFilm) {
       const movieNew = [...filmsList, movie];
       setFilmsList(movieNew);
-  
+
       const turnString = JSON.stringify(movieNew)
       localStorage.setItem("local", turnString)
+      alert("Filme adicionado aos favoritos")
+    } else {
+      alert("Filme já adicionado aos favoritos")
     }
   }
 
-  useEffect(() => {
+  const removeFavorite = (movie) => {
+
+    const filterDelete = filmsList.filter((item) => item.id !== movie.id)
+
+    const turnString = JSON.stringify(filterDelete)
+    localStorage.setItem("local", turnString)
+    setFilmsList(filterDelete)
+    alert("Filme excluído dos favoritos")
+  }
+
+  const consultItem = () => {
     if (localStorage.getItem("local")) {
       const storeItem = localStorage.getItem("local")
       const getString = JSON.parse(storeItem);
-      setFilmsList(getString)}
-    },[])
+      setFilmsList(getString)
+    }
+  }
 
 
   return (
@@ -76,7 +90,9 @@ function MyApp({ Component, pageProps }) {
           setFilms,
           filmsList,
           setFilmsList,
-          onAdd,
+          addFavorite,
+          removeFavorite,
+          consultItem
         }}>
         <ThemeProvider theme={theme}>
           <ChakraProvider>

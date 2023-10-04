@@ -1,0 +1,73 @@
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    min-height: 53.4vh;
+    width: auto;
+    flex-wrap: wrap;
+}
+
+.main .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 1%;
+    background-color: black;
+    color: white;
+    border: red 2px solid;
+    border-radius: 10px;
+    width: 13vw;
+    height: 25vw;
+}
+
+.main .card .poster {
+    height: 60%;
+    width: 85%;
+    border-radius: 5px;
+    margin-top: 2%;
+}
+
+.main .card .title {
+    display: flex;
+    font-size: 1.1vw;
+    height: 4vw;
+    width: 11vw;
+    margin-bottom: 2%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.main .card .buttons {
+    display: flex;
+    width: 11vw;
+    height: 2vw;
+    gap: 10%;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+
+.main .card .buttons .details {
+    width: 90%;
+    background-color: blue;
+    border-radius: 5px;
+    font-size: 0.8vw;
+}
+
+.main .card .buttons .remove {
+    width: 90%;
+    background-color: red;
+    border-radius: 5px;
+    font-size: 0.8vw;
+}
+
+.main .notFound {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    height: 54.2vh;
+    font-size: 3vh;
+}
