@@ -156,17 +156,18 @@ export default function Movie() {
                                                 </div>
                                             }
 
-                                            <iframe className={styles.trailer}
-                                                width="525"
-                                                height="315"
-                                                src={`${movie.trailerLink}`}
-                                                title="YouTube video player"
-                                                frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                                allowFullScreen>
-                                            </iframe>
+
                                         </div>
                                     </div>
+                                    <iframe className={styles.trailer}
+                                        width="525"
+                                        height="315"
+                                        src={`${movie.trailerLink}`}
+                                        title="YouTube video player"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                        allowFullScreen>
+                                    </iframe>
                                 </section>
                             </div>
                         }

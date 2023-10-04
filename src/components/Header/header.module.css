@@ -5,6 +5,7 @@
     align-items: center;
     justify-content: center;
     background-color: black;
+    padding-bottom: 1.5%;
 }
 
 .main .imageMarvel {
@@ -110,9 +111,10 @@
     justify-content: center;
     align-items: center;
     background-color: red;
+    width: 8vw;
     font-size: 1.3vw;
-    padding: 0.6%;
-    border-radius: 10px;
+    padding: 0.4%;
+    border-radius: 6px;
     color: white;
     margin: 1.2%;
 }
@@ -128,24 +130,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12vw;
-    font-size: 1.6vw;
+    width: 9vw;
+    height: 2.4vw;
+    font-size: 1.1vw;
     background-color: red;
-    padding: 0.6%;
+    padding-bottom: 0.5%;
     border-radius: 5px;
     color: white;
-    margin: 1.2%;
+    
 }
 
 .main .links .linkHomePage {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 12vw;
-    font-size: 1.6vw;
+    width: 9vw;
+    height: 2.4vw;
+    font-size: 1.1vw;
     background-color: blue;
-    padding: 0.6%;
-    border-radius: 6px;
+    padding-bottom: 0.5%;
+    border-radius: 5px;
     color: white;
     margin: 1.2%;
 }

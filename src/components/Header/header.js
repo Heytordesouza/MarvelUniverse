@@ -59,7 +59,7 @@ export default function Header(props) {
                         <Link className={styles.favorite} href='/favorites'>Favoritos</Link>
                     </>
                     :
-                    router.asPath === '/wishlist' ?
+                    router.asPath === '/favorites' ?
                         <>
                             <div className={styles.links}>
                                 <Link className={styles.linkHomePage} href='/'>Página Inicial</Link>

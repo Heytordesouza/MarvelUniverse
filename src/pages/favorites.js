@@ -24,25 +24,32 @@ export default function wishlist() {
         <>
             <Header />
             <main className={styles.main}>
-                {filmsList.map((movie) => {
-                    return (
-                        <section className={styles.card}>
-                            <Image
-                                className={styles.poster}
-                                src={movie.posterImg}
-                                width={35}
-                                height={45}
-                            />
-                            <div>{movie.title}</div>
-                            <button onClick={() => detalhes(movie.id)}>DETALHES</button>
-                            <button onClick={() => removeFavorite(movie)}>EXCLUIR</button>
-                        </section>
-                    )
-                })}
+                {filmsList.length > 0 ? (
+                    <>
+                        {filmsList.map((movie) => {
+                            return (
+                                <section className={styles.card}>
+                                    <Image
+                                        className={styles.poster}
+                                        src={movie.posterImg}
+                                        width={35}
+                                        height={45}
+                                    />
+                                    <div className={styles.title}>{movie.title}</div>
+                                    <div className={styles.buttons}>
+                                        <button className={styles.details} onClick={() => detalhes(movie.id)}>DETALHES</button>
+                                        <button className={styles.remove} onClick={() => removeFavorite(movie)}>EXCLUIR</button>
+                                    </div>
+                                </section>
+                            )
+                        })}
+                    </>
+                )
+                :
+                (<section className={styles.notFound}>Nenhum filme ou série favoritado</section>)
+                }
             </main>
             <Footer />
         </>
     )
-
-
 }
