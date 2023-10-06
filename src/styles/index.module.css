@@ -100,25 +100,100 @@
     font-size: 3vh;
 }
 
-@media screen and (min-device-width: 900px) and (max-device-width: 1200px) {
-    .main .notFound {
-        height: 21vh;
-    }
-}
-
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
+    
+    .main .container .section {
+        width: 30%;
+        height: 45vw;
+    }
+    
+    .main .container .section .typeFilm,
+    .main .container .section .typeSerie,
+    .main .container .section .typeCurta {
+        font-size: 1.5vw;
+    }
+
+    .main .container .section .poster {
+        height: 75%;
+        margin: 0% 8% 5% 8%;
+    }
+    
+    .main .container .section .title {
+        font-size: 2vw;
+        height: 5.5vh;
+        width: 25vw;
+        margin-bottom: 2%;
+    }
+    
     .main .notFound {
         height: 15vh;
     }
 }
 
 @media screen and (min-device-width: 320px) and (max-device-width: 679px) {
+    
+    .main .container {
+        min-height: 50vh;
+        gap: 2vw;
+    }
+    
+    .main .container .section {
+        width: 44%;
+        height: 70vw;
+    }
+    
+    .main .container .section .typeFilm,
+    .main .container .section .typeSerie,
+    .main .container .section .typeCurta {
+        font-size: 2vw;
+    }
+    
+    .main .container .section .poster {
+        height: 75%;
+        margin: 0% 8% 4% 8%;
+    }
+    
+    .main .container .section .title {
+        font-size: 3vw;
+        width: 30vw;
+        margin-bottom: 1%;
+    }
+    
     .main .notFound {
         height: 43vh;
     }
 }
 
 @media screen and (max-device-width: 319px) {
+    .main .container {
+        min-height: 50vh;
+        gap: 2vw;
+    }
+    
+    .main .container .section {
+        width: 70%;
+        height: max-content;
+    }
+    
+    .main .container .section .typeFilm,
+    .main .container .section .typeSerie,
+    .main .container .section .typeCurta {
+        font-size: 4vw;
+        margin-top: 1vh;
+    }
+    
+    .main .container .section .poster {
+        height: 75%;
+        margin: 0% 8% 8% 8%;
+    }
+    
+    .main .container .section .title {
+        font-size: 5vw;
+        width: 60vw;
+        height: 10vw;
+        margin-bottom: 5%;
+    }
+    
     .main .notFound {
         height: 70vh;
     }
