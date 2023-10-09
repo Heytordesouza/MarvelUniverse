@@ -15,6 +15,11 @@
 }
 
 .main .inputContainer {
+    display: flex;
+    flex-direction: column;
+        
+    justify-content: center;
+    align-items: center;
     width: 30%;
 }
 
@@ -23,7 +28,6 @@
     position: relative;
     bottom: -10px;
     width: fit-content;
-    left: 10px;
     padding: 0px 5px;
     background-color: black;
     color: white;
@@ -34,12 +38,13 @@
     border: 2px solid red;
     height: 10%;
     width: 100%;
-    padding: 3% 3%;
+    padding: 4% 3%;
     font-weight: bold;
     background-color: black;
     color: white;
     border-radius: 7px;
-    font-size: 1.2vw;
+    font-size: 1.4vw;
+    text-align: center;
 }
 
 .main .ordinationContainer {
@@ -56,6 +61,10 @@
     color: white;
     width: 40%;
     font-size: 1.2vw;
+}
+
+.main .ordinationContainer .ordem p {
+    margin-bottom: 0.8%;
 }
 
 .main .ordinationContainer .ordem select {
@@ -81,6 +90,10 @@
     justify-content: center;
     margin-bottom: 1%;
     width: 100%;
+}
+
+.main .typesContainer .types p {
+    margin-bottom: 1%;
 }
 
 .main .typesContainer .types {
@@ -154,49 +167,89 @@
     margin: 1.2%;
 }
 
+
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
 
     .main .inputContainer {
         display: flex;
         flex-direction: column;
         width: 100%;
+        justify-content: center;
+        align-items: center;
     }
 
     .main .inputContainer .name {
         left: -3px;
-        font-size: 3vw;
+        font-size: 2.2vw;
     }
 
     .main .inputContainer input {
         width: 50%;
         padding: 2%;
         text-align: center;
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     .main .ordinationContainer {
         margin-top: 2%;
-        margin-bottom: 4%;
+        margin-bottom: 0%;
+        height: 15vh;
     }
 
     .main .ordinationContainer .ordem {
         margin-bottom: 2%;
-        font-size: 3vw;
         width: 53.5%;
         margin-right: 1.5%;
     }
 
     .main .ordinationContainer .ordem p {
-        margin-bottom: 2%;
+        margin-bottom: 1%;
         margin-left: 1%;
+        font-size: 2vw;
     }
 
     .main .ordinationContainer .ordem select {
         width: 92%;
-        font-size: 3vw;
+        font-size: 2vw;
         padding: 3%;
         margin-bottom: 2%;
         text-align: center;
+        
+    }
+    
+    .main .typesContainer .types {
+        font-size: 2vw;
+    }
+
+    .main .typesContainer .types p {
+        margin-bottom: 1.3%;
+    }
+    
+    .main .typesContainer .types select {
+        width: 80%;
+        font-size: 2vw;
+    }
+
+    .main .favorite {
+        width: 11vw;
+        font-size: 2.3vw;
+        padding: 0.8%;
+        margin-top: 2%;
+    }
+    
+    .main .links .linkFavorite {
+        width: 14vw;
+        height: 3.3vw;
+        font-size: 2.3vw;
+        padding-bottom: 1%;
+    }
+    
+    .main .links .linkHomePage {
+        width: 17vw;
+        height: 3.3vw;
+        font-size: 2.1vw;
+        padding-bottom: 1%;
+        margin: 0%;
     }
 }
 
@@ -222,7 +275,7 @@
 
     .main .ordinationContainer {
         margin-top: 2%;
-        margin-bottom: 4%;
+        margin-bottom: 0%;
     }
 
     .main .ordinationContainer .ordem {
@@ -244,5 +297,44 @@
         padding: 3%;
         margin-bottom: 2%;
         text-align: center;
+    }
+
+    
+
+    .main .typesContainer .types {
+        font-size: 4vw;
+        width: 55%;
+    }
+
+    .main .typesContainer .types p {
+        margin-bottom: 1.3%;
+        width: 100%;
+    }
+    
+    .main .typesContainer .types select {
+        width: 80%;
+        font-size: 4vw;
+    }
+
+    .main .favorite {
+        width: 20vw;
+        font-size: 4vw;
+        padding: 0.8%;
+        margin-top: 3%;
+    }
+    
+    .main .links .linkFavorite {
+        width: 20vw;
+        height: 4.4vw;
+        font-size: 3.5vw;
+        padding-bottom: 1%;
+    }
+    
+    .main .links .linkHomePage {
+        width: 22vw;
+        height: 4.4vw;
+        font-size: 3.3vw;
+        padding-bottom: 1%;
+        margin: 0%;
     }
 }

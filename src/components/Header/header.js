@@ -29,7 +29,7 @@ export default function Header(props) {
                 {router.asPath === '/' ?
                     <>
                         <div className={styles.inputContainer}>
-                            <label className={styles.name}>Filme ou Série</label>
+                            <label className={styles.name}>Filme, Série ou Curta</label>
                             <input type="text" placeholder="Buscar por nome" onChange={onChangeSearch} value={search} />
                         </div>
                         <div className={styles.ordinationContainer}>
