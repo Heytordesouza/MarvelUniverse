@@ -43,7 +43,7 @@ export default function Header(props) {
                         </div>
                         <div className={styles.typesContainer}>
                             <label className={styles.types}>
-                            <p>Filmes por Tipo:</p>
+                            <p>Conteúdo por Tipo:</p>
                                 <select
                                     value={selectedType}
                                     onChange={e => setSelectedType(e.target.value)}
