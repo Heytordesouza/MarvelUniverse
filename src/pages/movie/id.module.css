@@ -102,7 +102,7 @@
     flex-wrap: wrap;
     gap: 3%;
     margin-bottom: 1%;
-    width: 90%;
+    width: 94%;
     height: 20%;
 }
 
@@ -184,7 +184,8 @@
     margin-bottom: 10px;
     background-color: #111111;
     border-radius: 8px;
-    width: 90%;
+    width: 92%;
+    padding-right: 1%;
 }
 
 .main .section .container .information .sinopseContainer .subTitleSinopse {
@@ -701,18 +702,16 @@
     }
 
     .main .section .container .information .titleContainer {
-        justify-content: center;
-        width: 80vw;
+        justify-content: start;
+        width: 75vw;
         height: 10vh;
         font-size: 4.5vw;
-        text-align: center;
         margin-top: 3%;  
     }
 
     .main .section .container .information .titleContainer .title {
-        width: 100%;
-        margin-left: 14%;
-        margin-bottom: 2%;
+        width: 82%;
+        text-align: center;
     }
 
     .main .section .container .information .titleContainer .favorite {
@@ -720,18 +719,21 @@
         font-size: 1.5vw;
         cursor: pointer;
         display: flex;
+        align-items: center;
         justify-content: end;
         margin-right: 5px;
+        margin-bottom: 0%;
     }
     
     .main .section .container .information .titleContainer .favorite .favoriteImg {
-        width: 2.3rem;
+        width: 2.9rem;
     }
 
     .main .section .container .information .generoContainer {
         justify-content: center;
         width: 90vw;
         gap: 4%;
+        margin-top: 4%;
     }
 
     .main .section .container .information .generoContainer .type {

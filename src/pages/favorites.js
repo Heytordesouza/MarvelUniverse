@@ -5,6 +5,8 @@ import Footer from "../components/Footer/footer";
 import styles from "../styles/favorites.module.css"
 import Image from 'next/image'
 import { useRouter } from "next/router";
+import lupa from "../../public/lupa.png"
+import excluir from "../../public/excluir.png"
 
 export default function wishlist() {
     const context = useContext(AppContext);
@@ -37,8 +39,8 @@ export default function wishlist() {
                                     />
                                     <div className={styles.title}>{movie.title}</div>
                                     <div className={styles.buttons}>
-                                        <button className={styles.details} onClick={() => detalhes(movie.id)}>DETALHES</button>
-                                        <button className={styles.remove} onClick={() => removeFavorite(movie)}>EXCLUIR</button>
+                                        <Image src={lupa} className={styles.details} onClick={() => detalhes(movie.id)}/>
+                                        <Image src={excluir} className={styles.remove} onClick={() => removeFavorite(movie)}/>
                                     </div>
                                 </section>
                             )
