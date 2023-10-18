@@ -30,17 +30,18 @@ export default function wishlist() {
                     <>
                         {filmsList.map((movie) => {
                             return (
-                                <section className={styles.card}>
+                                <section key={movie.id} className={styles.card}>
                                     <Image
                                         className={styles.poster}
-                                        src={movie.posterImg}
-                                        width={35}
+                                        src={`/poster/${movie.id}.jpg`}
+                                        width={45}
                                         height={45}
+                                        alt="poster"
                                     />
                                     <div className={styles.title}>{movie.title}</div>
                                     <div className={styles.buttons}>
-                                        <Image src={lupa} className={styles.details} onClick={() => detalhes(movie.id)}/>
-                                        <Image src={excluir} className={styles.remove} onClick={() => removeFavorite(movie)}/>
+                                        <Image src={lupa} alt="lupa" className={styles.details} onClick={() => detalhes(movie.id)}/>
+                                        <Image src={excluir} alt="remove" className={styles.remove} onClick={() => removeFavorite(movie)}/>
                                     </div>
                                 </section>
                             )
@@ -48,7 +49,7 @@ export default function wishlist() {
                     </>
                 )
                 :
-                (<section className={styles.notFound}>Nenhum filme ou série favoritado</section>)
+                (<section className={styles.notFound}>Nenhum filme, série ou curta favoritado</section>)
                 }
             </main>
             <Footer />

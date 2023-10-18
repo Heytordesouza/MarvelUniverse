@@ -317,7 +317,7 @@
         font-size: 1.5vw;
         cursor: pointer;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin-right: 0vw;
     }
     
@@ -521,7 +521,7 @@
         font-size: 1.5vw;
         cursor: pointer;
         display: flex;
-        justify-content: end;
+        justify-content: flex-end;
         margin-right: 18px;
     }
     
@@ -706,12 +706,13 @@
         width: 75vw;
         height: 10vh;
         font-size: 4.5vw;
-        margin-top: 3%;  
+        margin-top: 0%;  
     }
 
     .main .section .container .information .titleContainer .title {
         width: 82%;
         text-align: center;
+        font-size: 5vw;
     }
 
     .main .section .container .information .titleContainer .favorite {
@@ -720,7 +721,7 @@
         cursor: pointer;
         display: flex;
         align-items: center;
-        justify-content: end;
+        justify-content: flex-end;
         margin-right: 5px;
         margin-bottom: 0%;
     }
@@ -748,24 +749,24 @@
     .main .section .container .information .subTitleContainer {
         justify-content: center;
         margin-bottom: 15px;
-        width: 100%;
+        width: 100vw;
     }
 
     .main .section .container .information .subTitleContainer .IMDB {
-        margin-top: 2.6%;
+        margin-top: 3.5%;
         margin-left: 4%;
         margin-right: 2%;
     }
 
     .main .section .container .information .subTitleContainer .IMDB .imgIMDB {
-        width: 9%;
-        height: 3.6%;
+        width: 10.5%;
+        height: 3.8%;
         align-items: center;
         justify-content: center;
     }
 
     .main .section .container .information .subTitleContainer .IMDB .notaIMDB {
-        margin-top: 1.3em;
+        margin-top: 1.5em;
         margin-left: 0.1em;
         height: 1.2em;
         width: 1.5em;
@@ -795,7 +796,7 @@
     .main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle {
         width: 80%;
         height: 100%;
-        font-size: 3.5vw;
+        font-size: 3.7vw;
         margin: 5px;
     }
 
@@ -809,13 +810,14 @@
     .main .section .container .information .subTitleContainer .releaseDateOf .date,
     .main .section .container .information .subTitleContainer .durationContainer .duration,
     .main .section .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
-        font-size: 3vw;
+        font-size: 3.3vw;
     }
 
     .main .section .container .information .sinopseContainer {
-        width: 90%;
+        width: 90vw;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
     .main .section .container .information .sinopseContainer .subTitleSinopse {
@@ -823,7 +825,7 @@
     }
 
     .main .section .container .information .sinopseContainer .sinopse {
-        font-size: 2.9vw;
+        font-size: 3.4vw;
     }
 
     .main .section .container .information .watch {
@@ -833,13 +835,13 @@
         align-items: center;
         gap: 8%;
         padding-top: 0.5px;
-        width: 50%;
+        width: 80%;
         background-color: #111111;
         border: 1px solid black;
         border-radius: 8px;
         color: #f5c518;
         font-family: 'Roboto', sans-serif;
-        font-size: 3vw;
+        font-size: 4vw;
     }
     
     .main .section .container .information .watch :hover {

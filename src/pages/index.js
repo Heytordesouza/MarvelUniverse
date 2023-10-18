@@ -62,7 +62,7 @@ export default function Home() {
         <div>
           {showScrollTopButton && (
             <div className={styles.buttonTop}>
-              <Image src={seta} onClick={scrollTop} />
+              <Image src={seta} alt="seta" onClick={scrollTop} />
             </div>
           )}
         </div>
@@ -122,6 +122,7 @@ export default function Home() {
                     <Image
                       className={styles.poster}
                       src={`/poster/${film.id}.jpg`}
+                      alt="poster"
                       width={35}
                       height={45}
                     />

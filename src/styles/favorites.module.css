@@ -52,11 +52,13 @@
 .main .card .buttons .details {
     width: 17%;
     height: 85%;
+    cursor: pointer;
 }
 
 .main .card .buttons .remove {
-    width: 18%;
+    width: 17%;
     height: 85%;
+    cursor: pointer;
 }
 
 .main .notFound {
@@ -134,13 +136,13 @@
     }
     
     .main .card .buttons .remove {
-        width: 19%;
+        width: 20%;
         height: 100%;
     }
     
     .main .notFound {
         height: 71.5vh;
-        font-size: 3vw;
+        font-size: 3.6vw;
     }
 }
 

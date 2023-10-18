@@ -25,6 +25,7 @@ export default function Header(props) {
                     className={styles.imageMarvel}
                     src={marvelEdit}
                     alt="marvel"
+                    priority={true}
                 />
                 {router.asPath === '/' ?
                     <>
