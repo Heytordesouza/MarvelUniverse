@@ -703,16 +703,16 @@
 
     .main .section .container .information .titleContainer {
         justify-content: start;
-        width: 75vw;
+        width: 87vw;
         height: 10vh;
         font-size: 4.5vw;
-        margin-top: 0%;  
+        margin-top: 0%; 
     }
 
     .main .section .container .information .titleContainer .title {
         width: 82%;
         text-align: center;
-        font-size: 5vw;
+        font-size: 6vw;
     }
 
     .main .section .container .information .titleContainer .favorite {
@@ -734,7 +734,7 @@
         justify-content: center;
         width: 90vw;
         gap: 4%;
-        margin-top: 4%;
+        margin-top: 5%;
     }
 
     .main .section .container .information .generoContainer .type {
@@ -887,7 +887,7 @@
     }
     
     .main .section .trailer {
-        width: 76vw;
-        margin: 0% 0% 5% 5%;
+        width: 85vw;
+        margin: 0% 0% 5% 0%;
     }
 }
