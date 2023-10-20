@@ -1,35 +1,35 @@
-.main {
+.section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #000000;
     min-height: 53.4vh;
     width: auto;
     flex-wrap: wrap;
 }
 
-.main .card {
+.section .card {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
     margin: 1%;
-    background-color: black;
-    color: white;
-    border: red 2px solid;
+    background-color: #000000;
+    color: #ffffff;
+    border: 2px solid #ff0000 ;
     border-radius: 10px;
     width: 13vw;
     height: 25vw;
 }
 
-.main .card .poster {
+.section .card .poster {
     height: 60%;
     width: 85%;
     border-radius: 5px;
     margin-top: 2%;
 }
 
-.main .card .title {
+.section .card .title {
     display: flex;
     font-size: 1.1vw;
     height: 4vw;
@@ -40,7 +40,7 @@
     text-align: center;
 }
 
-.main .card .buttons {
+.section .card .buttons {
     display: flex;
     width: 11vw;
     height: 2vw;
@@ -49,58 +49,58 @@
     margin-bottom: 2%;
 }
 
-.main .card .buttons .details {
+.section .card .buttons .details {
     width: 17%;
     height: 85%;
     cursor: pointer;
 }
 
-.main .card .buttons .remove {
+.section .card .buttons .remove {
     width: 17%;
     height: 85%;
     cursor: pointer;
 }
 
-.main .notFound {
+.section .notFound {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    color: #ffffff;
     height: 54.2vh;
     font-size: 3vh;
 }
 
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
     
-    .main {
+    .section {
         min-height: 53.6vh;
     }
     
-    .main .card {
+    .section .card {
         width: 20vw;
         height: 38vw;
     }
     
-    .main .card .title {
+    .section .card .title {
         font-size: 1.6vw;
         width: 18vw;
     }
     
-    .main .card .buttons {
+    .section .card .buttons {
         width: 17vw;
         height: 3vw;
         margin-bottom: 1%;
     }
     
-    .main .card .buttons .details {
+    .section .card .buttons .details {
         width: 16%;
     }
     
-    .main .card .buttons .remove {
+    .section .card .buttons .remove {
         width: 16%;
     }
     
-    .main .notFound {
+    .section .notFound {
         height: 54.2vh;
         font-size: 3vw;
     }
@@ -108,39 +108,39 @@
 
 @media screen and (min-device-width: 320px) and (max-device-width: 679px) {
 
-    .main {
+    .section {
         align-items: start;
         min-height: 72vh;
         padding-top: 3%;
     }
 
-    .main .card {
+    .section .card {
         width: 31vw;
         height: 59vw;
     }
     
-    .main .card .title {
+    .section .card .title {
         font-size: 2.5vw;
         width: 28vw;
     }
     
-    .main .card .buttons {
+    .section .card .buttons {
         width: 28vw;
         height: 5.5vw;
         margin-bottom: 1%;
     }
     
-    .main .card .buttons .details {
+    .section .card .buttons .details {
         width: 19%;
         height: 100%;
     }
     
-    .main .card .buttons .remove {
+    .section .card .buttons .remove {
         width: 20%;
         height: 100%;
     }
     
-    .main .notFound {
+    .section .notFound {
         height: 71.5vh;
         font-size: 3.6vw;
     }
@@ -148,38 +148,38 @@
 
 @media screen and (max-device-width: 319px) {
     
-    .main {
+    .section {
         min-height: 80vh;
     }
 
-    .main .card {
+    .section .card {
         width: 50vw;
         height: 90vw;
     }
     
-    .main .card .title {
+    .section .card .title {
         font-size: 4vw;
         width: 40vw;
         height: 15vw;
     }
     
-    .main .card .buttons {
+    .section .card .buttons {
         width: 45vw;
         height: 8vw;
         margin-bottom: 1%;
     }
     
-    .main .card .buttons .details {
+    .section .card .buttons .details {
         width: 19%;
         height: 100%;
     }
     
-    .main .card .buttons .remove {
+    .section .card .buttons .remove {
         width: 19%;
         height: 100%;
     }
     
-    .main .notFound {
+    .section .notFound {
         height: 78vh;
         font-size: 4vw;
     }

@@ -56,7 +56,6 @@ function MyApp({ Component, pageProps }) {
     if (!newFilm) {
       const movieNew = [...filmsList, movie];
       setFilmsList(movieNew);
-
       const turnString = JSON.stringify(movieNew)
       localStorage.setItem("local", turnString)
       toast.success("Filme adicionado aos favoritos", {
@@ -87,7 +86,6 @@ function MyApp({ Component, pageProps }) {
       setFilmsList(getString)
     }
   }
-
 
   return (
     <>

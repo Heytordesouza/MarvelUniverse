@@ -1,20 +1,20 @@
-.main {
+.header {
     display: flex;
     flex-direction: column;
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: #000000;
     padding-bottom: 1.5%;
 }
 
-.main .imageMarvel {
+.header .imageMarvel {
     width: 100vw;
     background-size: cover;
     background-repeat: no-repeat;
 }
 
-.main .inputContainer {
+.header .inputContainer {
     display: flex;
     flex-direction: column; 
     justify-content: center;
@@ -22,31 +22,31 @@
     width: 30%;
 }
 
-.main .inputContainer .name {
+.header .inputContainer .name {
     display: block;
     position: relative;
     bottom: -10px;
     width: fit-content;
     padding: 0px 5px;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     font-size: 1.2vw;
 }
 
-.main .inputContainer input {
-    border: 2px solid red;
+.header .inputContainer input {
+    border: 2px solid #ff0000;
     height: 10%;
     width: 100%;
     padding: 4% 3%;
     font-weight: bold;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     border-radius: 7px;
     font-size: 1.4vw;
     text-align: center;
 }
 
-.main .ordinationContainer {
+.header .ordinationContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -55,35 +55,35 @@
     width: 100%;
 }
 
-.main .ordinationContainer .ordem {
+.header .ordinationContainer .ordem {
     text-align: center;
-    color: white;
+    color: #ffffff;
     width: 40%;
     font-size: 1.2vw;
 }
 
-.main .ordinationContainer .ordem p {
+.header .ordinationContainer .ordem p {
     margin-bottom: 0.8%;
 }
 
-.main .ordinationContainer .ordem select {
+.header .ordinationContainer .ordem select {
     width: 40%;
-    color: white;
-    background-color: black;
+    color: #ffffff;
+    background-color: #000000;
     padding: 6px 4px;
-    border: 2px solid red;
+    border: 2px solid #ff0000;
     border-radius: 5px;
     margin-left: 10px;
     font-size: 1.2vw;
 }
 
-.main .ordinationContainer .ordem select option {
+.header .ordinationContainer .ordem select option {
     align-items: center;
     justify-content: center;
     text-align: center;
 }
 
-.main .typesContainer {
+.header .typesContainer {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,122 +91,117 @@
     width: 100%;
 }
 
-.main .typesContainer .types p {
+.header .typesContainer .types p {
     margin-bottom: 1%;
 }
 
-.main .typesContainer .types {
-    color: white;
+.header .typesContainer .types {
+    color: #ffffff;
     width: 25%;
     font-size: 1.2vw;
 }
 
-.main .typesContainer .types select {
+.header .typesContainer .types select {
     width: 40%;
-    color: white;
-    background-color: black;
+    color: #ffffff;
+    background-color: #000000;
     padding: 6px 4px;
-    border: 2px solid red;
+    border: 2px solid #ff0000;
     border-radius: 5px;
     margin-left: 10px;
     font-size: 1.2vw;
 }
 
-.main .typesContainer .types select option {
+.header .typesContainer .types select option {
     text-align: center;
     align-items: center;
     justify-content: center;
 }
 
-.main .favorite {
+.header .favorite {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: red;
+    background-color: #ff0000;
     width: 8vw;
     font-size: 1.3vw;
     padding: 0.4%;
     border-radius: 6px;
-    color: white;
+    color: #ffffff;
     margin: 1.2%;
 }
 
-.main .links {
+.header .links {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 4%
 }
 
-.main .links .linkFavorite {
+.header .links .linkFavorite {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 9vw;
     height: 2.4vw;
     font-size: 1.1vw;
-    background-color: red;
+    background-color: #ff0000;
     padding-bottom: 0.5%;
     border-radius: 5px;
-    color: white;
+    color: #ffffff;
 }
 
-.main .links .linkHomePage {
+.header .links .linkHomePage {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 9vw;
     height: 2.4vw;
     font-size: 1.1vw;
-    background-color: blue;
+    background-color: #0000ff;
     padding-bottom: 0.5%;
     border-radius: 5px;
-    color: white;
+    color: #ffffff;
     margin: 1.2%;
 }
 
 
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
 
-    .main .inputContainer {
-        display: flex;
-        flex-direction: column;
+    .header .inputContainer {
         width: 100%;
-        justify-content: center;
-        align-items: center;
     }
 
-    .main .inputContainer .name {
+    .header .inputContainer .name {
         left: -3px;
         font-size: 2.2vw;
     }
 
-    .main .inputContainer input {
+    .header .inputContainer input {
         width: 50%;
         padding: 2%;
-        text-align: center;
         font-size: 2vw;
     }
 
-    .main .ordinationContainer {
+    .header .ordinationContainer {
         margin-top: 2%;
         margin-bottom: 0%;
         height: 15vh;
     }
 
-    .main .ordinationContainer .ordem {
+    .header .ordinationContainer .ordem {
         margin-bottom: 2%;
         width: 53.5%;
         margin-right: 1.5%;
     }
 
-    .main .ordinationContainer .ordem p {
+    .header .ordinationContainer .ordem p {
         margin-bottom: 1%;
         margin-left: 1%;
         font-size: 2vw;
     }
 
-    .main .ordinationContainer .ordem select {
+    .header .ordinationContainer .ordem select {
         width: 92%;
         font-size: 2vw;
         padding: 3%;
@@ -214,34 +209,34 @@
         text-align: center;
     }
     
-    .main .typesContainer .types {
+    .header .typesContainer .types {
         font-size: 2vw;
     }
 
-    .main .typesContainer .types p {
+    .header .typesContainer .types p {
         margin-bottom: 1.3%;
     }
     
-    .main .typesContainer .types select {
+    .header .typesContainer .types select {
         width: 80%;
         font-size: 2vw;
     }
 
-    .main .favorite {
+    .header .favorite {
         width: 11vw;
         font-size: 2.3vw;
         padding: 0.8%;
         margin-top: 2%;
     }
     
-    .main .links .linkFavorite {
+    .header .links .linkFavorite {
         width: 14vw;
         height: 3.3vw;
         font-size: 2.3vw;
         padding-bottom: 1%;
     }
     
-    .main .links .linkHomePage {
+    .header .links .linkHomePage {
         width: 17vw;
         height: 3.3vw;
         font-size: 2.1vw;
@@ -252,41 +247,38 @@
 
 @media screen and (max-device-width: 679px) {
 
-    .main .inputContainer {
-        display: flex;
-        flex-direction: column;
+    .header .inputContainer {
         width: 100%;
     }
 
-    .main .inputContainer .name {
+    .header .inputContainer .name {
         font-size: 4vw;
     }
 
-    .main .inputContainer input {
+    .header .inputContainer input {
         width: 53%;
         padding: 3%;
-        text-align: center;
         font-size: 4vw;
     }
 
-    .main .ordinationContainer {
+    .header .ordinationContainer {
         margin-top: 2%;
         margin-bottom: 0%;
     }
 
-    .main .ordinationContainer .ordem {
+    .header .ordinationContainer .ordem {
         margin-bottom: 2%;
         font-size: 4vw;
         width: 59.1%;
         margin-right: 2%;
     }
 
-    .main .ordinationContainer .ordem p {
+    .header .ordinationContainer .ordem p {
         margin-bottom: 2%;
         margin-left: 1%;
     }
 
-    .main .ordinationContainer .ordem select {
+    .header .ordinationContainer .ordem select {
         width: 90%;
         height: 50%;
         font-size: 4vw;
@@ -295,29 +287,29 @@
         text-align: center;
     }
 
-    .main .typesContainer .types {
+    .header .typesContainer .types {
         font-size: 4vw;
         width: 55%;
     }
 
-    .main .typesContainer .types p {
+    .header .typesContainer .types p {
         margin-bottom: 1.3%;
         width: 100%;
     }
     
-    .main .typesContainer .types select {
+    .header .typesContainer .types select {
         width: 80%;
         font-size: 4vw;
     }
 
-    .main .favorite {
+    .header .favorite {
         width: 20vw;
         font-size: 4vw;
         padding: 0.8%;
         margin-top: 3%;
     }
     
-    .main .links .linkFavorite {
+    .header .links .linkFavorite {
         width: 20vw;
         height: 6vw;
         font-size: 3.5vw;
@@ -325,7 +317,7 @@
         border-radius: 3px;
     }
     
-    .main .links .linkHomePage {
+    .header .links .linkHomePage {
         width: 25vw;
         height: 6vw;
         font-size: 3.5vw;

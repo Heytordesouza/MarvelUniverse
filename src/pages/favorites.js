@@ -23,14 +23,14 @@ export default function wishlist() {
     }, [])
 
     return (
-        <>
+        <main>
             <Header />
-            <main className={styles.main}>
+            <section className={styles.section}>
                 {filmsList.length > 0 ? (
                     <>
                         {filmsList.map((movie) => {
                             return (
-                                <section key={movie.id} className={styles.card}>
+                                <article key={movie.id} className={styles.card}>
                                     <Image
                                         className={styles.poster}
                                         src={`/poster/${movie.id}.jpg`}
@@ -43,7 +43,7 @@ export default function wishlist() {
                                         <Image src={lupa} alt="lupa" className={styles.details} onClick={() => detalhes(movie.id)}/>
                                         <Image src={excluir} alt="remove" className={styles.remove} onClick={() => removeFavorite(movie)}/>
                                     </div>
-                                </section>
+                                </article>
                             )
                         })}
                     </>
@@ -51,8 +51,8 @@ export default function wishlist() {
                 :
                 (<section className={styles.notFound}>Nenhum filme, série ou curta favoritado</section>)
                 }
-            </main>
+            </section>
             <Footer />
-        </>
+        </main>
     )
 }

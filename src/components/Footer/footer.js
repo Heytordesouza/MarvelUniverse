@@ -6,7 +6,7 @@ import linkedin from "../../../public/linkedin.png"
 export default function Footer() {
 
     return (
-        <main className={styles.main}>
+        <footer className={styles.footer}>
             <div className={styles.createdBy}>
                 <p>Criado por</p>
                 <div className={styles.created}>Heytor de Souza</div>
@@ -21,6 +21,6 @@ export default function Footer() {
                     </a>
                 </div>
             </div>
-        </main>
+        </footer>
     )
 } 
