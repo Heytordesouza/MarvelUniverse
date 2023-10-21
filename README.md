@@ -28,7 +28,6 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 <p>📍 Firebase
   
 <br></br>
-
 # Responsividade
 
 📍 PC
@@ -37,15 +36,15 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 <br>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpchome.png" width="900px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpchome.png?token=GHSAT0AAAAAACCEQFK2FBN6MZP7EW3CJNLYZJUEDRQ" width="900px" />
 </div>
 <br>
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpcfilme.png" width="400px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpcfilme.png?token=GHSAT0AAAAAACCEQFK2JYPLM4BKTJIKVH7YZJUECQA" width="400px" />
 </div>
 <br>
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printcelularhome.jpg" width="250px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printcelularhome.jpg?token=GHSAT0AAAAAACCEQFK2VSWXL4WJGCSIP5UIZJUEBUA" width="250px" />
 </div>
 <br>
 <div align="center">
