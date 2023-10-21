@@ -18,8 +18,7 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 - Sinopse
 - Link para assistir ao filme, série ou curta
 - Trailer
-  
-<br></br>
+
 # Conteúdos Abordados no Projeto
 
 <p>📍 NextJS
@@ -27,13 +26,11 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 <p>📍 React Toastify
 <p>📍 Firebase
   
-<br></br>
 # Responsividade
 
 📍 PC
 📍 Tablet
 📍 Celular
-<br>
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpchome.png?token=GHSAT0AAAAAACCEQFK2FBN6MZP7EW3CJNLYZJUEDRQ" width="900px" />
