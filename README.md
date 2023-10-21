@@ -16,15 +16,18 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 - Duração
 - Bilheteria (somente filmes)
 - Sinopse
-- Link para assistir ao trailer
-- Link para assistir ao filme ou série
+- Link para assistir ao filme, série ou curta
+- Trailer
+
 <br></br>
 
 # Conteúdos Abordados no Projeto
 
 <p>📍 NextJS
-<p>📍 Styled-components
+<p>📍 JavaScript
+<p>📍 React Toastify
 <p>📍 Firebase
+  
 <br></br>
 
 # Responsividade
@@ -35,13 +38,17 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 <br>
 
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/screenmarvel.png" width="900px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpchome.png" width="900px" />
 </div>
 <br>
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/screenmarveltablet.png" width="400px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpcfilme.png" width="400px" />
 </div>
 <br>
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/screenmarvelcel.png" width="250px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printcelularhome.jpg" width="250px" />
+</div>
+<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printcelularfilme.jpg" width="250px" />
 </div>
