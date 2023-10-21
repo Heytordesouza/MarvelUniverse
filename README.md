@@ -18,9 +18,8 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 - Sinopse
 - Link para assistir ao filme, série ou curta
 - Trailer
-
+  
 <br></br>
-
 # Conteúdos Abordados no Projeto
 
 <p>📍 NextJS
@@ -50,5 +49,5 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 </div>
 <br>
 <div align="center">
-<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printcelularfilme.jpg" width="250px" />
+<img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printcelularfilme.jpg?token=GHSAT0AAAAAACCEQFK2F4RJ33R2QCL75DKWZJUEAIA" width="250px" />
 </div>
