@@ -1,30 +1,27 @@
-.main {
+.section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-color: #000000;
     width: auto;
 }
 
-.main .section {
+.section .article {
     display: flex;
     flex-direction: column;
-    background-color: black;
-    color: white;
+    background-color: #000000;
+    color: #ffffff;
     width: 80vw;
-    border-radius: 20px;
-    border: red 2px solid;
-    margin: 1%;
 }
 
-.main .section .container {
+.section .article .container {
     display: flex;
     flex-direction: row;
     width: 100%;
 }
 
-.main .section .container .poster {
+.section .article .container .poster {
     height: 50%;
     width: 20%;
     margin: 25px;
@@ -32,7 +29,7 @@
     cursor: pointer;
 }
 
-.main .section .container .information {
+.section .article .container .information {
     display: flex;
     flex-direction: column;
     width: 75%;
@@ -40,7 +37,7 @@
     margin-bottom: 10px;
 }
 
-.main .section .container .information .titleContainer {
+.section .article .container .information .titleContainer {
     display: flex;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -52,31 +49,30 @@
     font-weight: bold;
 }
 
-.main .section .container .information .titleContainer .title {
+.section .article .container .information .titleContainer .title {
     width: 90%;
 }
 
-.main .section .container .information .titleContainer .favorite {
+.section .article .container .information .titleContainer .favorite {
     width: 8%;
-    font-size: 1.5vw;
     cursor: pointer;
     display: flex;
     justify-content: center;
     margin-right: 4vw;
 }
 
-.main .section .container .information .titleContainer .favorite .favoriteImg {
+.section .article .container .information .titleContainer .favorite .favoriteImg {
     width: 3vw;
 }
 
-.main .section .container .information .generoContainer {
+.section .article .container .information .generoContainer {
     display: flex;
     align-items: center;
     margin-bottom: 1%;
     gap: 1.7%;
 }
 
-.main .section .container .information .generoContainer .type {
+.section .article .container .information .generoContainer .type {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-size: 1vw;
@@ -85,31 +81,31 @@
     border-radius: 8px;
     justify-content: center;
     width: 5.2%;
-    color: white;
+    color: #ffffff;
 }
 
-.main .section .container .information .generoContainer .genero {
+.section .article .container .information .generoContainer .genero {
     display: flex;
     font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     background-color: #111111;
     padding: 5px;
     border-radius: 8px;
-    color: white;
+    color: #ffffff;
 }
 
-.main .section .container .information .subTitleContainer {
+.section .article .container .information .subTitleContainer {
     display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
     gap: 3%;
     margin-bottom: 1%;
-    width: 90%;
+    width: 94%;
     height: 20%;
 }
 
-.main .section .container .information .subTitleContainer .IMDB {
+.section .article .container .information .subTitleContainer .IMDB {
     display: flex;
     height: 45%;
     width: 4.8%;
@@ -117,19 +113,19 @@
     justify-content: center;
 }
 
-.main .section .container .information .subTitleContainer .IMDB .imgIMDB {
+.section .article .container .information .subTitleContainer .IMDB .imgIMDB {
     display: flex;
     position: absolute;
     width: 2.9%;
     margin-left: 0.5%;
 }
 
-.main .section .container .information .subTitleContainer .IMDB .notaIMDB {
+.section .article .container .information .subTitleContainer .IMDB .notaIMDB {
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    color: black;
+    color: #000000;
     margin-top: 1.7em;
     height: 1.8em;
     width: 2em;
@@ -139,9 +135,9 @@
     font-weight: bold;
 }
 
-.main .section .container .information .subTitleContainer .releaseDateOf,
-.main .section .container .information .subTitleContainer .durationContainer,
-.main .section .container .information .subTitleContainer .boxOfficeContainer {
+.section .article .container .information .subTitleContainer .releaseDateOf,
+.section .article .container .information .subTitleContainer .durationContainer,
+.section .article .container .information .subTitleContainer .boxOfficeContainer {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -152,9 +148,9 @@
     background-color: #111111;
 }
 
-.main .section .container .information .subTitleContainer .releaseDateOf .subTitle,
-.main .section .container .information .subTitleContainer .durationContainer .subTitle,
-.main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle {
+.section .article .container .information .subTitleContainer .releaseDateOf .subTitle,
+.section .article .container .information .subTitleContainer .durationContainer .subTitle,
+.section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -166,31 +162,32 @@
     width: 90%;
 }
 
-.main .section .container .information .subTitleContainer .releaseDateOf .subTitle .imgSubtitle,
-.main .section .container .information .subTitleContainer .durationContainer .subTitle .imgSubtitle,
-.main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle .imgSubtitle {
+.section .article .container .information .subTitleContainer .releaseDateOf .subTitle .imgSubtitle,
+.section .article .container .information .subTitleContainer .durationContainer .subTitle .imgSubtitle,
+.section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle .imgSubtitle {
     height: 90%;
     width: 12%;
 }
 
-.main .section .container .information .subTitleContainer .releaseDateOf .date,
-.main .section .container .information .subTitleContainer .durationContainer .duration,
-.main .section .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
+.section .article .container .information .subTitleContainer .releaseDateOf .date,
+.section .article .container .information .subTitleContainer .durationContainer .duration,
+.section .article .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
     font-family: 'Roboto', sans-serif;
     font-size: 1vw;
     margin: 0px 5px 5px 5px;
 }
 
-.main .section .container .information .sinopseContainer {
+.section .article .container .information .sinopseContainer {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
     background-color: #111111;
     border-radius: 8px;
-    width: 90%;
+    width: 92%;
+    padding-right: 1%;
 }
 
-.main .section .container .information .sinopseContainer .subTitleSinopse {
+.section .article .container .information .sinopseContainer .subTitleSinopse {
     display: flex;
     flex-direction: row;
     gap: 8px;
@@ -199,7 +196,7 @@
     font-size: 1vw;
 }
 
-.main .section .container .information .sinopseContainer .sinopse {
+.section .article .container .information .sinopseContainer .sinopse {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
@@ -208,151 +205,180 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.main .section .container .information .watch {
+.section .article .container .information .watch {
     display: flex;
-    flex-direction: row;
     align-items: center;
     gap: 8%;
     padding-top: 0.5px;
     width: 30%;
     background-color: #111111;
-    border: 1px solid black;
+    border: 1px solid #000000;
     border-radius: 8px;
     color: #f5c518;
     font-family: 'Roboto', sans-serif;
     font-size: 1vw;
 }
 
-.main .section .container .information .watch :hover {
+.section .article .container .information .watch :hover {
     background-color: #202020;
     border-radius: 8px;
 }
 
-.main .section .container .information .watch .imgWatch {
+.section .article .container .information .watch .imgWatch {
     display: flex;
-    flex-direction: row;
     gap: 8%;
     width: 100%;
     justify-content: center;
     align-items: center;
 }
 
-.main .section .container .information .watch .imgWatch .imgYoutube {
-    width: 3em;
-    height: 2em;
-}
-
-.main .section .container .information .watch .imgWatch .imgDisney {
+.section .article .container .information .watch .imgWatch .imgDisney {
     width: 4.1em;
     height: 2.7em;
     border-radius: 10px;
     padding: 1%;
 }
 
-.main .section .container .information .watch .imgWatch .imgAmazon {
+.section .article .container .information .watch .imgWatch .imgAmazon {
     width: 2.5em;
     height: 2.5em;
     border-radius: 10px;
     padding: 0.5%;
 }
 
-.main .section .container .information .watch .imgWatch .imgNetflix {
+.section .article .container .information .watch .imgWatch .imgNetflix {
     width: 3em;
     height: 2.5em;
     border-radius: 10px;
     padding: 1%;
 }
 
-.main .section .container .information .watch .imgWatch .imgHBO {
+.section .article .container .information .watch .imgWatch .imgHBO {
     width: 2.5em;
     height: 2.5em;
     border-radius: 10px;
     padding: 1%;
 }
 
-.main .section .trailer {
+.section .article .trailer {
     width: 54vw;
     margin: 1% 0 3% 17%;
 }
 
 @media screen and (min-device-width: 900px) and (max-device-width: 1200px) {
 
-    .main .section {
+    .section .article {
         width: 800px;
         height: 80%;
     }
 
-    .main .section .container {
+    .section .article .container {
         height: 100%;
     }
 
-    .main .section .container .poster {
+    .section .article .container .poster {
         height: 400px;
         width: 17em;
         margin: 25px 0px 25px 30px;
         border-radius: 20px;
     }
 
-    .main .section .container .information {
+    .section .article .container .information {
         width: 63%;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .information .titleContainer {
+    .section .article .container .information .titleContainer {
         justify-content: center;
-        width: 370px;
+        width: 460px;
         height: 5rem;
         font-size: 28px;
         text-align: center;
+        margin-top: 3%;
     }
 
-    .main .section .container .information .generoContainer {
+    .section .article .container .information .titleContainer .title {
+        width: 100%;
+        margin-left: 14%;
+        margin-bottom: 2%;
+    }
+
+    .section .article .container .information .titleContainer .favorite {
+        width: 17%;
+        justify-content: flex-end;
+        margin-right: 0vw;
+    }
+    
+    .section .article .container .information .titleContainer .favorite .favoriteImg {
+        width: 3rem;
+    }
+
+    .section .article .container .information .generoContainer {
         margin-bottom: 15px;
         gap: 6%;
         width: 310px;
         justify-content: center;
     }
 
-    .main .section .container .information .generoContainer .type {
+    .section .article .container .information .generoContainer .type {
         font-size: 0.8em;
         padding: 5px 22px;
     }
 
-    .main .section .container .information .generoContainer .genero {
+    .section .article .container .information .generoContainer .genero {
         font-size: 0.8em;
     }
 
-    .main .section .container .information .subTitleContainer {
+    .section .article .container .information .subTitleContainer {
         flex-direction: column;
         gap: 10%;
         margin-bottom: 10px;
         width: 80%;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB {
+    .section .article .container .information .subTitleContainer .IMDB {
         margin-bottom: 2%;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB .imgIMDB {
+    .section .article .container .information .subTitleContainer .IMDB .imgIMDB {
         width: 3%;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB .notaIMDB {
+    .section .article .container .information .subTitleContainer .IMDB .notaIMDB {
         margin-top: 1.4em;
         margin-left: 0.4em;
         width: 1.2em;
         font-size: 1.4vw;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf,
-    .main .section .container .information .subTitleContainer .durationContainer,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer {
+    .section .article .container .information .subTitleContainer .releaseDateOf,
+    .section .article .container .information .subTitleContainer .durationContainer,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer {
         height: 100%;
         width: 80%;
         margin-bottom: 20px;
+    }
+
+    .section .article .container .information .subTitleContainer .releaseDateOf .subTitle,
+    .section .article .container .information .subTitleContainer .durationContainer .subTitle,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle {
+        font-size: 100%;
+    }
+
+    .section .article .container .information .subTitleContainer .releaseDateOf .subTitle .imgSubtitle,
+    .section .article .container .information .subTitleContainer .durationContainer .subTitle .imgSubtitle,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle .imgSubtitle {
+        height: 80%;
+        width: 10%;
+    }
+
+    .section .article .container .information .subTitleContainer .releaseDateOf .date,
+    .section .article .container .information .subTitleContainer .durationContainer .duration,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
+        font-size: 100%;
     }
 
     .notBoxOfficeContainer {
@@ -360,169 +386,145 @@
         padding: 10% 40%;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf .subTitle,
-    .main .section .container .information .subTitleContainer .durationContainer .subTitle,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle {
-        font-size: 100%;
-    }
-
-    .main .section .container .information .subTitleContainer .releaseDateOf .subTitle .imgSubtitle,
-    .main .section .container .information .subTitleContainer .durationContainer .subTitle .imgSubtitle,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle .imgSubtitle {
-        height: 80%;
-        width: 10%;
-    }
-
-    .main .section .container .information .subTitleContainer .releaseDateOf .date,
-    .main .section .container .information .subTitleContainer .durationContainer .duration,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
-        font-size: 100%;
-    }
-
-    .main .section .container .information .sinopseContainer {
+    .section .article .container .information .sinopseContainer {
         position: relative;
         margin: -5px 210px 15px -90px;
         width: 740px;
         padding: 2px;
     }
 
-    .main .section .container .information .sinopseContainer .sinopse {
+    .section .article .container .information .sinopseContainer .subTitleSinopse {
+        font-size: 1rem;
+    }
+
+    .section .article .container .information .sinopseContainer .sinopse {
         font-size: 0.9rem;
     }
 
-    .main .section .container .information .links {
+    .section .article .container .information .watch {
         position: relative;
-        margin-left: -300px;
-        gap: 60px;
-        width: 500px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .main .section .container .information .links .watch {
+        margin: 0px 210px 15px -90px;
+        gap: 8%;
         width: 50%;
-        height: 10%;
-        padding: 3px 1px 3px 3px;
-        font-size: 0.8em;
+        font-size: 1rem;
     }
-
-    .main .section .container .information .links .watch .imgWatch {
-        gap: 6%;
-        text-align: center;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgYoutube {
-        width: 42px;
-        height: 30px;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgDisney {
-        width: 58px;
-        height: 35px;
-        border-radius: 10px;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgAmazon {
-        width: 38px;
-        height: 37px;
-        border-radius: 10px;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgNetflix {
-        width: 40px;
-        height: 35px;
-        border-radius: 7px;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgHBO {
-        width: 38px;
-        height: 35px;
-        border-radius: 7px;
+    
+    .section .article .trailer {
+        width: 45rem;
+        margin: 0% 0% 5% 5%;
     }
 }
 
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
     
-    .main .section {
+    .section .article {
         width: 630px;
         height: 80%;
         margin: 2%;
     }
 
-    .main .section .container {
+    .section .article .container {
         height: 100%;
     }
 
-    .main .section .container .poster {
-        height: 22rem;
-        width: 15rem;
+    .section .article .container .poster {
+        height: 23.5rem;
+        width: 17rem;
         margin: 25px 0px 25px 25px;
         border-radius: 20px;
     }
 
-    .main .section .container .information {
-        width: 57%;
+    .section .article .container .information {
+        width: 52%;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .information .titleContainer {
-        padding-top: 20px;
+    .section .article .container .information .titleContainer {
         justify-content: center;
+        width: 350px;
+        height: 4rem;
+        font-size: 22px;
         text-align: center;
-        width: 320px;
-        height: 3rem;
-        font-size: 24px;
+        margin-top: 5%;  
     }
 
-    .main .section .container .information .generoContainer {
+    .section .article .container .information .titleContainer .title {
+        width: 100%;
+        margin-left: 14%;
+        margin-bottom: 0%;
+    }
+
+    .section .article .container .information .titleContainer .favorite {
+        width: 17%;
+        justify-content: flex-end;
+        margin-right: 18px;
+    }
+    
+    .section .article .container .information .titleContainer .favorite .favoriteImg {
+        width: 2.3rem;
+    }
+
+    .section .article .container .information .generoContainer {
         margin-bottom: 15px;
         gap: 6%;
         width: 310px;
-        margin-top: 20px;
+        margin-top: 10px;
         justify-content: center;
     }
 
-    .main .section .container .information .generoContainer .type {
+    .section .article .container .information .generoContainer .type {
         font-size: 0.8em;
         padding: 5px 22px;
     }
 
-    .main .section .container .information .generoContainer .genero {
+    .section .article .container .information .generoContainer .genero {
         font-size: 0.8em;
     }
 
-    .main .section .container .information .subTitleContainer {
+    .section .article .container .information .subTitleContainer {
         flex-direction: column;
         gap: 10%;
         margin-bottom: 10px;
         width: 80%;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB {
-        width: 4.8%;
-        margin-bottom: 2%;
+    .section .article .container .information .subTitleContainer .IMDB {
+        width: 5.8%;
+        margin-bottom: 3%;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB .imgIMDB {
-        width: 3.3%;
+    .section .article .container .information .subTitleContainer .IMDB .imgIMDB {
+        width: 4.3%;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB .notaIMDB {
+    .section .article .container .information .subTitleContainer .IMDB .notaIMDB {
         margin-top: 1.5em;
         margin-left: 0.3em;
         width: 1.2em;
-        font-size: 1.4vw;
+        font-size: 1.7vw;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf,
-    .main .section .container .information .subTitleContainer .durationContainer,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer {
+    .section .article .container .information .subTitleContainer .releaseDateOf,
+    .section .article .container .information .subTitleContainer .durationContainer,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer {
         height: 100%;
         width: 80%;
         margin-bottom: 10px;
+    }
+
+    .section .article .container .information .subTitleContainer .releaseDateOf .subTitle,
+    .section .article .container .information .subTitleContainer .durationContainer .subTitle,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle {
+        font-size: 100%;
+    }
+
+    .section .article .container .information .subTitleContainer .releaseDateOf .date,
+    .section .article .container .information .subTitleContainer .durationContainer .duration,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
+        font-size: 100%;
     }
 
     .notBoxOfficeContainer {
@@ -530,259 +532,240 @@
         padding: 12% 40%;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf .subTitle,
-    .main .section .container .information .subTitleContainer .durationContainer .subTitle,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle {
-        font-size: 100%;
-    }
-
-    .main .section .container .information .subTitleContainer .releaseDateOf .date,
-    .main .section .container .information .subTitleContainer .durationContainer .duration,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
-        font-size: 100%;
-    }
-
-    .main .section .container .information .sinopseContainer {
+    .section .article .container .information .sinopseContainer {
         position: relative;
-        margin: 0px 110px 15px -155px;
-        width: 570px;
+        margin: 0px 110px 15px -185px;
+        width: 580px;
     }
 
-    .main .section .container .information .sinopseContainer .subTitleSinopse {
+    .section .article .container .information .sinopseContainer .subTitleSinopse {
         font-size: 100%;
     }
 
-    .main .section .container .information .sinopseContainer .sinopse {
+    .section .article .container .information .sinopseContainer .sinopse {
         font-size: 0.9rem;
     }
 
-    .main .section .container .information .links {
+    .section .article .container .information .watch {
         position: relative;
-        margin-left: -265px;
-        width: 30em;
-        justify-content: center;
-        align-items: center;
+        margin: 0px 210px 15px -50px;
+        width: 75%;
+        font-size: 1rem;
     }
-
-    .main .section .container .information .links .watch {
-        width: 60%;
-        height: 10%;
-        border-radius: 8px;
-        padding: 3px 12px 3px 10px;
-        font-size: 1em;
+    
+    .section .article .container .information .watch .imgWatch .imgDisney {
+        width: 4.6em;
+        height: 3em;
     }
-
-    .main .section .container .information .links .watch .imgWatch {
-        gap: 10%;
+    
+    .section .article .container .information .watch .imgWatch .imgAmazon {
+        width: 2.9em;
+        height: 2.9em;
     }
-
-    .main .section .container .information .links .watch .imgWatch .imgYoutube {
-        width: 45px;
-        height: 32px;
+    
+    .section .article .container .information .watch .imgWatch .imgNetflix {
+        width: 2.9em;
+        height: 2.7em;
     }
-
-    .main .section .container .information .links .watch .imgWatch .imgDisney {
-        width: 52px;
-        height: 32px;
-        border-radius: 10px;
+    
+    .section .article .container .information .watch .imgWatch .imgHBO {
+        width: 2.7em;
+        height: 2.7em;
     }
-
-    .main .section .container .information .links .watch .imgWatch .imgAmazon {
-        width: 38px;
-        height: 37px;
-        border-radius: 10px;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgNetflix {
-        width: 40px;
-        height: 35px;
-        border-radius: 7px;
-    }
-
-    .main .section .container .information .links .watch .imgWatch .imgHBO {
-        width: 38px;
-        height: 35px;
-        border-radius: 7px;
+    
+    .section .article .trailer {
+        width: 35rem;
+        margin: 0% 0% 5% 5%;
     }
 }
 
 @media screen and (max-device-width: 679px) {
     
-    .main .section {
+    .section .article {
         width: 85vw;
         height: 30%;
         margin: 2%;
     }
 
-    .main .section .container {
+    .section .article .container {
         flex-direction: column;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .poster {
+    .section .article .container .poster {
         height: 60%;
         width: 70%;
         margin: 25px 25px 20px 25px;
         border-radius: 20px;
     }
 
-    .main .section .container .information {
+    .section .article .container .information {
         width: 100%;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .information .titleContainer {
-        margin-bottom: 20px;
-        justify-content: center;
+    .section .article .container .information .titleContainer {
+        justify-content: start;
+        width: 87vw;
+        height: 15vw;
+        font-size: 4.5vw;
+        margin-top: 1%; 
+    }
+
+    .section .article .container .information .titleContainer .title {
+        width: 82%;
         text-align: center;
-        width: 85%;
-        height: 100%;
         font-size: 6vw;
     }
 
-    .main .section .container .information .generoContainer {
+    .section .article .container .information .titleContainer .favorite {
+        width: 17%;
+        align-items: center;
+        justify-content: flex-end;
+        margin-right: 5px;
+        margin-bottom: 0%;
+    }
+    
+    .section .article .container .information .titleContainer .favorite .favoriteImg {
+        width: 2.9rem;
+    }
+
+    .section .article .container .information .generoContainer {
         justify-content: center;
         width: 90vw;
         gap: 4%;
+        margin-top: 5%;
     }
 
-    .main .section .container .information .generoContainer .type {
+    .section .article .container .information .generoContainer .type {
         font-size: 3.3vw;
         padding: 5px 28px;
     }
 
-    .main .section .container .information .generoContainer .genero {
+    .section .article .container .information .generoContainer .genero {
         font-size: 3.3vw;
     }
 
-    .main .section .container .information .subTitleContainer {
+    .section .article .container .information .subTitleContainer {
         justify-content: center;
         margin-bottom: 15px;
-        width: 100%;
+        width: 100vw;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB {
+    .section .article .container .information .subTitleContainer .IMDB {
         margin-top: 3.5%;
         margin-left: 4%;
         margin-right: 2%;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB .imgIMDB {
-        width: 9%;
-        height: 5.6%;
+    .section .article .container .information .subTitleContainer .IMDB .imgIMDB {
+        width: 10.5%;
+        height: 3.8%;
         align-items: center;
         justify-content: center;
     }
 
-    .main .section .container .information .subTitleContainer .IMDB .notaIMDB {
-        margin-top: 1.3em;
+    .section .article .container .information .subTitleContainer .IMDB .notaIMDB {
+        margin-top: 1.5em;
         margin-left: 0.1em;
         height: 1.2em;
         width: 1.5em;
         font-size: 3.9vw;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf {
+    .section .article .container .information .subTitleContainer .releaseDateOf {
         height: 100%;
         width: 75%;
         margin: 15px 5px 2px 5px;
     }
 
-    .main .section .container .information .subTitleContainer .durationContainer {
+    .section .article .container .information .subTitleContainer .durationContainer {
         width: 40%;
         height: 100%;
         margin-top: 3%;
     }
 
-    .main .section .container .information .subTitleContainer .boxOfficeContainer {
+    .section .article .container .information .subTitleContainer .boxOfficeContainer {
         width: 47%;
         height: 100%;
         margin-top: 3%;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf .subTitle,
-    .main .section .container .information .subTitleContainer .durationContainer .subTitle,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle {
+    .section .article .container .information .subTitleContainer .releaseDateOf .subTitle,
+    .section .article .container .information .subTitleContainer .durationContainer .subTitle,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle {
         width: 80%;
         height: 100%;
-        font-size: 3.5vw;
+        font-size: 3.7vw;
         margin: 5px;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf .subTitle .imgSubtitle,
-    .main .section .container .information .subTitleContainer .durationContainer .subTitle .imgSubtitle,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .subTitle .imgSubtitle {
+    .section .article .container .information .subTitleContainer .releaseDateOf .subTitle .imgSubtitle,
+    .section .article .container .information .subTitleContainer .durationContainer .subTitle .imgSubtitle,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .subTitle .imgSubtitle {
         height: 1.2em;
         width: 1.2em;
     }
 
-    .main .section .container .information .subTitleContainer .releaseDateOf .date,
-    .main .section .container .information .subTitleContainer .durationContainer .duration,
-    .main .section .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
-        font-size: 3vw;
+    .section .article .container .information .subTitleContainer .releaseDateOf .date,
+    .section .article .container .information .subTitleContainer .durationContainer .duration,
+    .section .article .container .information .subTitleContainer .boxOfficeContainer .boxOffice {
+        font-size: 3.3vw;
     }
 
-    .main .section .container .information .sinopseContainer {
-        width: 90%;
+    .section .article .container .information .sinopseContainer {
+        width: 90vw;
         align-items: center;
         justify-content: center;
+        text-align: center;
     }
 
-    .main .section .container .information .sinopseContainer .subTitleSinopse {
+    .section .article .container .information .sinopseContainer .subTitleSinopse {
         font-size: 3.5vw;
     }
 
-    .main .section .container .information .sinopseContainer .sinopse {
-        font-size: 2.9vw;
+    .section .article .container .information .sinopseContainer .sinopse {
+        font-size: 3.4vw;
     }
 
-    .main .section .container .information .links {
-        width: 75.5vw;
-        gap: 2%;
+    .section .article .container .information .watch {
         justify-content: center;
-        align-items: center;
+        width: 80%;
+        font-size: 4vw;
     }
-
-    .main .section .container .information .links .watch {
-        width: 50%;
-        border-radius: 8px;
-        padding: 5px;
-        font-size: 2.5vw;
-    }
-
-    .main .section .container .information .links .watch .imgWatch {
-        gap: 7%;
-        height: 50%;
-    }
-
-    .main .section .container .information .links .watch .imgYoutube {
-        width: 22%;
-        margin-bottom: 1%;
-    }
-
-    .main .section .container .information .links .watch .imgDisney {
-        width: 28%;
-        height: 15%;
+    
+    .section .article .container .information .watch .imgWatch .imgDisney {
+        width: 4.3em;
+        height: 2.8em;
         border-radius: 10px;
+        padding: 1%;
     }
-
-    .main .section .container .information .links .watch .imgAmazon {
-        width: 18%;
-        height: 10%;
+    
+    .section .article .container .information .watch .imgWatch .imgAmazon {
+        width: 2.5em;
+        height: 2.5em;
         border-radius: 10px;
+        padding: 0.5%;
     }
-
-    .main .section .container .information .links .watch .imgNetflix {
-        width: 16%;
-        height: 10%;
-        border-radius: 7px;
+    
+    .section .article .container .information .watch .imgWatch .imgNetflix {
+        width: 3em;
+        height: 2.5em;
+        border-radius: 10px;
+        padding: 1%;
     }
-
-    .main .section .container .information .links .watch .imgHBO {
-        width: 16%;
-        height: 10%;
-        border-radius: 7px;
+    
+    .section .article .container .information .watch .imgWatch .imgHBO {
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: 10px;
+        padding: 1%;
+    }
+    
+    .section .article .trailer {
+        width: 85vw;
+        margin: 0% 0% 5% 0%;
     }
 }

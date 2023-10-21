@@ -5,6 +5,8 @@ import Footer from "../components/Footer/footer";
 import styles from "../styles/favorites.module.css"
 import Image from 'next/image'
 import { useRouter } from "next/router";
+import lupa from "../../public/lupa.png"
+import excluir from "../../public/excluir.png"
 
 export default function wishlist() {
     const context = useContext(AppContext);
@@ -21,35 +23,36 @@ export default function wishlist() {
     }, [])
 
     return (
-        <>
+        <main>
             <Header />
-            <main className={styles.main}>
+            <section className={styles.section}>
                 {filmsList.length > 0 ? (
                     <>
                         {filmsList.map((movie) => {
                             return (
-                                <section className={styles.card}>
+                                <article key={movie.id} className={styles.card}>
                                     <Image
                                         className={styles.poster}
-                                        src={movie.posterImg}
-                                        width={35}
+                                        src={`/poster/${movie.id}.jpg`}
+                                        width={45}
                                         height={45}
+                                        alt="poster"
                                     />
                                     <div className={styles.title}>{movie.title}</div>
                                     <div className={styles.buttons}>
-                                        <button className={styles.details} onClick={() => detalhes(movie.id)}>DETALHES</button>
-                                        <button className={styles.remove} onClick={() => removeFavorite(movie)}>EXCLUIR</button>
+                                        <Image src={lupa} alt="lupa" className={styles.details} onClick={() => detalhes(movie.id)}/>
+                                        <Image src={excluir} alt="remove" className={styles.remove} onClick={() => removeFavorite(movie)}/>
                                     </div>
-                                </section>
+                                </article>
                             )
                         })}
                     </>
                 )
                 :
-                (<section className={styles.notFound}>Nenhum filme ou série favoritado</section>)
+                (<section className={styles.notFound}>Nenhum filme, série ou curta favoritado</section>)
                 }
-            </main>
+            </section>
             <Footer />
-        </>
+        </main>
     )
 }

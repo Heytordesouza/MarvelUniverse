@@ -48,24 +48,23 @@ export default function Movie() {
     };
 
     return (
-        <>
+        <main>
             <Header />
             {films.map((movie) => {
                 return (
                     <div key={movie.id}>
                         {movie.id === filmId &&
-                            <div className={styles.main}>
-                                <section className={styles.section} key={movie.id}>
+                            <section className={styles.section}>
+                                <article className={styles.article} key={movie.id}>
                                     <div className={styles.container}>
                                         <Image
                                             className={styles.poster}
                                             src={`/poster/${movie.id}.jpg`}
                                             width={35}
                                             height={40}
+                                            alt="poster"
                                         />
-
                                         <div className={styles.information}>
-
                                             <div className={styles.titleContainer}>
                                                 <div className={styles.title}>{movie.title}</div>
                                                 <div className={styles.favorite}>
@@ -76,6 +75,7 @@ export default function Movie() {
                                                             onClick={() => toggleFavorite(movie)}
                                                             width={40}
                                                             height={40}
+                                                            alt="favoriteOn"
                                                         />
                                                         :
                                                         <Image
@@ -84,6 +84,7 @@ export default function Movie() {
                                                             onClick={() => toggleFavorite(movie)}
                                                             width={40}
                                                             height={40}
+                                                            alt="favoriteOff"
                                                         />
                                                     }
                                                 </div>
@@ -92,32 +93,29 @@ export default function Movie() {
                                                 <span className={styles.type}>{movie.type}</span>
                                                 <span className={styles.genero}>{movie.gender}</span>
                                             </div>
-
                                             <div className={styles.subTitleContainer}>
                                                 <div className={styles.IMDB}>
-                                                    <Image className={styles.imgIMDB} src={IMDB} width={35} height={40} />
+                                                    <Image className={styles.imgIMDB} src={IMDB} width={35} height={40} alt="IMDB" />
                                                     <span className={styles.notaIMDB}>{movie.IMDBNote}</span>
                                                 </div>
                                                 <div className={styles.releaseDateOf}>
                                                     <div className={styles.subTitle}>
-                                                        <Image className={styles.imgSubtitle} src={calender} />
+                                                        <Image className={styles.imgSubtitle} src={calender} alt="calender" />
                                                         <span>Data de Lançamento:</span>
                                                     </div>
                                                     <span className={styles.date}>{movie.releaseDateOf}</span>
                                                 </div>
-
                                                 <div className={styles.durationContainer}>
                                                     <div className={styles.subTitle}>
-                                                        <Image className={styles.imgSubtitle} src={duration} />
+                                                        <Image className={styles.imgSubtitle} src={duration} alt="duration" />
                                                         <span>Duração:</span>
                                                     </div>
                                                     <span className={styles.duration}>{movie.duration}</span>
                                                 </div>
-
                                                 {movie.boxOfficeUS$ ?
                                                     <div className={styles.boxOfficeContainer}>
                                                         <div className={styles.subTitle}>
-                                                            <Image className={styles.imgSubtitle} src={cash} />
+                                                            <Image className={styles.imgSubtitle} src={cash} alt="cash" />
                                                             <span>Bilheteria:</span>
                                                         </div>
                                                         <span className={styles.boxOffice}>US$ {movie.boxOfficeUS$.toLocaleString("en-US")}.00</span>
@@ -126,37 +124,30 @@ export default function Movie() {
                                                     <div className={styles.notBoxOfficeContainer} />
                                                 }
                                             </div>
-
                                             <div className={styles.sinopseContainer}>
                                                 <span className={styles.subTitleSinopse}>Sinopse:</span>
                                                 <span className={styles.sinopse}>{movie.synopsis}</span>
                                             </div>
-
-
                                             {movie.movieLink &&
                                                 <div className={styles.watch}>
                                                     <a className={styles.imgWatch} href={movie.movieLink} target="_blank" >
-
                                                         {movie.type === "Filme"
                                                             ? <span>Assistir ao Filme</span>
                                                             : movie.type === "Série"
                                                                 ? <span>Assistir a Série</span>
                                                                 : <span>Assistir ao Curta</span>
                                                         }
-
                                                         {movie.streaming === "disney"
-                                                            ? <Image className={styles.imgDisney} src={disneyplus} />
+                                                            ? <Image className={styles.imgDisney} src={disneyplus} alt="disney" />
                                                             : movie.streaming === "netflix"
-                                                                ? <Image className={styles.imgNetflix} src={netflix} />
+                                                                ? <Image className={styles.imgNetflix} src={netflix} alt="netflix" />
                                                                 : movie.streaming === "hbo"
-                                                                    ? <Image className={styles.imgHBO} src={hbomax} />
-                                                                    : <Image className={styles.imgAmazon} src={amazon} />
+                                                                    ? <Image className={styles.imgHBO} src={hbomax} alt="hbomax" />
+                                                                    : <Image className={styles.imgAmazon} src={amazon} alt="amazon" />
                                                         }
                                                     </a>
                                                 </div>
                                             }
-
-
                                         </div>
                                     </div>
                                     <iframe className={styles.trailer}
@@ -164,17 +155,17 @@ export default function Movie() {
                                         height="315"
                                         src={`${movie.trailerLink}`}
                                         title="YouTube video player"
-                                        frameborder="0"
+                                        frameBorder="0"
                                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                         allowFullScreen>
                                     </iframe>
-                                </section>
-                            </div>
+                                </article>
+                            </section>
                         }
                     </div>
                 )
             })}
             <Footer />
-        </>
+        </main>
     )
 }

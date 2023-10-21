@@ -1,103 +1,98 @@
-.main {
+.footer {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    height: 10em;
+    color: #ffffff;
+    height: 6em;
     font-size: 1.3vw;
     bottom: 0;
-    background-color: black;
+    gap: 50%;
+    background-color: #000000;
 }
 
-.main .createdBy {
+.footer .createdBy {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.main .createdBy .created {
-    background-color: white;
+.footer .createdBy .created {
+    background-color: #ffffff;
     padding: 0.2em 0.6em;
     border-radius: 10px;
-    color: black;
+    color: #000000;
     margin-bottom: 2%;
 }
 
-.main .containerContacts {
+.footer .containerContacts {
     display: flex;
     flex-direction: column;
 }
 
-.main .containerContacts .contacts {
+.footer .containerContacts .contacts {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 8%;
-    margin: 2%;
+    gap: 20%;
+    margin-top: 2vh;
     width: 100%;
 }
 
-.main .containerContacts .contacts img {
+.footer .containerContacts .contacts img {
     display: flex;
-    width: 2vw;
+    width: 3.5vw;
     border-radius: 2px;
 }
 
-
 @media screen and (min-device-width: 680px) and (max-device-width: 899px) {
 
-    .main {
-        flex-direction: row;
+    .footer {
         font-size: 2vw;
         height: 5.7em;
         gap: 20%;
     }
 
-    .main .createdBy .created {
+    .footer .createdBy .created {
         margin: 5% 0%;
     }
 
-    .main .containerContacts {
+    .footer .containerContacts {
         justify-content: center;
         align-items: center;
         width: 20%;
     }
 
-    .main .containerContacts .contacts {
+    .footer .containerContacts .contacts {
         gap: 25%;
         margin: 8%;
     }
 
-    .main .containerContacts .contacts img {
-        width: 4vw;
+    .footer .containerContacts .contacts img {
+        width: 5vw;
     }
-
 }
 
 @media screen and (max-device-width: 679px) {
 
-    .main {
-        flex-direction: row;
+    .footer {
         font-size: 4vw;
         height: 5.8em;
         gap: 20%;
-        margin: 6% 0%;
     }
 
-    .main .containerContacts {
+    .footer .containerContacts {
         justify-content: center;
         align-items: center;
         width: 20%;
     }
 
-    .main .containerContacts .contacts {
-        gap: 18%;
+    .footer .containerContacts .contacts {
+        gap: 20%;
     }
 
-    .main .containerContacts .contacts img {
-        width: 6vw;
+    .footer .containerContacts .contacts img {
+        width: 8vw;
     }
 }

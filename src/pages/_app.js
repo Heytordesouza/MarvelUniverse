@@ -5,6 +5,9 @@ import { getFirestore, collection, getDocs, query, orderBy } from 'firebase/fire
 import Head from 'next/head'
 import AppContext from '../components/AppContext';
 import { useState, useEffect } from 'react';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const GlobalStyle = createGlobalStyle`
   body {
@@ -53,13 +56,13 @@ function MyApp({ Component, pageProps }) {
     if (!newFilm) {
       const movieNew = [...filmsList, movie];
       setFilmsList(movieNew);
-
       const turnString = JSON.stringify(movieNew)
       localStorage.setItem("local", turnString)
-      alert("Filme adicionado aos favoritos")
-    } else {
-      alert("Filme já adicionado aos favoritos")
-    }
+      toast.success("Filme adicionado aos favoritos", {
+        theme: "dark",
+        autoClose: 1500
+      })
+    } 
   }
 
   const removeFavorite = (movie) => {
@@ -69,7 +72,11 @@ function MyApp({ Component, pageProps }) {
     const turnString = JSON.stringify(filterDelete)
     localStorage.setItem("local", turnString)
     setFilmsList(filterDelete)
-    alert("Filme excluído dos favoritos")
+    toast.success("Filme excluído dos favoritos", {
+      icon: "🗑️",
+      theme: "dark",
+      autoClose: 1500
+    });
   }
 
   const consultItem = () => {
@@ -80,10 +87,10 @@ function MyApp({ Component, pageProps }) {
     }
   }
 
-
   return (
     <>
       <GlobalStyle />
+      <ToastContainer />
       <AppContext.Provider
         value={{
           films,
