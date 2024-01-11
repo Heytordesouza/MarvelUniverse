@@ -4,6 +4,8 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 
 🟢 Acesse ao site por esse <a href="https://universomarvelstudios.vercel.app">link</a>.
 
+Atualizado em 10/01/2024
+
 # Informações de cada filme e série:
 
 📍 Filtragem por nome e ordenação por data de lançamento e ordem cronológica dos eventos.
@@ -31,6 +33,8 @@ Este projeto consiste em um site com informações de cada filme e série do Uni
 📍 PC
 📍 Tablet
 📍 Celular
+
+
 
 <div align="center">
 <img src="https://raw.githubusercontent.com/Heytordesouza/MarvelUniverse/projeto-finalizado/public/printpchome.png?token=GHSAT0AAAAAACCEQFK2FBN6MZP7EW3CJNLYZJUEDRQ" width="900px" />
